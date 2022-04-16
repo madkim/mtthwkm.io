@@ -61,13 +61,13 @@ export default function Home() {
       <Row className='home__navbar justify-content-end'>
         <Col xs='auto'>
           <div className='home__navbar--item cursor-pointer'>
-            about
+            about <i className="show-on-hover fa-light fa-block-question"></i>
           </div>
           <div className='home__navbar--item cursor-pointer'>
-            work
+            work <i className="show-on-hover fa-light fa-code"></i>
           </div>
           <div className='home__navbar--item cursor-pointer'>
-            projects
+            projects <i className="show-on-hover fa-light fa-rocket-launch"></i>
           </div>
         </Col>
       </Row>
