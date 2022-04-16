@@ -1,0 +1,18 @@
+/* Home */
+#home {
+    height: 100%;
+}
+
+.home__title {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    background-color: black;
+}
+
+.home__title:hover {
+    font-size: 100px;
+    transition: all;
+    background-color: yellow !important;
+    transition-duration: .5s;
+}
