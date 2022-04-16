@@ -7,42 +7,94 @@ export default function Home() {
   useEffect(() => {
    gsap.to(".title__1", { // selector text, Array, or object
       x: 100, // any properties (not limited to CSS)
-      ease: "power",
-      duration: 1, // seconds
+      ease: "elastic",
+      duration: 1.5, // seconds
       backgroundColor: "red", // camelCase
     });
    gsap.to(".title__2", { // selector text, Array, or object
       x: -100, // any properties (not limited to CSS)
-      ease: "power",
+      ease: "elastic",
       delay: .5,
-      duration: 1, // seconds
+      duration: 1.5, // seconds
       backgroundColor: "red", // camelCase
     });
    gsap.to(".title__3", { // selector text, Array, or object
       x: 100, // any properties (not limited to CSS)
-      ease: "power",
+      ease: "elastic",
       delay: 1,
-      duration: 1, // seconds
+      duration: 1.5, // seconds
       backgroundColor: "red", // camelCase
-    });
+   });
+    gsap.to(".home__navbar", { // selector text, Array, or object
+      opacity: 1,
+      ease: "power",
+      delay: 2,
+      duration: 1, // seconds
+   });
+    gsap.to(".home__scroll", { // selector text, Array, or object
+      y: 50,
+      opacity: 1,
+      ease: "power",
+      delay: 2,
+      duration: 1, // seconds
+   });
+    gsap.to(".home__scroll", { // selector text, Array, or object
+      y: 50,
+      opacity: 1,
+      ease: "power",
+      delay: 2,
+      duration: 1, // seconds
+   });
+    gsap.to(".home__scroll", { // selector text, Array, or object
+      y: 30,
+      ease: "linear",
+      delay: 3,
+      duration: 1, // seconds
+      yoyo: true,
+      repeat: -1
+   });
   }, [])
   
 
   return (
     <Container id="home">
+      <Row className='home__navbar justify-content-end'>
+        <Col xs='auto'>
+          <div className='home__navbar--item cursor-pointer'>
+            about
+          </div>
+          <div className='home__navbar--item cursor-pointer'>
+            work
+          </div>
+          <div className='home__navbar--item cursor-pointer'>
+            projects
+          </div>
+        </Col>
+      </Row>
+
       <Row className='mt-5 home__title title__1'>
         <Col>
           this is a
         </Col>
       </Row>
+
       <Row className='mt-5 home__title title__2'>
         <Col>
-        design 
+          design 
         </Col>
       </Row>
+
       <Row className='mt-5 home__title title__3'>
         <Col>
            website
+        </Col>
+      </Row>
+
+      <Row className='home__scroll'>
+        <Col xs='auto'>
+          <div className='home__scroll--text text-light'>
+            scroll down <i className="fa-solid fa-hand-point-down"></i>
+          </div>
         </Col>
       </Row>
     </Container>
