@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import gsap from 'gsap'
@@ -57,46 +57,56 @@ export default function Home() {
   
 
   return (
-    <Container id="home">
-      <Row className='home__navbar justify-content-end'>
-        <Col xs='auto'>
-          <div className='home__navbar--item cursor-pointer'>
-            about <i className="show-on-hover fa-light fa-block-question"></i>
-          </div>
-          <div className='home__navbar--item cursor-pointer'>
-            work <i className="show-on-hover fa-light fa-code"></i>
-          </div>
-          <div className='home__navbar--item cursor-pointer'>
-            projects <i className="show-on-hover fa-light fa-rocket-launch"></i>
-          </div>
-        </Col>
-      </Row>
+    <Fragment>
+      <Container id="home">
+        <Row className='home__navbar justify-content-end'>
+          <Col xs='auto'>
+            <div className='home__navbar--item cursor-pointer'>
+              about <i className="show-on-hover fa-light fa-block-question"></i>
+            </div>
+            <div className='home__navbar--item cursor-pointer'>
+              work <i className="show-on-hover fa-light fa-code"></i>
+            </div>
+            <div className='home__navbar--item cursor-pointer'>
+              projects <i className="show-on-hover fa-light fa-rocket-launch"></i>
+            </div>
+          </Col>
+        </Row>
 
-      <Row className='mt-5 home__title title__1'>
-        <Col>
-          this is a
-        </Col>
-      </Row>
+        <Row className='mt-5 home__title title__1'>
+          <Col>
+            this is a
+          </Col>
+        </Row>
 
-      <Row className='mt-5 home__title title__2'>
-        <Col>
-          design 
-        </Col>
-      </Row>
+        <Row className='mt-5 home__title title__2'>
+          <Col>
+            design 
+          </Col>
+        </Row>
 
-      <Row className='mt-5 home__title title__3'>
-        <Col>
-           website
-        </Col>
-      </Row>
+        <Row className='mt-5 home__title title__3'>
+          <Col>
+            website
+          </Col>
+        </Row>
 
-      <Row className='home__scroll'>
-        <Col xs='auto'>
-          <div className='home__scroll--text text-light'>
-            scroll down <i className="fa-solid fa-hand-point-down"></i>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+        <Row className='home__scroll'>
+          <Col xs='auto'>
+            <div className='home__scroll--text text-light'>
+              scroll down <i className="fa-solid fa-hand-point-down"></i>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
+      <div className="home__parallax"></div>
+
+      <div style={{height: '150vh', color: 'white', backgroundColor: 'black', fontSize: '36px'}}>
+        This is some info that I can write stuff on blah blah
+      </div>
+      
+      <div className="home__parallax"></div>
+    </Fragment>
   )
 }

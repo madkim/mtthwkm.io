@@ -10,6 +10,10 @@
 }
 
 /* Home */
+#home {
+    height: 100vh;
+}
+
 .home__navbar {
     color: white;
     padding: 2em;
@@ -72,4 +76,19 @@
     color: yellow !important;
     cursor: pointer;
     font-size: 20px;
+}
+
+.home__parallax {
+    /* The image used */
+    background-image: url("https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox");
+    /* background-image: url("https://www.history.com/.image/ar_233:100%2Cc_fill%2Ccs_srgb%2Cg_faces:center%2Cq_auto:good%2Cw_3840/MTU3ODc4NjAwMjkxNzIyNTY5/yosemite-3.webp"); */
+
+    /* Full height */
+    height: 100vh;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
