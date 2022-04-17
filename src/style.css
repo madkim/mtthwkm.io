@@ -49,9 +49,18 @@
 }
 
 #project__cards {
-    left: -25vw;
-    width: 150vw;
+    left: -19vw;
+    width: 140vw;
+    display: flex;
     position: relative;
+    align-items: center;
+}
+
+.project__click__me {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project__card {
@@ -64,6 +73,13 @@
     transition: filter .2s, top .5s, width .5s, height .5s;
     background: white;
     border-radius: 1.5em;
+}
+
+.project__card--first,
+.project__card--last {
+    top: 2em;
+    width: 25vw;
+    height: 45vh;
 }
 
 .project__card--active,

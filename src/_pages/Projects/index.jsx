@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from 'react'
+import { animateProjectsPage } from '../../_helpers/animation'
 import ProjectCard from './Components/ProjectCard'
-import { Col, Row } from 'react-bootstrap'
 
 export default function Projects() {
   const [selected, setSelected] = useState('active')
 
   useEffect(() => {
-    //observe
+    animateProjectsPage()
   }, [])
-
+  
   const handleSelect = () => {
-    setSelected('show')
+    setSelected(selected === 'active' ? 'show' : 'active')
   }
 
   return (
     <div id="projects">
+      <div className='project__click__me text-light'>
+        click me &nbsp;<i className="fa-solid fa-hand-point-down"></i>
+      </div>
       <br />
-      <div id='project__cards' className='d-flex'>
+      <div id='project__cards'>
         <ProjectCard
           select={handleSelect} 
           status='first' 

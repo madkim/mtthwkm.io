@@ -36,16 +36,28 @@ export function animateHomePage() {
     duration: 1,
   });
   gsap.to(".home__scroll", {
-    y: 50,
-    opacity: 1,
-    ease: "power",
-    delay: 2,
-    duration: 1,
-  });
-  gsap.to(".home__scroll", {
     y: 30,
     ease: "linear",
     delay: 3,
+    duration: 1,
+    yoyo: true,
+    repeat: -1,
+  });
+}
+
+// Projects Animations
+export function animateProjectsPage() {
+  gsap.to(".project__click__me", {
+    y: -10,
+    opacity: 1,
+    ease: "power",
+    delay: 1,
+    duration: 1,
+  });
+  gsap.to(".project__click__me", {
+    y: 10,
+    ease: "linear",
+    delay: 2,
     duration: 1,
     yoyo: true,
     repeat: -1,
