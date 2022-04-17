@@ -8,6 +8,13 @@
     height: 100vh;
 }
 
+#home__details {
+    color: white;
+    height: 150vh;
+    font-size: 36px;
+    background-color: black;
+}
+
 .home__navbar {
     color: white;
     padding: 2em;
@@ -17,13 +24,14 @@
 
 .home__navbar--item {
     color: white;
+    text-decoration: none;
     transition: transform .2s;
 }
 
 .home__navbar--item:hover {
     color: yellow;
     cursor: pointer;
-    transform: translate(5px, 0px);
+    transform: translate(5px, 0px) !important;
 }
 
 .home__navbar--icon {
@@ -85,11 +93,4 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#home__details {
-    color: white;
-    height: 150vh;
-    font-size: 36px;
-    background-color: black;
 }
