@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import classNames from 'classnames'
+
 import { Row, Col } from 'react-bootstrap'
 import { Link, useLocation } from 'react-router-dom'
 
-import classNames from 'classnames'
-
 export default function Navbar() {
+  const navRef = useRef(null)
   const location = useLocation()
-
   const [active, setActive] = useState(location.pathname)
-
+  
   useEffect(() => {
+    if (location.pathname === '/home') {
+      navRef.current.style.opacity = 0;
+    }
     setActive(location.pathname)
   }, [location.pathname])
 
@@ -24,7 +27,7 @@ export default function Navbar() {
   }
 
   return (
-    <Row className='navbar justify-content-end'>
+    <Row ref={navRef} className='navbar justify-content-end'>
       <Col xs='auto'>
         <Link to="/home" className='text-decoration-none'>
           <div 

@@ -9,7 +9,7 @@ class MainLayout extends Component {
     return (
       <Fragment>
         <br />
-        <Navbar history={this.props.history}/>
+        <Navbar />
         <Outlet />
         <Footer />
       </Fragment>
