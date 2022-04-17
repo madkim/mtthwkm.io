@@ -11,7 +11,6 @@
 #home__details {
     color: white;
     height: 150vh;
-    font-size: 36px;
     background-color: black;
 }
 
@@ -83,7 +82,6 @@
 .home__parallax {
     /* The image used */
     background-image: url("https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox");
-    /* background-image: url("https://www.history.com/.image/ar_233:100%2Cc_fill%2Ccs_srgb%2Cg_faces:center%2Cq_auto:good%2Cw_3840/MTU3ODc4NjAwMjkxNzIyNTY5/yosemite-3.webp"); */
 
     /* Full height */
     height: 100vh;
