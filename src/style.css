@@ -48,13 +48,26 @@
 }
 
 .project__card {
-    width: 30em;
-    height: 26em;
+    top: 1em;
+    width: 30vw;
+    height: 50vh;
     border: 1px solid;
-    padding: 2em;
+    /* padding: 2em; */
+    margin: .5em;
+    filter: grayscale(1);
     position: relative;
+    transition: filter .2s, top .5s, width .5s, height .5s;
     background: white;
     border-radius: 1.5em;
+}
+
+.project__card--active,
+.project__card:hover {
+    top: 0em;
+    width: 35vw;
+    height: 55vh;
+    cursor: pointer;
+    filter: grayscale(0);
 }
 
 .project__arrow {
