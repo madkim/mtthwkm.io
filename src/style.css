@@ -44,23 +44,20 @@
 
 /* Projects */
 #projects {
-    width: 100vw !important;
+    width: 100% !important;
     height: 100% !important;
 }
 
 #project__cards {
     left: -25vw;
     width: 150vw;
-    height: 55vh;
-    position: absolute;
+    position: relative;
 }
 
 .project__card {
     top: 1em;
     width: 30vw;
     height: 50vh;
-    border: 1px solid;
-    /* padding: 2em; */
     margin: .5em;
     filter: grayscale(1);
     position: relative;

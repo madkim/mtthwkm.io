@@ -41,6 +41,8 @@ export default function Projects() {
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
       </div>
+
+      <br />
     
       <div id='project__arrows'>
         <div className='project__arrow'>
@@ -51,15 +53,6 @@ export default function Projects() {
         </div>
       </div>
       <br />
-
-      <Row>
-        <Col>
-          {/* Project Details */}
-          <div id='project__details' className='text-'>
-            <h1>This is the details area</h1>
-          </div>
-        </Col>
-      </Row>
       </div>
   )
 }
