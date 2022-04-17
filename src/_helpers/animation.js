@@ -22,7 +22,7 @@ export function animateHomePage() {
     duration: 1.5,
     backgroundColor: "red",
   });
-  gsap.to(".home__navbar", {
+  gsap.to(".navbar", {
     opacity: 1,
     ease: "power",
     delay: 2,

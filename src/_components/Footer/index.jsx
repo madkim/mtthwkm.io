@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 export default function Footer() {
   return (
     <Container>
-      <div id='footer' className='p-5'>
+      <div id='footer' className='p-5 text-light'>
         <h1>Footer</h1>
       </div>
     </Container>

@@ -3,6 +3,52 @@
     cursor: pointer;
 }
 
+/* Navbar */
+.navbar {
+    color: white;
+    padding: 2em;
+    /* opacity: 0; */
+    opacity: 1;
+    text-align: right;
+}
+
+.navbar--item {
+    color: white;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+.navbar--active, 
+.navbar--item:hover {
+    color: yellow;
+    cursor: pointer;
+    transform: translate(5px, 0px) !important;
+}
+
+.navbar--icon {
+    color: yellow;
+}
+
+/* About */
+#about {
+    height: 100vh;
+}
+
+/* Contact */
+#contact {
+    height: 100vh;
+}
+
+/* Projects */
+#projects {
+    height: 100vh;
+}
+
+/* Work */
+#work {
+    height: 100vh;
+}
+
 /* Home */
 #home {
     height: 100vh;
@@ -12,29 +58,6 @@
     color: white;
     height: 150vh;
     background-color: black;
-}
-
-.home__navbar {
-    color: white;
-    padding: 2em;
-    opacity: 0;
-    text-align: right;
-}
-
-.home__navbar--item {
-    color: white;
-    text-decoration: none;
-    transition: transform .2s;
-}
-
-.home__navbar--item:hover {
-    color: yellow;
-    cursor: pointer;
-    transform: translate(5px, 0px) !important;
-}
-
-.home__navbar--icon {
-    color: yellow;
 }
 
 .home__title {

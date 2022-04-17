@@ -2,7 +2,7 @@ import React, { useEffect, Fragment } from 'react'
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import Navbar from './Components/Navbar'
+import Navbar from '../../_components/Navbar'
 
 export default function Home() {
 

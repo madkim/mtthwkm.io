@@ -7,6 +7,7 @@ class MainLayout extends Component {
   render() {
     return (
       <Fragment>
+        <br />
         <Outlet />
         <Footer />
       </Fragment>
