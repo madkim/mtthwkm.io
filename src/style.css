@@ -51,14 +51,14 @@
     background-color: yellow !important;
 }
 
-.title__1:hover {
+.home__title--1:hover {
     background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 0% !important;
 }
-.title__2:hover {
+.home__title--2:hover {
     color: white;
     background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 50% !important;
 }
-.title__3:hover {
+.home__title--3:hover {
     color: white;
     background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 100% !important;
 }

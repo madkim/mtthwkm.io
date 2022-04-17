@@ -19,24 +19,22 @@ export default function Home() {
       <Container id="home">
         <Navbar />
 
-        <Row className='mt-5 home__title title__1'>
+        <Row className='mt-5 home__title home__title--1'>
           <Col>
             this is a
           </Col>
         </Row>
-
-        <Row className='mt-5 home__title title__2'>
+        <Row className='mt-5 home__title home__title--2'>
           <Col>
             design 
           </Col>
         </Row>
-
-        <Row className='mt-5 home__title title__3'>
+        <Row className='mt-5 home__title home__title--3'>
           <Col>
             website
           </Col>
         </Row>
-
+        
         <Row className='home__scroll'>
           <Col xs='auto'>
             <div onClick={handleScroll} className='home__scroll--text text-light'>
