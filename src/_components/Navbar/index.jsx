@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
+import { Link, useLocation } from 'react-router-dom'
 
-import history from '../../_helpers/history'
 import classNames from 'classnames'
 
 export default function Navbar() {
-  const [active, setActive] = useState(history.location.pathname)
+  const location = useLocation()
+
+  const [active, setActive] = useState(location.pathname)
 
   useEffect(() => {
-    setActive(history.location.pathname)
-  }, [history.location.pathname])
+    setActive(location.pathname)
+  }, [location.pathname])
 
   const showIcon = (page) => {
     return active === page ? 'opacity-100' :'opacity-0' 
@@ -29,7 +30,7 @@ export default function Navbar() {
           <div 
             className={pageActive('/home')}
             onMouseEnter={() => setActive('/home')}
-            onMouseLeave={() => setActive(history.location.pathname)}
+            onMouseLeave={() => setActive(location.pathname)}
           >
             home
           </div>
@@ -38,7 +39,7 @@ export default function Navbar() {
           <div 
             className={pageActive('/about')}
             onMouseEnter={() => setActive('/about')}
-            onMouseLeave={() => setActive(history.location.pathname)}
+            onMouseLeave={() => setActive(location.pathname)}
           >
             about
           </div>
@@ -47,7 +48,7 @@ export default function Navbar() {
           <div 
             className={pageActive('/work')}
             onMouseEnter={() => setActive('/work')}
-            onMouseLeave={() => setActive(history.location.pathname)}
+            onMouseLeave={() => setActive(location.pathname)}
           >
             work
           </div>
@@ -56,7 +57,7 @@ export default function Navbar() {
           <div 
             className={pageActive('/projects')}
             onMouseEnter={() => setActive('/projects')}
-            onMouseLeave={() => setActive(history.location.pathname)}
+            onMouseLeave={() => setActive(location.pathname)}
           >
             projects
           </div>
@@ -65,7 +66,7 @@ export default function Navbar() {
           <div 
             className={pageActive('/contact')}
             onMouseEnter={() => setActive('/contact')}
-            onMouseLeave={() => setActive(history.location.pathname)}
+            onMouseLeave={() => setActive(location.pathname)}
           >
             contact
           </div>
@@ -74,7 +75,7 @@ export default function Navbar() {
       <Col xs='1' style={{width: '1px'}}>
         <Row>
           <Col className={showIcon("/home")}>
-            <i class="navbar--icon fa-light fa-alien-8bit"></i>
+            <i className="navbar--icon fa-light fa-alien-8bit"></i>
           </Col>
         </Row>
         <Row>

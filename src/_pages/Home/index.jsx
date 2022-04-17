@@ -17,8 +17,6 @@ export default function Home() {
   return (
     <Fragment>
       <Container id="home">
-        <Navbar />
-
         <Row className='mt-5 home__title home__title--1'>
           <Col>
             this is a

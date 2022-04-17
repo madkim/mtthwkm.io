@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap'
 export default function Contact() {
   return (
     <Container id="contact">
-        <Navbar />
+
       </Container>
   )
 }
