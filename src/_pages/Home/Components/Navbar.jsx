@@ -30,41 +30,41 @@ export default function Navbar() {
   return (
     <Row className='home__navbar justify-content-end'>
       <Col xs='auto'>
-          <Link to="/about" className='text-decoration-none'>
-            <div 
-              className='home__navbar--item'
-              onMouseEnter={() => setShowIcon('about')}
-              onMouseLeave={() => setShowIcon('')}
-            >
+        <Link to="/about" className='text-decoration-none'>
+          <div 
+            className='home__navbar--item'
+            onMouseEnter={() => setShowIcon('about')}
+            onMouseLeave={() => setShowIcon('')}
+          >
             about
-            </div>
+          </div>
         </Link>
         <Link to="/work" className='text-decoration-none'>
-            <div 
-              className='home__navbar--item'
-              onMouseEnter={() => setShowIcon('work')}
-              onMouseLeave={() => setShowIcon('')}
-            >
+          <div 
+            className='home__navbar--item'
+            onMouseEnter={() => setShowIcon('work')}
+            onMouseLeave={() => setShowIcon('')}
+          >
             work
-            </div>
+          </div>
         </Link>
         <Link to="/projects" className='text-decoration-none'>
-            <div 
-              className='home__navbar--item'
-              onMouseEnter={() => setShowIcon('projects')}
-              onMouseLeave={() => setShowIcon('')}
-            >
+          <div 
+            className='home__navbar--item'
+            onMouseEnter={() => setShowIcon('projects')}
+            onMouseLeave={() => setShowIcon('')}
+          >
             projects
-            </div>
+          </div>
         </Link>
         <Link to="/contact" className='text-decoration-none'>
-            <div 
-              className='home__navbar--item'
-              onMouseEnter={() => setShowIcon('contact')}
-              onMouseLeave={() => setShowIcon('')}
-            >
+          <div 
+            className='home__navbar--item'
+            onMouseEnter={() => setShowIcon('contact')}
+            onMouseLeave={() => setShowIcon('')}
+          >
             contact
-            </div>
+          </div>
         </Link>
       </Col>
       <Col xs='1' style={{width: '1px'}}>
