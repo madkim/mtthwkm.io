@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Row, Col, Card, FloatingLabel, Form } from 'react-bootstrap'
 
 export default function Contact() {
 
@@ -18,40 +18,41 @@ export default function Contact() {
       <br />
       <Row>
         <Col xs={{span: 8, offset: 2}}>
-          <Card >
-            <Card.Body>
-              <Row>
-                <Col>
-                  <TextField fullWidth label="Name" id="fullWidth" />
-                </Col>
-              </Row>
-              <br />
-              <Row>
-                <Col>
-                  <TextField fullWidth label="Email" id="fullWidth" />
-                </Col>
-              </Row>
-              <br />
-              <Row>
-                <Col>
-                  <TextField
-                    id="standard-multiline-static"
-                    fullWidth
-                    label="Details"
-                    multiline
-                    rows={4}
-                    variant="standard"
+          <div >
+            <Row>
+              <Col>
+                <FloatingLabel controlId="floatingName" label="Name">
+                  <Form.Control type="text" placeholder="Name" />
+                </FloatingLabel>
+              </Col>
+            </Row>
+            <br />
+            <Row>
+              <Col>
+                <FloatingLabel controlId="floatingEmail" label="Email">
+                  <Form.Control type="email" placeholder="Email" />
+                </FloatingLabel>
+              </Col>
+            </Row>
+            <br />
+            <Row>
+              <Col>
+                <FloatingLabel controlId="floatingTextarea" label="Details">
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    style={{ height: '100px' }}
                   />
-                </Col>
-              </Row>
-              <br />
-              <Row>
-                <Col>
-                  <Button fullWidth size='large' variant="contained" style={{background: 'forestgreen'}} >Say Hi &nbsp;<i className="fa-solid fa-hand-wave"></i></Button>
-                </Col>
-              </Row>
-            </Card.Body>
-          </Card>
+                </FloatingLabel>
+              </Col>
+            </Row>
+            <br />
+            <Row>
+              <Col>
+                <Button fullWidth size='large' variant="contained" style={{background: 'forestgreen'}} >Say Hi &nbsp;<i className="fa-solid fa-hand-wave"></i></Button>
+              </Col>
+            </Row>
+          </div>
         </Col>
       </Row>
     </Container>
