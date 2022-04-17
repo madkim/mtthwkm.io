@@ -26,9 +26,13 @@ export default function Navbar() {
     })
   }
 
+  const navCols = classNames({
+    'navbar--contact': location.pathname === '/contact'
+  })
+
   return (
     <Row ref={navRef} className='navbar justify-content-end'>
-      <Col xs='auto'>
+      <Col xs='auto' className={navCols}>
         <Link to="/home" className='text-decoration-none'>
           <div 
             className={pageActive('/home')}
@@ -75,7 +79,7 @@ export default function Navbar() {
           </div>
         </Link>
       </Col>
-      <Col xs='1' style={{width: '1px'}}>
+      <Col xs='1' style={{width: '1px'}} className={navCols}>
         <Row>
           <Col className={showIcon("/home")}>
             <i className="navbar--icon fa-light fa-alien-8bit"></i>

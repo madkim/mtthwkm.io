@@ -11,6 +11,10 @@
     text-align: right;
 }
 
+.navbar--contact {
+    background: #4f8ee1d4;
+}
+
 .navbar--item {
     color: white;
     text-decoration: none;
