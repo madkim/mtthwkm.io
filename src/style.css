@@ -136,34 +136,37 @@
 
 #home__details {
     color: white;
-    height: 150vh;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: black;
 }
 
 .home__title {
     color: black;
+    height: 22vh;
     font-size: 50px;
     text-align: center;
     background-color: black;
-    transition: font-size .5s;
+    transition: font-size .2s, height .2s;
 }
+
 
 .home__title:hover {
     cursor: default !important;
-    font-size: 150px;
-    background-color: yellow !important;
+    font-size: 125px;
 }
 
+.home__title--2:hover,
+.home__title--3:hover,
 .home__title--1:hover {
-    background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 0% !important;
-}
-.home__title--2:hover {
     color: white;
-    background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 50% !important;
-}
-.home__title--3:hover {
-    color: white;
-    background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 100% !important;
+    background-image: url("https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .home__scroll {
@@ -183,15 +186,11 @@
 }
 
 .home__parallax {
-    /* The image used */
     background-image: url("https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox");
-
-    /* Full height */
+  
     height: 100vh;
-    
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }

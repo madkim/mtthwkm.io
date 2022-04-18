@@ -12,7 +12,7 @@ export default function ProjectCard({ image, status = '', select }) {
 
   return (
     <div onClick={select} className={projectCard}>
-      <Image fluid src={image} style={{borderRadius: '1.5em 1.5em 0 0'}} />
+      <Image src={image} style={{borderRadius: '1.5em 1.5em 0 0', height: 'auto', width: '100%'}} />
       <div className='project__card--details p-3'>
         <h5>Project</h5>
         <p className='lead'>This is the short detail about the project</p>
