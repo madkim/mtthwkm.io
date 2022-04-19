@@ -76,13 +76,13 @@ export function animateProjectsPage() {
 
 export function animateContactPage() {
   gsap.to("#contact", {
-    ease: "power",
+    ease: "linear",
     opacity: 1,
     duration: 2,
   });
   gsap.to(".contact__form", {
     ease: "linear",
-    delay: 1,
+    delay: 2,
     opacity: 1,
     duration: 1,
   });

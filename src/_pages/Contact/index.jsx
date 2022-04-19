@@ -42,7 +42,7 @@ export default function Contact() {
                       fullWidth
                       multiline
                       rows={4}
-                      label="Details"
+                      label="Lets talk ˙ᵕ˙"
                       variant="standard"
                     />
                 </Col>
