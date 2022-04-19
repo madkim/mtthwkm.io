@@ -82,7 +82,7 @@ export function animateContactPage() {
   });
   gsap.to(".contact__form", {
     ease: "linear",
-    delay: 4,
+    delay: 1,
     opacity: 1,
     duration: 1,
   });
