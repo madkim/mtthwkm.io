@@ -1,13 +1,14 @@
 import React, { useEffect, Fragment, useState, useRef } from 'react'
+import Navbar from '../../_components/Navbar'
 import JTreeImg from '../../_assets/jtree.jpg'
 
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import Navbar from '../../_components/Navbar'
 
 export default function Home() {
   const homeDetailsRef = useRef(null)
   const [index, setIndex] = useState(0)
+  const [offset, setOffset] = useState(0)
 
   const nameArray = [
     'designer',
@@ -22,19 +23,30 @@ export default function Home() {
   ]
 
   useEffect(() => {
+    animateHomePage()
+   }, [])
+
+  useEffect(() => {
     setTimeout(() => {
       const newIndex = index + 1 
       setIndex(newIndex % nameArray.length)
     }, 2000);
   }, [index])
   
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
-   animateHomePage()
-  }, [])
+    homeDetailsRef.current.style.opacity = (offset - 1872) / 500
+  }, [offset])
 
   const handleScroll = () => {
-    homeDetailsRef.current.scrollIntoView()
+    const ref = homeDetailsRef.current.getBoundingClientRect()
+    window.scroll(0, ref.top + 500)
   }
 
   return (
@@ -42,6 +54,7 @@ export default function Home() {
       <Container id="home" fluid>
       <Row style={{position: 'fixed', right: 0}}>
         <Col>
+          <br />
           <Navbar />
         </Col>
       </Row>
@@ -63,30 +76,28 @@ export default function Home() {
       <div className="home__parallax--1"></div>
 
       <Container >
-        <div id='home__details'>
-          <div ref={homeDetailsRef} className='text-center'>
-            <div className='mt-5'>
-              <Image height={300} width={'100%'} src={JTreeImg}   style={{objectFit: 'cover'}}/>
-              <div className=' m-5  d-flex justify-content-center flex-row'>
-                <div className='text-center'>
-                  <p>Hello! I'm Matt <br />  Welcome to my website</p>
-                  <div>
-                    <p>I'm
-                        <br />
-                        a climber 
-                        <br /> 
-                        a music maker 
-                        <br /> 
-                        a Front End developer
-                        <br /> 
-                        an outdoor enthusiast 
-                        <br /> 
-                        a lover of all things coffee </p>
-                  </div>
-                  <p>Please feel free to look around and enjoy your stay</p> 
-                  <p>I'm happy you're here</p>
+        <div id='home__details--container'>
+          <div ref={homeDetailsRef} className='text-center home__details mb-5'>
+            <Image height={300} width={'100%'} src={JTreeImg}   style={{objectFit: 'cover'}}/>
+            <div className=' m-5  d-flex justify-content-center flex-row'>
+              <div className='text-center'>
+                <p>Hello! I'm Matt <br />  Welcome to my website</p>
+                <div>
+                  <p>I'm
+                      <br />
+                      a climber 
+                      <br /> 
+                      a music maker 
+                      <br /> 
+                      a Front End developer
+                      <br /> 
+                      an outdoor enthusiast 
+                      <br /> 
+                      a lover of all things coffee </p>
                 </div>
-            </div>
+                <p>Please feel free to look around and enjoy your stay</p> 
+                <p>I'm happy you're here</p>
+              </div>
             </div>
           </div>
         </div>

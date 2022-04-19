@@ -61,7 +61,6 @@ export function animateProjectsPage() {
 }
 
 // Contact Animations
-
 export function animateContactPage() {
   gsap.to("#contact", {
     ease: "linear",
