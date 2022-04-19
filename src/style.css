@@ -161,12 +161,13 @@
 
 /* Home */
 #home {
+    opacity: 0;
     height: 100vh;
 }
 
 #home__details {
     color: white;
-    height: 110vh;
+    height: 375vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -175,7 +176,7 @@
 
 .home__title {
     color: black;
-    height: 22vh;
+    height: 100vh;
     font-size: 50px;
     text-align: center;
     background-color: black;
@@ -183,14 +184,14 @@
 }
 
 
-.home__title:hover {
+.home__title {
     cursor: default !important;
     font-size: 125px;
 }
 
-.home__title--2:hover,
-.home__title--3:hover,
-.home__title--1:hover {
+.home__title--2,
+.home__title--3,
+.home__title--1 {
     background-image: url('./_assets/bishop.JPG');
     background-attachment: fixed;
     background-position: center;
@@ -198,25 +199,33 @@
     background-size: cover;
 }
 
-.home__title--1:hover {
+.home__title--1 {
   color: red;
 }
 
-.home__title--2:hover {
-  color: yellow;
+.home__title--2 {
+  color: red;
+  cursor: default !important;
+    font-size: 125px;
 }
 
-.home__title--3:hover {
+.home__title--3 {
   color: white;
 }
 
 .home__scroll {
     opacity: 0;
+    display: flex;
+    position: relative;
+    top: -10em;
+
+    justify-content: center;
 }
 
 .home__scroll--text {
-    color: white;
-    padding: 2em;
+    color: white !important;
+    background-color: red;
+    padding: .5em;
     transition: transform .5s, font-size .2s;
 }
 

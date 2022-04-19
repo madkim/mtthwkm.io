@@ -2,6 +2,11 @@ import gsap from "gsap";
 
 // Home Animations
 export function animateHomePage() {
+  gsap.to("#home", {
+    ease: "power",
+    duration: 1.5,
+    opacity: 1
+  });
   gsap.to(".home__title--1", {
     ease: "elastic",
     duration: 1.5,

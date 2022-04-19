@@ -1,10 +1,12 @@
-import React, { useEffect, Fragment, useState } from 'react'
+import React, { useEffect, Fragment, useState, useRef } from 'react'
 import JTreeImg from '../../_assets/jtree.jpg'
 
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
+import Navbar from '../../_components/Navbar'
 
 export default function Home() {
+  const homeDetailsRef = useRef(null)
   const [index, setIndex] = useState(0)
 
   const nameArray = [
@@ -32,33 +34,26 @@ export default function Home() {
   }, [])
 
   const handleScroll = () => {
-    document.getElementById('home__details').scrollIntoView()
+    homeDetailsRef.current.scrollIntoView()
   }
 
   return (
     <Fragment>
       <Container id="home" fluid>
-        <Row className='mt-3 home__title home__title--1'>
-          <Col className='d-flex align-items-center justify-content-around user-select-none'>
-            <div>this is a</div>
-            <div>&nbsp;</div>
-          </Col>
-        </Row>
+      <Row style={{position: 'fixed', right: 0}}>
+        <Col>
+          <Navbar />
+        </Col>
+      </Row>
         <Row className='home__title home__title--2'>
           <Col className='d-flex align-items-center justify-content-center user-select-none'>
-              {nameArray[index]}'s
-          </Col>
-        </Row>
-        <Row className='home__title home__title--3'>
-          <Col className='d-flex align-items-center justify-content-around user-select-none'>
-            <div>&nbsp;</div>
-            <div>website</div>
+              {nameArray[index]}
           </Col>
         </Row>
         
         <Row className='home__scroll'>
           <Col xs='auto'>
-            <div onClick={handleScroll} className='home__scroll--text text-light'>
+            <div onClick={handleScroll} className='home__scroll--text'>
               scroll down <i className="fa-solid fa-hand-point-down"></i>
             </div>
           </Col>
@@ -69,7 +64,7 @@ export default function Home() {
 
       <Container>
         <div id='home__details'>
-          <div className='text-center'>
+          <div ref={homeDetailsRef} className='text-center'>
             <Image height={500} width={500} src={JTreeImg} roundedCircle style={{objectFit: 'cover'}}/>
             <div className='lead mt-5'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id venenatis sapien. Praesent placerat mauris vel nunc iaculis lobortis. Donec vitae aliquam ipsum. Sed placerat consequat risus at posuere. Donec aliquet molestie euismod. Ut justo risus, pulvinar posuere scelerisque ut, aliquam nec purus. Praesent efficitur arcu lacus, in hendrerit nisl maximus sed. Sed nec metus at nulla viverra tincidunt eget quis ex. Vivamus feugiat lobortis mi id viverra. Aliquam euismod nisi ut ligula venenatis hendrerit. Etiam libero quam, sollicitudin ac viverra eu, auctor at justo. Vestibulum luctus consequat nisi vel dapibus. Vivamus id est pharetra, tincidunt nunc id, eleifend sapien.
