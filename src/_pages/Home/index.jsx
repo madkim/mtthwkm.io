@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <Fragment>
       <Container id="home" fluid>
-        <Row className='mt-5 home__title home__title--1'>
+        <Row className='mt-3 home__title home__title--1'>
           <Col className='d-flex align-items-center justify-content-around'>
             <div>this is a</div>
             <div>&nbsp;</div>
