@@ -32,12 +32,14 @@
     color: yellow;
 }
 
+
 /* Header */
 #header {
   top: 0;
   position: fixed;
   background-color: black;
 }
+
 
 /* Footer */
 #footer {
@@ -46,17 +48,25 @@
   background-color: black;
 }
 
+
 /* About */
 #about {
     height: 100vh;
 }
 
+
 /* Contact */
 #contact {
+    opacity: 0;
     height: 100vh;
     background-image: url('./_assets/bishop2.JPG');
     background-size: cover;
 }
+
+.contact__form {
+  opacity: 0;
+}
+
 
 /* Projects */
 #projects {
@@ -142,10 +152,12 @@
     opacity: 1;
 }
 
+
 /* Work */
 #work {
     height: 100vh;
 }
+
 
 /* Home */
 #home {

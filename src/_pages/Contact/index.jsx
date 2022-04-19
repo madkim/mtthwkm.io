@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react'
 import Button from '@mui/material/Button';
-import { TextField } from '@mui/material';
-import { Container, Row, Col } from 'react-bootstrap'
 import Navbar from '../../_components/Navbar';
 
+import { TextField } from '@mui/material';
+import { Container, Row, Col } from 'react-bootstrap'
+import { animateContactPage } from '../../_helpers/animation';
+
 export default function Contact() {
+  useEffect(() => {
+    animateContactPage()
+  }, [])
+
   return (
     <div id="contact" >
       <br />
@@ -13,7 +19,7 @@ export default function Contact() {
           <Navbar />
         </Col>
       </Row>
-      <Container >
+      <Container className="contact__form">
         <br />
         <Row>
           <Col xs={{span: 8, offset: 2}}>

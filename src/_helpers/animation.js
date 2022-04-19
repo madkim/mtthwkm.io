@@ -71,3 +71,19 @@ export function animateProjectsPage() {
     repeat: -1,
   });
 }
+
+// Contact Animations
+
+export function animateContactPage() {
+  gsap.to("#contact", {
+    ease: "power",
+    opacity: 1,
+    duration: 2,
+  });
+  gsap.to(".contact__form", {
+    ease: "linear",
+    delay: 4,
+    opacity: 1,
+    duration: 1,
+  });
+}
