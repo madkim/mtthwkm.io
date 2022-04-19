@@ -1,3 +1,6 @@
+123
+123
+
 - Host website on AWS S3?
 
 // Home Page About
@@ -36,6 +39,8 @@ As it was time to go off to college I got my first MacBook. I had played piano s
 
 In my first year of college, I remember not knowing what to do and being quite confused. I had a good friend who was taking an intro computer science course and seeing him write code which was immediately output to the screen was something that peaked my interest. The following quarter I enrolled in the intro to java course and the rest was history. 
 
+//internship at FieldTest
+
 After graduating I spent some time soul searching and trying to find what I wanted to do. Being a new grad was scary and definitely challenged me. I found myself in an intense bout of imposter syndrome, something I didn’t fully understand until I experiencing it. Luckily it just takes one person to give you a chance. In 2018 I worked at a small research facility that needed a full-stack developer to take over a project which handled patient records (similar to the EPIC system but much smaller scale). I gained insight into the inner workings of how a web application works from front to back.  I owe a lot to being able to have that opportunity and enjoyed the position very much.
 
 As with all things, at some point, they must come to an end. At the end of 2019 the facility I worked for was absorbed. It took a lot of thinking but I decided it was time for me to move on to bigger and better things! I finished my work, packed my bags and moved up to Sacramento, CA to live with my long time partner. During this time I picked up some odd jobs here and there, from helping a family friend with a website to working at a rock climbing gym. All of which came to a halt when the pandemic hit. 
@@ -54,6 +59,7 @@ Now you know a lot about me! Tell me about yourself! (Link to contact page)
 - Info about work (Online Resume) also probably link resume as well
     - AxS
     - DARF
+    - FieldTest
 - Letters of rec 
 - Detailed summary of work, photos/gifs of the platform, technologies used. 
 - Animated skill level for languages? 
@@ -67,12 +73,9 @@ Now you know a lot about me! Tell me about yourself! (Link to contact page)
 =======================================================================================
 
 // Projects Page
-- Projects
-    - Budget Project ( MOOLA)
-    - Say Project (Untitled)
-    - SlugSense 
-    - Rock Paper Scissors challenge
-    - SP_CE Project
+- Use GitHub API to show percent of language used, list top 3 languages for each project!
+- https://stackoverflow.com/questions/42371596/how-to-get-a-primary-or-a-list-of-languages-from-githubs-url-using-github-api 
+
 - Details
     - Date of project
     - Technologies used w/ icons
@@ -85,5 +88,41 @@ Now you know a lot about me! Tell me about yourself! (Link to contact page)
     - Add fixed (x) icon to close project details
     - Clicking outside or on another project closes the details
     - Hide other projects when opening project details? 
+- Projects
+    - Say Project (Untitled)
+        - May 2021
+        - React, Typescript, CSS, Firebase, Ionic/Capacitor, iOS/Android
+        - Summary
+        - https://github.com/madkim/SayProject 
+        - 
+    - Budget Project ( MOOLA)
+        - March 2021
+        - React, Typescript, Firebase, Ionic/Capacitor, iOS/Android
+        - Summary
+        - https://github.com/madkim/BudgetProject 
+        - 
+    - Rock Paper Scissors challenge
+        - Feb 2020
+        - Vue, Javascript, HTML & CSS
+        - Summary
+        - https://github.com/madkim/rock-paper-scissors-challenge/tree/axs-vue-project 
+
+    - SlugSense 
+        - Jan 2017
+        - iOS, Swift
+        - https://devpost.com/software/slugsense 
+
+    - Pure Data?
+        - Dec 2016
+        - Pure Data 
+        - https://github.com/madkim/Pure-Data/tree/master/Project2 
+
+
+    - SPACE Project
+        - Dec 2016
+        - Firebase, React Native, Android 
+        - https://github.com/joshuapena/space-mobile 
 
 =======================================================================================
+
+// Footer add Github and LinkedIn icons
