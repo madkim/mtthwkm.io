@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import Button from '@mui/material/Button';
 import BishopImg from '../../_assets/bishop2.JPG'
-import { Container, Row, Col, FloatingLabel, Form } from 'react-bootstrap'
+import { TextField } from '@mui/material';
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Contact() {
-
   useEffect(() => {
     document.body.style.backgroundImage = `url(${BishopImg})`;
     document.body.style.backgroundSize = `cover`;
@@ -22,35 +22,31 @@ export default function Contact() {
           <div >
             <Row>
               <Col>
-                <FloatingLabel controlId="floatingName" label="Name">
-                  <Form.Control type="text" placeholder="Name" />
-                </FloatingLabel>
+                <TextField fullWidth id="standard-basic" label="Name" variant="standard" />
               </Col>
             </Row>
             <br />
             <Row>
               <Col>
-                <FloatingLabel controlId="floatingEmail" label="Email">
-                  <Form.Control type="email" placeholder="Email" />
-                </FloatingLabel>
+                <TextField fullWidth id="standard-basic" label="Email" variant="standard" />
               </Col>
             </Row>
             <br />
             <Row>
               <Col>
-                <FloatingLabel controlId="floatingTextarea" label="Details">
-                  <Form.Control
-                    as="textarea"
-                    placeholder="Leave a comment here"
-                    style={{ height: '100px' }}
+                <TextField
+                    fullWidth
+                    multiline
+                    rows={4}
+                    label="Details"
+                    variant="standard"
                   />
-                </FloatingLabel>
               </Col>
             </Row>
             <br />
-            <Row>
+            <Row className='mt-2'>
               <Col>
-                <Button fullWidth size='large' variant="contained" style={{background: 'forestgreen', padding: '1em'}} ><i className="fa-solid fa-hand-wave"></i></Button>
+                <Button size='large' variant="contained" style={{background: 'forestgreen', padding: '1em', width: '200px'}} ><i className="fa-solid fa-hand-wave"></i></Button>
               </Col>
             </Row>
           </div>

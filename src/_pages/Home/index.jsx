@@ -17,18 +17,18 @@ export default function Home() {
     <Fragment>
       <Container id="home" fluid>
         <Row className='mt-3 home__title home__title--1'>
-          <Col className='d-flex align-items-center justify-content-around'>
+          <Col className='d-flex align-items-center justify-content-around user-select-none'>
             <div>this is a</div>
             <div>&nbsp;</div>
           </Col>
         </Row>
         <Row className='home__title home__title--2'>
-          <Col className='d-flex align-items-center justify-content-center'>
+          <Col className='d-flex align-items-center justify-content-center user-select-none'>
               design 
           </Col>
         </Row>
         <Row className='home__title home__title--3'>
-          <Col className='d-flex align-items-center justify-content-around'>
+          <Col className='d-flex align-items-center justify-content-around user-select-none'>
             <div>&nbsp;</div>
             <div>website</div>
           </Col>

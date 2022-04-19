@@ -50,17 +50,22 @@ export function animateHomePage() {
 
 // Projects Animations
 export function animateProjectsPage() {
+  gsap.to("#project__cards", {
+    ease: "linear",
+    opacity: 1,
+    duration: .2,
+  });
   gsap.to(".project__click__me", {
     y: -10,
     opacity: 1,
     ease: "power",
-    delay: 1,
+    delay: 2,
     duration: 1,
   });
   gsap.to(".project__click__me", {
     y: 10,
     ease: "linear",
-    delay: 2,
+    delay: 3,
     duration: 1,
     yoyo: true,
     repeat: -1,

@@ -12,7 +12,7 @@ export default function Footer() {
   }, [location.pathname])
 
   return (
-    <div ref={footerRef} id='footer' className='py-1 text-light text-center w-100 lead'>
+    <div ref={footerRef} id='footer' className='py-1 text-light text-center w-100 lead user-select-none'>
       mtthwkm.io
     </div>
   )
