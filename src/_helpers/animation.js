@@ -32,14 +32,14 @@ export function animateHomePage() {
     duration: 1,
   });
   gsap.to(".home__scroll", {
-    y: 50,
+    y: 40,
     opacity: 1,
     ease: "power",
     delay: 2,
     duration: 1,
   });
   gsap.to(".home__scroll", {
-    y: 30,
+    y: 20,
     ease: "linear",
     delay: 3,
     duration: 1,

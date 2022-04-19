@@ -1,10 +1,32 @@
-import React, { useEffect, Fragment } from 'react'
+import React, { useEffect, Fragment, useState } from 'react'
 import JTreeImg from '../../_assets/jtree.jpg'
 
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 
 export default function Home() {
+  const [index, setIndex] = useState(0)
+
+  const nameArray = [
+    'designer',
+    'developer',
+    'rock climber',
+    'programmer',
+    'musician',
+    'lover',
+    'coffee drinker',
+    'thinker',
+    'D R E A M E R',
+  ]
+
+  useEffect(() => {
+    setTimeout(() => {
+      const newIndex = index + 1 
+      setIndex(newIndex % nameArray.length)
+    }, 2000);
+  }, [index])
+  
+
   useEffect(() => {
    animateHomePage()
   }, [])
@@ -24,7 +46,7 @@ export default function Home() {
         </Row>
         <Row className='home__title home__title--2'>
           <Col className='d-flex align-items-center justify-content-center user-select-none'>
-              design 
+              {nameArray[index]}'s
           </Col>
         </Row>
         <Row className='home__title home__title--3'>

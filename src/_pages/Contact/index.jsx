@@ -26,13 +26,13 @@ export default function Contact() {
             <div >
               <Row>
                 <Col>
-                  <TextField fullWidth id="standard-basic" label="Name" variant="standard" />
+                  <TextField fullWidth id="standard-basic" label="name" variant="standard" />
                 </Col>
               </Row>
               <br />
               <Row>
                 <Col>
-                  <TextField fullWidth id="standard-basic" label="Email" variant="standard" />
+                  <TextField fullWidth id="standard-basic" label="email" variant="standard" />
                 </Col>
               </Row>
               <br />
@@ -42,7 +42,7 @@ export default function Contact() {
                       fullWidth
                       multiline
                       rows={4}
-                      label="Lets talk ˙ᵕ˙"
+                      label="lets talk"
                       variant="standard"
                     />
                 </Col>
