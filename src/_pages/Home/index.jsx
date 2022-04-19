@@ -62,7 +62,7 @@ export default function Home() {
 
       <div className="home__parallax--1"></div>
 
-      <Container>
+      <Container >
         <div id='home__details'>
           <div ref={homeDetailsRef} className='text-center'>
             <div className='mt-5'>

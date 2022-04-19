@@ -162,7 +162,13 @@
 /* Home */
 #home {
     opacity: 0;
-    height: 100vh;
+    height: 100%;
+
+    background-image: url('./_assets/bishop.JPG');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #home__details {
@@ -171,15 +177,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: black;
+    /* background-color: black; */
 }
 
+/* .home__details--container {
+  background: linear-gradient(#ffff,#0000, #005bc2)
+} */
+
 .home__title {
-    color: black;
+    /* color: black; */
     height: 100vh;
     font-size: 50px;
     text-align: center;
-    background-color: black;
+    /* background-color: black; */
     transition: font-size .2s, height .2s;
 }
 
@@ -189,7 +199,7 @@
     font-size: 125px;
 }
 
-.home__title--2,
+/* .home__title--2,
 .home__title--3,
 .home__title--1 {
     background-image: url('./_assets/bishop.JPG');
@@ -197,7 +207,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .home__title--1 {
   color: red;

@@ -7,23 +7,6 @@ export function animateHomePage() {
     duration: 1.5,
     opacity: 1
   });
-  gsap.to(".home__title--1", {
-    ease: "elastic",
-    duration: 1.5,
-    backgroundColor: "red",
-  });
-  gsap.to(".home__title--2", {
-    ease: "elastic",
-    delay: 0.5,
-    duration: 1.5,
-    backgroundColor: "red",
-  });
-  gsap.to(".home__title--3", {
-    ease: "elastic",
-    delay: 1,
-    duration: 1.5,
-    backgroundColor: "red",
-  });
   gsap.to(".navbar", {
     opacity: 1,
     ease: "power",
