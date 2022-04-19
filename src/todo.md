@@ -120,7 +120,7 @@ Now you know a lot about me! Tell me about yourself! (Link to contact page)
 
     - SPACE Project
         - Dec 2016
-        - Firebase, React Native, Android 
+        - Firebase, React Native, Javascript, Android 
         - https://github.com/joshuapena/space-mobile 
 
 =======================================================================================
