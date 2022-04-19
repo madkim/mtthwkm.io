@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import { Container, Row, Col, Card, FloatingLabel, Form } from 'react-bootstrap'
+import BishopImg from '../../_assets/bishop2.JPG'
+import { Container, Row, Col, FloatingLabel, Form } from 'react-bootstrap'
 
 export default function Contact() {
 
   useEffect(() => {
-    document.body.style.background = 'url("https://images.unsplash.com/photo-1610878180933-123728745d22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80") center/100% fixed no-repeat';
+    document.body.style.backgroundImage = `url(${BishopImg})`;
+    document.body.style.backgroundSize = `cover`;
 
     return () => {
       document.body.style.background = 'black';
@@ -49,7 +50,7 @@ export default function Contact() {
             <br />
             <Row>
               <Col>
-                <Button fullWidth size='large' variant="contained" style={{background: 'forestgreen'}} >Say Hi &nbsp;<i className="fa-solid fa-hand-wave"></i></Button>
+                <Button fullWidth size='large' variant="contained" style={{background: 'forestgreen', padding: '1em'}} ><i className="fa-solid fa-hand-wave"></i></Button>
               </Col>
             </Row>
           </div>
