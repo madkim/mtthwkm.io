@@ -1,53 +1,86 @@
 import gsap from "gsap";
 
+    // import ScrollTrigger from 'gsap/ScrollTrigger'
+
+    // gsap.registerPlugin(ScrollTrigger)
+
+    // gsap.to("#home__details--container", {
+    //   scrollTrigger: ".home__details", 
+    //   ease: 'linear',
+    //   opacity: 0
+    // });
+
 // Home Animations
 export function animateHomePage() {
-  gsap.to(".title__1", {
-    x: 100,
-    ease: "elastic",
+  gsap.to("#home", {
+    ease: "power",
     duration: 1.5,
-    backgroundColor: "red",
+    opacity: 1
   });
-  gsap.to(".title__2", {
-    x: -100,
-    ease: "elastic",
-    delay: 0.5,
-    duration: 1.5,
-    backgroundColor: "red",
+  gsap.to(".navbar", {
+    opacity: 1,
+    ease: "power",
+    delay: 2,
+    duration: 1,
   });
-  gsap.to(".title__3", {
-    x: 100,
-    ease: "elastic",
-    delay: 1,
-    duration: 1.5,
-    backgroundColor: "red",
-  });
-  gsap.to(".home__navbar", {
+  gsap.to("#footer", {
     opacity: 1,
     ease: "power",
     delay: 2,
     duration: 1,
   });
   gsap.to(".home__scroll", {
-    y: 50,
+    y: 40,
     opacity: 1,
     ease: "power",
     delay: 2,
     duration: 1,
   });
   gsap.to(".home__scroll", {
-    y: 50,
-    opacity: 1,
-    ease: "power",
-    delay: 2,
-    duration: 1,
-  });
-  gsap.to(".home__scroll", {
-    y: 30,
+    y: 20,
     ease: "linear",
     delay: 3,
     duration: 1,
     yoyo: true,
     repeat: -1,
+  });
+}
+
+// Projects Animations
+export function animateProjectsPage() {
+  gsap.to("#project__cards", {
+    ease: "linear",
+    opacity: 1,
+    duration: .2,
+  });
+  gsap.to(".project__click__me", {
+    y: -10,
+    opacity: 1,
+    ease: "power",
+    delay: 2,
+    duration: 1,
+  });
+  gsap.to(".project__click__me", {
+    y: 10,
+    ease: "linear",
+    delay: 3,
+    duration: 1,
+    yoyo: true,
+    repeat: -1,
+  });
+}
+
+// Contact Animations
+export function animateContactPage() {
+  gsap.to("#contact", {
+    ease: "linear",
+    opacity: 1,
+    duration: 2,
+  });
+  gsap.to(".contact__form", {
+    ease: "linear",
+    delay: 2,
+    opacity: 1,
+    duration: 1,
   });
 }

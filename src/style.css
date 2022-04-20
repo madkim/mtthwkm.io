@@ -3,92 +3,252 @@
     cursor: pointer;
 }
 
-/* Home */
-#home {
-    height: 100vh;
-}
-
-#home__details {
-    color: white;
-    height: 150vh;
-    background-color: black;
-}
-
-.home__navbar {
+/* Navbar */
+.navbar {
     color: white;
     padding: 2em;
-    opacity: 0;
+    opacity: 1;
     text-align: right;
 }
 
-.home__navbar--item {
+.navbar--contact {
+    background: #4f8ee1d4;
+}
+
+.navbar--item {
     color: white;
     text-decoration: none;
     transition: transform .2s;
 }
 
-.home__navbar--item:hover {
+.navbar--active, 
+.navbar--item:hover {
     color: yellow;
     cursor: pointer;
     transform: translate(5px, 0px) !important;
 }
 
-.home__navbar--icon {
+.navbar--icon {
     color: yellow;
 }
 
-.home__title {
-    color: black;
-    text-align: center;
-    font-size: 50px;
-    background-color: black;
-    transition: font-size .5s;
+
+/* Header */
+#header {
+  top: 0;
+  position: fixed;
+  background-color: black;
 }
 
-.home__title:hover {
-    cursor: default !important;
-    font-size: 150px;
-    background-color: yellow !important;
+
+/* Footer */
+#footer {
+  bottom: 0;
+  position: fixed;
+  background-color: black;
 }
 
-.title__1:hover {
-    background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 0% !important;
-}
-.title__2:hover {
-    color: white;
-    background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 50% !important;
-}
-.title__3:hover {
-    color: white;
-    background: url('https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox') no-repeat left 100% !important;
-}
 
-.home__scroll {
-    opacity: 0;
-}
-
-.home__scroll--text {
-    color: white;
-    padding: 2em;
-    transition: transform .5s, font-size .2s;
-}
-
-.home__scroll--text:hover {
-    color: yellow !important;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.home__parallax {
-    /* The image used */
-    background-image: url("https://www.inyocounty.us/sites/default/files/styles/front_/public/2020-12/sierra-snow_0.JPG?h=6f8e8448&itok=pOWYlqox");
-
-    /* Full height */
+/* About */
+#about {
     height: 100vh;
-    
-    /* Create the parallax scrolling effect */
+}
+
+
+/* Contact */
+#contact {
+    opacity: 0;
+    height: 100vh;
+    background-image: url('./_assets/bishop2.JPG');
+    background-size: cover;
+}
+
+.contact__form {
+  opacity: 0;
+}
+
+
+/* Projects */
+#projects {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#project__cards {
+    left: -19vw;
+    width: 140vw;
+    opacity: 0;
+    display: flex;
+    position: relative;
+    transition: opacity 1s;
+    align-items: center;
+}
+
+.project__click__me {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project__card {
+    top: 1em;
+    width: 30vw;
+    height: 50vh;
+    margin: .5em;
+    filter: grayscale(1);
+    position: relative;
+    transition: filter .2s, top .5s, width .5s, height .5s;
+    background: white;
+    border-radius: 1.5em;
+}
+
+.project__card--first,
+.project__card--last {
+    top: 2em;
+    width: 25vw;
+    height: 45vh;
+}
+
+.project__card--active,
+.project__card:hover {
+    top: 0em;
+    width: 35vw;
+    height: 55vh;
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+.project__card--show {
+    top: 0em;
+    width: 100% !important;
+    height: 100% !important;
+    filter: grayscale(0);
+}
+
+#project__arrows {
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    z-index: 99;
+    background-color: black;
+}
+
+.project__arrow {
+    color: white;
+    opacity: .5;
+    transition: opacity .5s;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
+.project__arrow:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+/* Work */
+#work {
+    height: 100vh;
+}
+
+
+/* Home */
+#home {
+    opacity: 0;
+    height: 100%;
+
+    background-image: url('./_assets/bishop.JPG');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#home__details--container {
+    color: white;
+    height: 375vh;
+    background: url('./_assets/bishop.JPG') no-repeat fixed center;
+    background-size: cover;
+}
+
+.home__details--background {
+    opacity: 0;
+    background-color: black;
+}
+
+.home__details {
+    top: 20vh;
+    opacity: 0;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.home__title {
+    height: 100vh;
+    font-size: 50px;
+    text-align: center;
+    transition: font-size .2s, height .2s;
+}
+
+.home__title {
+    cursor: default !important;
+    font-size: 125px;
+}
+
+.home__title--1 {
+  color: red;
+}
+
+.home__title--2 {
+  color: red;
+  cursor: default !important;
+  font-size: 125px;
+}
+
+.home__title--3 {
+  color: white;
+}
+
+.home__scroll {
+  top: -10em;
+  opacity: 0;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.home__scroll--text {
+    color: white !important;
+    background-color: red;
+    padding: .5em;
+    transition: transform .5s, font-size .2s;
+}
+
+.home__scroll--text:hover {
+    color: red !important;
+    background-color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.home__parallax--1 {
+    background-image: url('./_assets/bishop.JPG');
+}
+.home__parallax--2 {
+    background-image: url('./_assets/jtree.jpg');
+}
+.home__parallax--1, 
+.home__parallax--2 {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }

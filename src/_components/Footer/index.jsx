@@ -1,12 +1,19 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import React, { useRef, useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
+  const footerRef = useRef(null)
+  const location = useLocation()
+  
+  useEffect(() => {
+    if (location.pathname === '/home') {
+      footerRef.current.style.opacity = 0;
+    }
+  }, [location.pathname])
+
   return (
-    <Container>
-      <div id='footer' className='p-5'>
-        <h1>Footer</h1>
-      </div>
-    </Container>
+    <div ref={footerRef} id='footer' className='py-1 text-light text-center w-100 lead user-select-none'>
+      mtthwkm.io
+    </div>
   )
 }
