@@ -1,8 +1,6 @@
 import React, { useEffect, Fragment, useState, useRef } from 'react'
-import gsap from 'gsap'
 import Navbar from '../../_components/Navbar'
 import JTreeImg from '../../_assets/jtree.jpg'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
@@ -27,16 +25,9 @@ export default function Home() {
   ]
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' })
-    animateHomePage()
-
-    // gsap.registerPlugin(ScrollTrigger)
-
-    // gsap.to("#home__details--container", {
-    //   scrollTrigger: ".home__details", 
-    //   ease: 'linear',
-    //   opacity: 0
-    // });
+    setTimeout(() => {
+      animateHomePage()
+    }, 200);
    }, [])
 
   useEffect(() => {
@@ -66,7 +57,7 @@ export default function Home() {
   return (
     <Fragment>
       <Container id="home" fluid>
-      <Row style={{position: 'fixed', right: 0}}>
+      <Row style={{position: 'fixed', right: 0, zIndex: 99}}>
         <Col>
           <br />
           <Navbar />

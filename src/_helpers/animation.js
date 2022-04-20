@@ -1,5 +1,15 @@
 import gsap from "gsap";
 
+    // import ScrollTrigger from 'gsap/ScrollTrigger'
+
+    // gsap.registerPlugin(ScrollTrigger)
+
+    // gsap.to("#home__details--container", {
+    //   scrollTrigger: ".home__details", 
+    //   ease: 'linear',
+    //   opacity: 0
+    // });
+
 // Home Animations
 export function animateHomePage() {
   gsap.to("#home", {
