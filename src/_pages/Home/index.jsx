@@ -1,12 +1,16 @@
 import React, { useEffect, Fragment, useState, useRef } from 'react'
+import gsap from 'gsap'
 import Navbar from '../../_components/Navbar'
 import JTreeImg from '../../_assets/jtree.jpg'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 
 export default function Home() {
   const homeDetailsRef = useRef(null)
+  const homeDetailsBgRef = useRef(null)
+
   const [index, setIndex] = useState(0)
   const [offset, setOffset] = useState(0)
 
@@ -23,7 +27,16 @@ export default function Home() {
   ]
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' })
     animateHomePage()
+
+    // gsap.registerPlugin(ScrollTrigger)
+
+    // gsap.to("#home__details--container", {
+    //   scrollTrigger: ".home__details", 
+    //   ease: 'linear',
+    //   opacity: 0
+    // });
    }, [])
 
   useEffect(() => {
@@ -42,11 +55,12 @@ export default function Home() {
 
   useEffect(() => {
     homeDetailsRef.current.style.opacity = (offset - 1872) / 500
+    homeDetailsBgRef.current.style.opacity = (offset - 1000) / 1000
   }, [offset])
 
   const handleScroll = () => {
     const ref = homeDetailsRef.current.getBoundingClientRect()
-    window.scroll(0, ref.top + 500)
+    window.scroll(0, ref.top + 1800)
   }
 
   return (
@@ -73,11 +87,11 @@ export default function Home() {
         </Row>
       </Container>
 
-      <div className="home__parallax--1"></div>
+      {/* <div className="home__parallax--1"></div> */}
 
-      <Container >
-        <div id='home__details--container'>
-          <div ref={homeDetailsRef} className='text-center home__details mb-5'>
+      <div id='home__details--container'>
+        <div ref={homeDetailsBgRef} className='home__details--background h-100'>
+          <div ref={homeDetailsRef} className='text-center home__details mb-5 container'>
             <Image height={300} width={'100%'} src={JTreeImg}   style={{objectFit: 'cover'}}/>
             <div className=' m-5  d-flex justify-content-center flex-row'>
               <div className='text-center'>
@@ -101,7 +115,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
       
       <div className="home__parallax--2"></div>
     </Fragment>
