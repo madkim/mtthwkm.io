@@ -24,7 +24,7 @@ export default function Timeline() {
         </h3>
         <h4 className="vertical-timeline-element-subtitle">Redlands, CA</h4>
         <p>
-          Python development intern
+        <i className="fa-brands fa-react"></i> React Front-End Developer
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -36,9 +36,9 @@ export default function Timeline() {
       >
         <h3 className="vertical-timeline-element-title">Full-Stack Developer @ Donaldson Arthritis Research Foundation</h3>
         <h4 className="vertical-timeline-element-subtitle">Colton, CA</h4>
-        <p>
-          Python development intern
-        </p>
+        <p><b>Front-End:</b> <i className="fa-brands fa-js"></i> Javascript, JQuery, <i className="fa-brands fa-html5"></i> HTML, <i className="fa-brands fa-css3"></i> CSS</p>
+        <p><b>Back-End:</b> <i className="fa-brands fa-laravel"></i> Laravel, <i className="fa-brands fa-php"></i> PHP</p>
+        <p><b>Database:</b> MySQL</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         date="2017"
@@ -50,7 +50,7 @@ export default function Timeline() {
         <h3 className="vertical-timeline-element-title">Graduated College</h3>
         <h4 className="vertical-timeline-element-subtitle">University of California Santa Cruz</h4>
         <p>
-          Bachelor Degree in Computer Science
+        <i className="fa-solid fa-graduation-cap"></i> Bachelor Degree in Computer Science
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -72,7 +72,7 @@ export default function Timeline() {
         </h3>
         <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
         <p>
-          Python development intern
+        <i className="fa-brands fa-python"></i> Python development intern
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
