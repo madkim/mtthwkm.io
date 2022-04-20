@@ -43,6 +43,12 @@ export default function About() {
       duration: 1,
       opacity: 1
     });
+    gsap.to('.about__restart', {
+      ease: "power",
+      delay: 3,
+      opacity: 1,
+      duration: 1,
+    });
   }
 
   return (
@@ -50,6 +56,7 @@ export default function About() {
       <br />
       <Row>
         <Col>
+          <small onClick={() => window.location.reload()} className='about__restart'>start over</small>
           <h1>
             <div className='about__choice user-select-none'>You want to:</div>
             <ul className='about__items'>
@@ -110,6 +117,7 @@ export default function About() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             date="2010 - 2011"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           >
@@ -121,6 +129,7 @@ export default function About() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             date="2008 - 2010"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           >
@@ -133,6 +142,7 @@ export default function About() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2006 - 2008"
+            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           >
             <h3 className="vertical-timeline-element-title">Web Designer</h3>
@@ -143,6 +153,7 @@ export default function About() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
+            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             date="April 2013"
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           >
@@ -154,6 +165,7 @@ export default function About() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
+            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             date="November 2012"
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           >
@@ -165,6 +177,7 @@ export default function About() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
+            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             date="2002 - 2006"
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           >

@@ -68,6 +68,15 @@
   padding-right: 15em;
 }
 
+.about__restart {
+  opacity: 0;
+}
+
+.about__restart:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
 .about__choice,
 .about__item {
   opacity: 0;
