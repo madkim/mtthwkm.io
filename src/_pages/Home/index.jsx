@@ -11,6 +11,7 @@ export default function Home() {
 
   const [index, setIndex] = useState(0)
   const [offset, setOffset] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   const nameArray = [
     'designer',
@@ -26,8 +27,12 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => {
-      animateHomePage()
-    }, 200);
+      window.scroll(0,0)
+      setLoading(false)
+      setTimeout(() => {
+        animateHomePage()
+      }, 200);
+    }, 500);
    }, [])
 
   useEffect(() => {
@@ -45,13 +50,19 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    homeDetailsRef.current.style.opacity = (offset - 1872) / 500
-    homeDetailsBgRef.current.style.opacity = (offset - 1000) / 1000
+    if (homeDetailsRef.current && homeDetailsBgRef.current) {
+      homeDetailsRef.current.style.opacity = (offset - 1872) / 500
+      homeDetailsBgRef.current.style.opacity = (offset - 1000) / 1000
+    }
   }, [offset])
 
   const handleScroll = () => {
     const ref = homeDetailsRef.current.getBoundingClientRect()
     window.scroll(0, ref.top + 1800)
+  }
+
+  if (loading) {
+    return null
   }
 
   return (
