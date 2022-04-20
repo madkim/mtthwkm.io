@@ -46,6 +46,24 @@ export function animateHomePage() {
   });
 }
 
+// About Animations
+export function animateAboutPage() {
+  gsap.to(".about__choice", {
+    ease: "elastic",
+    opacity: 1,
+    delay: 1,
+    duration: 2,
+    y: -20
+  });
+  gsap.to(".about__item", {
+    ease: "elastic",
+    opacity: 1,
+    delay: 2,
+    duration: 2,
+    y: 20
+  });
+}
+
 // Projects Animations
 export function animateProjectsPage() {
   gsap.to("#project__cards", {

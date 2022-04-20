@@ -51,7 +51,20 @@
 
 /* About */
 #about {
-    height: 100vh;
+  /* opacity: 0; */
+  height: 100%;
+}
+
+.about__choice,
+.about__item {
+  opacity: 0;
+  list-style-type: none;
+}
+
+.about__item:hover {
+  cursor: pointer;
+  color: yellow;
+  list-style-type: disc;
 }
 
 
