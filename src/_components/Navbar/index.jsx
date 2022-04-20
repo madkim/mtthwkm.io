@@ -83,7 +83,7 @@ export default function Navbar() {
         </Row>
         <Row>
           <Col className={showIcon("/about")}>
-            <i className='navbar--icon fa-light fa-face-smile-upside-down'></i>
+            <i className='navbar--icon fa-light fa-face-smile'></i>
           </Col>
         </Row>
         <Row>

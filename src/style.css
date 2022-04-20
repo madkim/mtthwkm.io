@@ -51,8 +51,14 @@
 
 /* About */
 #about {
-  /* opacity: 0; */
   height: 100%;
+}
+
+#about__short,
+#about__long,
+#about__timeline {
+  opacity: 0;
+  display: none;
 }
 
 .about__choice,
