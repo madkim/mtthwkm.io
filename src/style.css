@@ -161,36 +161,9 @@
 
 /* Home */
 #home {
-    height: 100vh;
-}
+    opacity: 0;
+    height: 100%;
 
-#home__details {
-    color: white;
-    height: 110vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: black;
-}
-
-.home__title {
-    color: black;
-    height: 22vh;
-    font-size: 50px;
-    text-align: center;
-    background-color: black;
-    transition: font-size .2s, height .2s;
-}
-
-
-.home__title:hover {
-    cursor: default !important;
-    font-size: 125px;
-}
-
-.home__title--2:hover,
-.home__title--3:hover,
-.home__title--1:hover {
     background-image: url('./_assets/bishop.JPG');
     background-attachment: fixed;
     background-position: center;
@@ -198,39 +171,78 @@
     background-size: cover;
 }
 
-.home__title--1:hover {
+#home__details--container {
+    color: white;
+    height: 375vh;
+    background: url('./_assets/bishop.JPG') no-repeat fixed center;
+    background-size: cover;
+}
+
+.home__details--background {
+    opacity: 0;
+    background-color: black;
+}
+
+.home__details {
+    top: 20vh;
+    opacity: 0;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.home__title {
+    height: 100vh;
+    font-size: 50px;
+    text-align: center;
+    transition: font-size .2s, height .2s;
+}
+
+.home__title {
+    cursor: default !important;
+    font-size: 125px;
+}
+
+.home__title--1 {
   color: red;
 }
 
-.home__title--2:hover {
-  color: yellow;
+.home__title--2 {
+  color: red;
+  cursor: default !important;
+  font-size: 125px;
 }
 
-.home__title--3:hover {
+.home__title--3 {
   color: white;
 }
 
 .home__scroll {
-    opacity: 0;
+  top: -10em;
+  opacity: 0;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 
 .home__scroll--text {
-    color: white;
-    padding: 2em;
+    color: white !important;
+    background-color: red;
+    padding: .5em;
     transition: transform .5s, font-size .2s;
 }
 
 .home__scroll--text:hover {
-    color: yellow !important;
+    color: red !important;
+    background-color: white;
     cursor: pointer;
     font-size: 20px;
 }
 
 .home__parallax--1 {
-  background-image: url('./_assets/bishop.JPG');
+    background-image: url('./_assets/bishop.JPG');
 }
 .home__parallax--2 {
-  background-image: url('./_assets/jtree.jpg');
+    background-image: url('./_assets/jtree.jpg');
 }
 .home__parallax--1, 
 .home__parallax--2 {

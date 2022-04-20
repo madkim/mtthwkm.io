@@ -1,11 +1,17 @@
-import React, { useEffect, Fragment, useState } from 'react'
+import React, { useEffect, Fragment, useState, useRef } from 'react'
+import Navbar from '../../_components/Navbar'
 import JTreeImg from '../../_assets/jtree.jpg'
 
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 
 export default function Home() {
+  const homeDetailsRef = useRef(null)
+  const homeDetailsBgRef = useRef(null)
+
   const [index, setIndex] = useState(0)
+  const [offset, setOffset] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   const nameArray = [
     'designer',
@@ -21,64 +27,97 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => {
+      window.scroll(0,0)
+      setLoading(false)
+      setTimeout(() => {
+        animateHomePage()
+      }, 200);
+    }, 500);
+   }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
       const newIndex = index + 1 
       setIndex(newIndex % nameArray.length)
     }, 2000);
   }, [index])
   
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
-   animateHomePage()
-  }, [])
+    if (homeDetailsRef.current && homeDetailsBgRef.current) {
+      homeDetailsRef.current.style.opacity = (offset - 1872) / 500
+      homeDetailsBgRef.current.style.opacity = (offset - 1000) / 1000
+    }
+  }, [offset])
 
   const handleScroll = () => {
-    document.getElementById('home__details').scrollIntoView()
+    const ref = homeDetailsRef.current.getBoundingClientRect()
+    window.scroll(0, ref.top + 1800)
+  }
+
+  if (loading) {
+    return null
   }
 
   return (
     <Fragment>
       <Container id="home" fluid>
-        <Row className='mt-3 home__title home__title--1'>
-          <Col className='d-flex align-items-center justify-content-around user-select-none'>
-            <div>this is a</div>
-            <div>&nbsp;</div>
-          </Col>
-        </Row>
+      <Row style={{position: 'fixed', right: 0, zIndex: 99}}>
+        <Col>
+          <br />
+          <Navbar />
+        </Col>
+      </Row>
         <Row className='home__title home__title--2'>
           <Col className='d-flex align-items-center justify-content-center user-select-none'>
-              {nameArray[index]}'s
-          </Col>
-        </Row>
-        <Row className='home__title home__title--3'>
-          <Col className='d-flex align-items-center justify-content-around user-select-none'>
-            <div>&nbsp;</div>
-            <div>website</div>
+              {nameArray[index]}
           </Col>
         </Row>
         
         <Row className='home__scroll'>
           <Col xs='auto'>
-            <div onClick={handleScroll} className='home__scroll--text text-light'>
+            <div onClick={handleScroll} className='home__scroll--text'>
               scroll down <i className="fa-solid fa-hand-point-down"></i>
             </div>
           </Col>
         </Row>
       </Container>
 
-      <div className="home__parallax--1"></div>
+      {/* <div className="home__parallax--1"></div> */}
 
-      <Container>
-        <div id='home__details'>
-          <div className='text-center'>
-            <Image height={500} width={500} src={JTreeImg} roundedCircle style={{objectFit: 'cover'}}/>
-            <div className='lead mt-5'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id venenatis sapien. Praesent placerat mauris vel nunc iaculis lobortis. Donec vitae aliquam ipsum. Sed placerat consequat risus at posuere. Donec aliquet molestie euismod. Ut justo risus, pulvinar posuere scelerisque ut, aliquam nec purus. Praesent efficitur arcu lacus, in hendrerit nisl maximus sed. Sed nec metus at nulla viverra tincidunt eget quis ex. Vivamus feugiat lobortis mi id viverra. Aliquam euismod nisi ut ligula venenatis hendrerit. Etiam libero quam, sollicitudin ac viverra eu, auctor at justo. Vestibulum luctus consequat nisi vel dapibus. Vivamus id est pharetra, tincidunt nunc id, eleifend sapien.
-              Aenean placerat, urna sit amet gravida semper, lectus lectus vestibulum felis, at euismod mauris magna nec sapien. Mauris sit amet magna eget arcu ornare vehicula non sit amet lorem. Morbi velit nunc, tincidunt in convallis sed, tempor non nibh. In convallis leo quis nisl porttitor varius. Vivamus eu orci pulvinar, congue erat et, vehicula nulla. Aliquam sollicitudin dolor ac eros faucibus, pellentesque maximus mi tempor. Morbi sollicitudin semper massa, sed vestibulum magna cursus ut. In quam neque, eleifend non suscipit vel, posuere vel quam. Proin ultricies vehicula diam.
-              Donec placerat nisl et vestibulum ullamcorper. Morbi in lacus a arcu efficitur consequat id a ante. Duis sed luctus nunc. Phasellus eu sem iaculis mauris venenatis ultricies id eget magna. Aliquam vitae turpis ac arcu mollis aliquam ut nec enim. Curabitur congue orci lacus, ut molestie augue ornare id. Nam id neque vitae quam euismod iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas rutrum, neque vitae efficitur consectetur, massa diam ultricies ligula, ac dapibus ante leo quis massa. Nullam vitae hendrerit sem. Donec accumsan ullamcorper fringilla. Ut diam nibh, auctor iaculis semper eu, ornare eu nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a dictum nisl, quis gravida diam. Vivamus semper urna ut nulla finibus tempor.
+      <div id='home__details--container'>
+        <div ref={homeDetailsBgRef} className='home__details--background h-100'>
+          <div ref={homeDetailsRef} className='text-center home__details mb-5 container'>
+            <Image height={300} width={'100%'} src={JTreeImg}   style={{objectFit: 'cover'}}/>
+            <div className=' m-5  d-flex justify-content-center flex-row'>
+              <div className='text-center'>
+                <p>Hello! I'm Matt <br />  Welcome to my website</p>
+                <div>
+                  <p>I'm
+                      <br />
+                      a climber 
+                      <br /> 
+                      a music maker 
+                      <br /> 
+                      a Front End developer
+                      <br /> 
+                      an outdoor enthusiast 
+                      <br /> 
+                      a lover of all things coffee </p>
+                </div>
+                <p>Please feel free to look around and enjoy your stay</p> 
+                <p>I'm happy you're here</p>
+              </div>
             </div>
           </div>
         </div>
-      </Container>
+      </div>
       
       <div className="home__parallax--2"></div>
     </Fragment>

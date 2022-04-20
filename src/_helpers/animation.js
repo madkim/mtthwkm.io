@@ -1,23 +1,21 @@
 import gsap from "gsap";
 
+    // import ScrollTrigger from 'gsap/ScrollTrigger'
+
+    // gsap.registerPlugin(ScrollTrigger)
+
+    // gsap.to("#home__details--container", {
+    //   scrollTrigger: ".home__details", 
+    //   ease: 'linear',
+    //   opacity: 0
+    // });
+
 // Home Animations
 export function animateHomePage() {
-  gsap.to(".home__title--1", {
-    ease: "elastic",
+  gsap.to("#home", {
+    ease: "power",
     duration: 1.5,
-    backgroundColor: "red",
-  });
-  gsap.to(".home__title--2", {
-    ease: "elastic",
-    delay: 0.5,
-    duration: 1.5,
-    backgroundColor: "red",
-  });
-  gsap.to(".home__title--3", {
-    ease: "elastic",
-    delay: 1,
-    duration: 1.5,
-    backgroundColor: "red",
+    opacity: 1
   });
   gsap.to(".navbar", {
     opacity: 1,
@@ -73,7 +71,6 @@ export function animateProjectsPage() {
 }
 
 // Contact Animations
-
 export function animateContactPage() {
   gsap.to("#contact", {
     ease: "linear",
