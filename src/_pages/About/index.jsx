@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react'
-import gsap from 'gsap'
-
 import { Link } from 'react-router-dom'
 import { animateAboutPage } from '../../_helpers/animation'
 import { Container, Row, Col } from 'react-bootstrap'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
-import 'react-vertical-timeline-component/style.min.css';
+import gsap from 'gsap'
+import Timeline from './Components/Timeline'
 
 export default function About() {
   useEffect(() => {
@@ -93,7 +91,6 @@ export default function About() {
         <p>A big part of getting into computers came from video games. As a kid, I was blessed with a Super Nintendo which altered my life forever. I remember spending hours playing games like Legend of Zelda, Street Fighter and Contra. Eventually I upgraded to a PS2 and ultimately ended up playing a lot of computer games. All this informed my love of computers and the virtual worlds that could be explored within them. </p><br/>
         <p>As it was time to go off to college I got my first MacBook. I had played piano since I was a child and picked up drums throughout high-school, yet I think my real musical journey started with my first MacBook. I taught myself the music software Logic and Ableton and ever since then I've enjoyed producing music in my spare time. </p><br/>
         <p>In my first year of college, I remember not knowing what to do and being quite confused. I had a good friend who was taking an intro computer science course and seeing him write code which was immediately output to the screen was something that peaked my interest. The following quarter I enrolled in the intro to java course and the rest was history. </p><br/>
-        <p>//internship at FieldTest</p><br/>
         <p>After graduating I spent some time soul searching and trying to find what I wanted to do. Being a new grad was scary and definitely challenged me. I found myself in an intense bout of imposter syndrome, something I didn't fully understand until I experiencing it. Luckily it just takes one person to give you a chance. In 2018 I worked at a small research facility that needed a full-stack developer to take over a project which handled patient records (similar to the EPIC system but much smaller scale). I gained insight into the inner workings of how a web application works from front to back.  I owe a lot to being able to have that opportunity and enjoyed the position very much.</p><br/>
         <p>As with all things, at some point, they must come to an end. At the end of 2019 the facility I worked for was absorbed. It took a lot of thinking but I decided it was time for me to move on to bigger and better things! I finished my work, packed my bags and moved up to Sacramento, CA to live with my long time partner. During this time I picked up some odd jobs here and there, from helping a family friend with a website to working at a rock climbing gym. All of which came to a halt when the pandemic hit. </p><br/>
         <p>I spent most of the pandemic isolating and feeling isolated. It was scary and is still something that we are dealing with in our day to day. In July of 2020, I became very sick with anemia. I moved back home to Redlands, CA where I spent much of the remainder of the year recovering. It has been a difficult road to recovery, thankfully as of late I am fully recovered and healthy. With all the life changes that 2020 brought, not all were negative. Nov 2020, on Thanksgiving, I received an offer of employment for AxS Health, a telemedicine start up that I had been interested in since around the time I graduated. </p><br/>
@@ -101,96 +98,7 @@ export default function About() {
       </div>
 
       <div id='about__timeline' className='container lead'>
-      <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          >
-            <h3 className="vertical-timeline-element-title">Creative Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-            <p>
-              Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-            <p>
-              Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            date="2008 - 2010"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-            <p>
-              User Experience, Visual Design
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2006 - 2008"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-            <p>
-              User Experience, Visual Design
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            date="April 2013"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-          >
-            <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-            <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-            <p>
-              Strategy, Social Media
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            date="November 2012"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-          >
-            <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-            <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-            <p>
-              Creative Direction, User Experience, Visual Design
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            date="2002 - 2006"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-          >
-            <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-            <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-            <p>
-              Creative Direction, Visual Design
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-          />
-        </VerticalTimeline>
+        <Timeline />
       </div>
     </Container>
   )
