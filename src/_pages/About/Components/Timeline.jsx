@@ -8,7 +8,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         date="2020 - present"
         className="vertical-timeline-element--work"
-        iconStyle={{ background: 'black', color: 'black' }}
+        iconStyle={{ background: 'url("https://media-exp1.licdn.com/dms/image/C4D0BAQFjkEgh7evkyg/company-logo_200_200/0/1519896845247?e=2147483647&v=beta&t=2OrUJEw0aOxepEuUCUV8BJZDcWRaYhc_xDJnLSMLeeg") center/99%', color: 'black' }}
         contentStyle={{ background: 'yellow', color: 'black' }}
         dateClassName='text-light'
       >
@@ -30,7 +30,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         date="2018"
         className="vertical-timeline-element--work"
-        iconStyle={{ background: 'black', color: 'black' }}
+        iconStyle={{ background: 'black url("https://static.wixstatic.com/media/ebc113_a93529259e66454e90f308b27a6d6d57.png/v1/fill/w_420,h_185,al_c,lg_1,enc_auto/ebc113_a93529259e66454e90f308b27a6d6d57.png") no-repeat fixed center/80%', color: 'black' }}
         contentStyle={{ background: 'yellow', color: 'black' }}
         dateClassName='text-light'
       >
@@ -43,7 +43,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         date="2017"
         className="vertical-timeline-element--education"
-        iconStyle={{ background: 'black', color: 'black' }}
+        iconStyle={{ background: 'url("https://media-exp1.licdn.com/dms/image/C560BAQFsjvxBDYgQMA/company-logo_100_100/0/1565726655033?e=2147483647&v=beta&t=d4KP1SEpZiVVK_xgyBEuFCxgWL5BRuDK-8zMco1e9sg") center/99%', color: 'black' }}
         contentStyle={{ background: 'yellow', color: 'black' }}
         dateClassName='text-light'
       >
@@ -56,7 +56,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         date="2015"
         className="vertical-timeline-element--work"
-        iconStyle={{ background: 'black', color: 'black' }}
+        iconStyle={{ background: 'url("https://media-exp1.licdn.com/dms/image/C4E0BAQGz1EtJ-Md81g/company-logo_100_100/0/1643310134685?e=2147483647&v=beta&t=5E_HVDzbI__jhOTSUMJGtM4Z9ZiX6whpdBqbK4yQnNc") center/80%', color: 'black' }}
         contentStyle={{ background: 'yellow', color: 'black' }}
         dateClassName='text-light'
       >
