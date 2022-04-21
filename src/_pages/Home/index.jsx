@@ -52,7 +52,7 @@ export default function Home() {
   useEffect(() => {
     if (homeDetailsRef.current && homeDetailsBgRef.current) {
       homeDetailsRef.current.style.opacity = (offset - 1872) / 500
-      homeDetailsBgRef.current.style.opacity = (offset - 1000) / 1000
+      homeDetailsBgRef.current.style.opacity = (offset - 1000) / 500
     }
   }, [offset])
 
