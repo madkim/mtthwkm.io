@@ -208,7 +208,7 @@
 
 #home__details--container {
     color: white;
-    height: 375vh;
+    height: 500vh;
     background: url('./_assets/bishop.JPG') no-repeat fixed center;
     background-size: cover;
 }

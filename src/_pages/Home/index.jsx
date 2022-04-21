@@ -1,11 +1,14 @@
 import React, { useEffect, Fragment, useState, useRef } from 'react'
 import Navbar from '../../_components/Navbar'
 import JTreeImg from '../../_assets/jtree.jpg'
+import BishopImg from '../../_assets/bishop3.JPG'
 
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 
 export default function Home() {
+  const imgOneRef = useRef(null)
+  const imgTwoRef = useRef(null)
   const homeDetailsRef = useRef(null)
   const homeDetailsBgRef = useRef(null)
 
@@ -50,9 +53,12 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    console.log(offset)
     if (homeDetailsRef.current && homeDetailsBgRef.current) {
       homeDetailsRef.current.style.opacity = (offset - 1872) / 500
       homeDetailsBgRef.current.style.opacity = (offset - 1000) / 500
+
+      imgTwoRef.current.style.opacity = (offset - 3000) / 500
     }
   }, [offset])
 
@@ -94,8 +100,9 @@ export default function Home() {
       <div id='home__details--container'>
         <div ref={homeDetailsBgRef} className='home__details--background h-100'>
           <div ref={homeDetailsRef} className='text-center home__details mb-5 container'>
-            <Image height={300} width={'100%'} src={JTreeImg}   style={{objectFit: 'cover'}}/>
-            <div className=' m-5  d-flex justify-content-center flex-row'>
+          <div ref={imgOneRef} style={{position: 'absolute', height: '1000px', width: '100%', background: 'black'}}>
+            <Image height={300} width={'100%'} src={JTreeImg} style={{objectFit: 'cover'}}/>
+             <div className=' m-5  d-flex justify-content-center flex-row'>
               <div className='text-center'>
                 <p>Hello! I'm Matt <br />  Welcome to my website</p>
                 <div>
@@ -116,9 +123,21 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div ref={imgTwoRef} style={{position: 'absolute', height: '1000px', width: '100%', background: 'black'}}>
+            <Image height={300} width={'100%'} src={BishopImg} style={{objectFit: 'cover'}}/>
+             <div className=' m-5  d-flex justify-content-center flex-row'>
+              <div className='text-center'>
+                <p>Hello! I'm Matt <br />  Welcome to my website</p>
+ 
+                <p>Please feel free to look around and enjoy your stay</p> 
+                <p>I'm happy you're here</p>
+              </div>
+            </div>
+          </div>
+           
+          </div>
         </div>
       </div>
-      
       <div className="home__parallax--2"></div>
     </Fragment>
   )
