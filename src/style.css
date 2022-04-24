@@ -39,6 +39,23 @@
   background-color: black;
 }
 
+#header__icons {
+  z-index: 10000;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.header__icon {
+  color: white;
+}
+
+.header__icon:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
 /* Footer */
 #footer {
   bottom: 0;
@@ -102,6 +119,7 @@
 #projects {
   width: 100% !important;
   height: 100% !important;
+  padding-bottom: 200px;
 }
 
 #project__cards {
@@ -158,7 +176,7 @@
 
 #project__arrows {
   width: 100%;
-  height: 50px;
+  height: 100px;
   bottom: 0;
   display: flex;
   position: fixed;

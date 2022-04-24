@@ -1,4 +1,5 @@
 import React, { useEffect, Fragment, useState, useRef } from 'react'
+import Header from '../../_components/Header'
 import Navbar from '../../_components/Navbar'
 import JTreeImg from '../../_assets/jtree.jpg'
 import BishopImg from '../../_assets/bishop3.JPG'
@@ -74,6 +75,9 @@ export default function Home() {
   return (
     <Fragment>
       <Container id='home' fluid>
+        <div className='pt-4 text-dark' style={{ position: 'fixed' }}>
+          <Header />
+        </div>
         <Row style={{ position: 'fixed', right: 0, zIndex: 99 }}>
           <Col>
             <br />
