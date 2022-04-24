@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { useLocation } from 'react-router-dom'
 
 export default function Header() {
@@ -13,22 +14,32 @@ export default function Header() {
 
   return (
     <div ref={headerRef} id='header__icons'>
-      <a
-        rel='noopener noreferrer'
-        href='https://github.com/madkim'
-        target='_blank'
-        className='header__icon px-3'
+      <OverlayTrigger
+        placement='bottom'
+        overlay={<Tooltip id={`tooltip-bottom`}>Github</Tooltip>}
       >
-        <i className='fab fa-github'></i>
-      </a>
-      <a
-        rel='noopener noreferrer'
-        href='https://www.linkedin.com/in/mtthwkm/'
-        target='_blank'
-        className='header__icon'
+        <a
+          rel='noopener noreferrer'
+          href='https://github.com/madkim'
+          target='_blank'
+          className='header__icon px-3'
+        >
+          <i className='fab fa-github'></i>
+        </a>
+      </OverlayTrigger>
+      <OverlayTrigger
+        placement='bottom'
+        overlay={<Tooltip id={`tooltip-bottom`}>LinkedIn</Tooltip>}
       >
-        <i className='fab fa-linkedin'></i>
-      </a>
+        <a
+          rel='noopener noreferrer'
+          href='https://www.linkedin.com/in/mtthwkm/'
+          target='_blank'
+          className='header__icon'
+        >
+          <i className='fab fa-linkedin'></i>
+        </a>
+      </OverlayTrigger>
     </div>
   )
 }
