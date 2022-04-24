@@ -25,32 +25,32 @@ export default function Home() {
     'lover',
     'coffee drinker',
     'thinker',
-    'D R E A M E R',
+    'D R E A M E R'
   ]
 
   useEffect(() => {
     setTimeout(() => {
-      window.scroll(0,0)
+      window.scroll(0, 0)
       setLoading(false)
       setTimeout(() => {
         animateHomePage()
-      }, 200);
-    }, 500);
-   }, [])
+      }, 200)
+    }, 500)
+  }, [])
 
   useEffect(() => {
     setTimeout(() => {
-      const newIndex = index + 1 
+      const newIndex = index + 1
       setIndex(newIndex % nameArray.length)
-    }, 2000);
+    }, 2000)
   }, [index])
-  
+
   useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+    const onScroll = () => setOffset(window.pageYOffset)
+    window.removeEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     console.log(offset)
@@ -73,23 +73,23 @@ export default function Home() {
 
   return (
     <Fragment>
-      <Container id="home" fluid>
-      <Row style={{position: 'fixed', right: 0, zIndex: 99}}>
-        <Col>
-          <br />
-          <Navbar />
-        </Col>
-      </Row>
-        <Row className='home__title home__title--2'>
-          <Col className='d-flex align-items-center justify-content-center user-select-none'>
-              {nameArray[index]}
+      <Container id='home' fluid>
+        <Row style={{ position: 'fixed', right: 0, zIndex: 99 }}>
+          <Col>
+            <br />
+            <Navbar />
           </Col>
         </Row>
-        
+        <Row className='home__title home__title--2'>
+          <Col className='d-flex align-items-center justify-content-center user-select-none'>
+            {nameArray[index]}
+          </Col>
+        </Row>
+
         <Row className='home__scroll'>
           <Col xs='auto'>
             <div onClick={handleScroll} className='home__scroll--text'>
-              scroll down <i className="fa-solid fa-hand-point-down"></i>
+              scroll down <i className='fa-solid fa-hand-point-down'></i>
             </div>
           </Col>
         </Row>
@@ -99,46 +99,79 @@ export default function Home() {
 
       <div id='home__details--container'>
         <div ref={homeDetailsBgRef} className='home__details--background h-100'>
-          <div ref={homeDetailsRef} className='text-center home__details mb-5 container'>
-          <div ref={imgOneRef} style={{position: 'absolute', height: '1000px', width: '100%', background: 'black'}}>
-            <Image height={300} width={'100%'} src={JTreeImg} style={{objectFit: 'cover'}}/>
-             <div className=' m-5  d-flex justify-content-center flex-row'>
-              <div className='text-center'>
-                <p>Hello! I'm Matt <br />  Welcome to my website</p>
-                <div>
-                  <p>I'm
+          <div
+            ref={homeDetailsRef}
+            className='text-center home__details mb-5 container'
+          >
+            <div
+              ref={imgOneRef}
+              style={{
+                position: 'absolute',
+                height: '1000px',
+                width: '100%',
+                background: 'black'
+              }}
+            >
+              <Image
+                height={300}
+                width={'100%'}
+                src={JTreeImg}
+                style={{ objectFit: 'cover' }}
+              />
+              <div className=' m-5  d-flex justify-content-center flex-row'>
+                <div className='text-center'>
+                  <p>
+                    Hello! I'm Matt <br /> Welcome to my website
+                  </p>
+                  <div>
+                    <p>
+                      I'm
                       <br />
-                      a climber 
-                      <br /> 
-                      a music maker 
-                      <br /> 
+                      a climber
+                      <br />
+                      a music maker
+                      <br />
                       a Front End developer
-                      <br /> 
-                      an outdoor enthusiast 
-                      <br /> 
-                      a lover of all things coffee </p>
+                      <br />
+                      an outdoor enthusiast
+                      <br />a lover of all things coffee{' '}
+                    </p>
+                  </div>
+                  <p>Please feel free to look around and enjoy your stay</p>
+                  <p>I'm happy you're here</p>
                 </div>
-                <p>Please feel free to look around and enjoy your stay</p> 
-                <p>I'm happy you're here</p>
               </div>
             </div>
-          </div>
-          <div ref={imgTwoRef} style={{position: 'absolute', height: '1000px', width: '100%', background: 'black'}}>
-            <Image height={300} width={'100%'} src={BishopImg} style={{objectFit: 'cover'}}/>
-             <div className=' m-5  d-flex justify-content-center flex-row'>
-              <div className='text-center'>
-                <p>Hello! I'm Matt <br />  Welcome to my website</p>
- 
-                <p>Please feel free to look around and enjoy your stay</p> 
-                <p>I'm happy you're here</p>
+            <div
+              ref={imgTwoRef}
+              style={{
+                position: 'absolute',
+                height: '1000px',
+                width: '100%',
+                background: 'black'
+              }}
+            >
+              <Image
+                height={300}
+                width={'100%'}
+                src={BishopImg}
+                style={{ objectFit: 'cover' }}
+              />
+              <div className=' m-5  d-flex justify-content-center flex-row'>
+                <div className='text-center'>
+                  <p>
+                    Hello! I'm Matt <br /> Welcome to my website
+                  </p>
+
+                  <p>Please feel free to look around and enjoy your stay</p>
+                  <p>I'm happy you're here</p>
+                </div>
               </div>
             </div>
-          </div>
-           
           </div>
         </div>
       </div>
-      <div className="home__parallax--2"></div>
+      <div className='home__parallax--2'></div>
     </Fragment>
   )
 }
