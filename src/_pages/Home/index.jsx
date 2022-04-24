@@ -54,7 +54,6 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    console.log(offset)
     if (homeDetailsRef.current && homeDetailsBgRef.current) {
       homeDetailsRef.current.style.opacity = (offset - 1872) / 500
       homeDetailsBgRef.current.style.opacity = (offset - 1000) / 500

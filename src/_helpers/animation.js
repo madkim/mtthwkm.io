@@ -17,6 +17,12 @@ export function animateHomePage() {
     duration: 1.5,
     opacity: 1
   })
+  gsap.to('#header__icons', {
+    opacity: 1,
+    ease: 'power',
+    delay: 2,
+    duration: 1
+  })
   gsap.to('.navbar', {
     opacity: 1,
     ease: 'power',

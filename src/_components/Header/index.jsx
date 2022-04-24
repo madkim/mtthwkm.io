@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 
 export default function Header() {
+  const headerRef = useRef(null)
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.pathname === '/home') {
+      headerRef.current.style.opacity = 0
+    }
+  }, [location.pathname])
+
   return (
-    <div id='header__icons'>
+    <div ref={headerRef} id='header__icons'>
       <a
         rel='noopener noreferrer'
         href='https://github.com/madkim'
