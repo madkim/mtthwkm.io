@@ -101,7 +101,7 @@ export default function Home() {
         <div ref={homeDetailsBgRef} className='home__details--background h-100'>
           <div
             ref={homeDetailsRef}
-            className='text-center home__details mb-5 container'
+            className='text-center home__details container'
           >
             <div
               ref={imgOneRef}
