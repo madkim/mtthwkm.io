@@ -74,7 +74,7 @@ export default function Home() {
   return (
     <Fragment>
       <Container id='home' fluid>
-        <div className='pt-4 text-dark' style={{ position: 'fixed' }}>
+        <div className='d-lg-flex d-none pt-4 text-dark' style={{ position: 'fixed' }}>
           <Header />
         </div>
         <Row style={{ position: 'fixed', right: 0, zIndex: 99 }}>
@@ -83,7 +83,7 @@ export default function Home() {
             <Navbar />
           </Col>
         </Row>
-        <Row className='home__title home__title--2'>
+        <Row className='home__title'>
           <Col className='d-flex align-items-center justify-content-center user-select-none'>
             {nameArray[index]}
           </Col>
