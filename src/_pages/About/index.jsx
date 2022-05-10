@@ -204,7 +204,7 @@ export default function About() {
         <p>
           I spent most of the pandemic isolating and feeling isolated. It was
           scary and is still something that we are dealing with in our day to
-          day. In July of 2020, I became very sick with anemia. I moved back
+          day. In July of 2020, I became very sick. I moved back
           home to Redlands, CA where I spent much of the remainder of the year
           recovering. It has been a difficult road to recovery, thankfully as of
           late I am fully recovered and healthy. With all the life changes that
@@ -214,8 +214,8 @@ export default function About() {
         </p>
         <br />
         <p>
-          Working for AxS Health, I've been able to hone my skills in front end
-          development.{' '}
+          Working for AxS Health, I've been able to hone my font end development skills 
+          and look forward to the opportunities to continue my growth as a developer. 
         </p>
         <br />
       </div>
