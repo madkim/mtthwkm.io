@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Col, Row } from 'react-bootstrap'
+import { Button, Col, Row } from 'react-bootstrap'
 import { useLocation } from 'react-router-dom'
 import './style.css'
 
@@ -19,10 +19,6 @@ export default function SideMenu() {
 
       <div className='sidepanel__container text-start'>
         <div>
-          <Row>
-            <Col xs={{offset: 3}} className='text-white '>MENU</Col>
-          </Row>
-
           <Link
             to='/home'
             onClick={() => closeNav()}
@@ -94,6 +90,42 @@ export default function SideMenu() {
             </Row>
           </Link>
         </div>
+      </div>
+      <div>
+        <Row>
+          <Col xs='3'>
+            <a
+              rel='noopener noreferrer'
+              href='https://github.com/madkim'
+              target='_blank'
+              className='header__icon'
+            >
+              <Button className='rounded-pill' variant='outline-dark' style={{color: '#818181'}}>
+                <i className='fab fa-github'></i>
+              </Button>
+            </a>
+          </Col>
+          <Col xs='3'>
+            <a
+              rel='noopener noreferrer'
+              href='https://www.linkedin.com/in/mtthwkm/'
+              target='_blank'
+              className='header__icon'
+            >
+              <Button className='rounded-pill' variant='outline-dark' style={{color: '#818181'}}>  
+                <i className='fab fa-linkedin'></i>
+              </Button>
+            </a>
+          </Col>
+          <Col xs='3'>
+            <Link to='/resume' className='text-decoration-none'>
+              <Button className='rounded-pill' variant='outline-dark' style={{color: '#818181'}}>  
+                <i className="fal fa-file-alt"></i>
+              </Button>
+            </Link>
+          </Col>
+        </Row>
+        <br />
       </div>
     </div>
   )
