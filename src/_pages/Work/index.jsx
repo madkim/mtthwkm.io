@@ -44,25 +44,12 @@ export default function Work() {
           <h5 className='lead'>2020 - present</h5>
         </div>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non scelerisque est. Fusce hendrerit eros ac sapien efficitur, et commodo metus auctor. Suspendisse vitae nisl efficitur, hendrerit neque nec, aliquam neque. Maecenas ultricies consectetur magna ut viverra. Ut quis ligula vestibulum, tempus tortor nec, egestas lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam euismod lorem suscipit est interdum, quis placerat odio ornare. Vivamus sagittis, libero ut tincidunt hendrerit, dolor purus bibendum lacus, quis suscipit nulla mauris et nibh. Donec hendrerit semper pulvinar. Sed eleifend elit id ornare scelerisque. Curabitur lectus erat, eleifend sit amet aliquet id, volutpat a magna. Duis placerat efficitur ligula, nec placerat magna molestie in. Vestibulum eu tortor pretium, pretium mi quis, commodo magna. Cras a ex metus. Quisque commodo congue interdum.
-        </p>
-
-        <p>
-          Vivamus non lacus orci. Morbi consectetur mi orci, vel pharetra sem ultricies eget. Aenean tempor lectus dui, in faucibus dolor sodales at. Curabitur eu leo vel neque consectetur eleifend. Pellentesque semper justo sed lorem iaculis lobortis. Donec vulputate sapien eget nisl luctus, vitae fermentum turpis sagittis. Nullam lacinia commodo dui, vel consectetur magna congue non. Phasellus eget mauris erat. Ut quis gravida nulla, nec posuere ligula. In nulla metus, consequat et leo vel, consequat dictum tortor. Fusce semper velit felis, at tristique mi pulvinar non.
-        </p>
-
-        <p>
-          Cras pulvinar lectus id nisl ultricies, a lacinia dolor rhoncus. Cras porttitor bibendum mauris quis porta. Duis ultrices justo ut nibh ullamcorper, eu vulputate nibh tristique. Etiam id massa a leo interdum rutrum vulputate et augue. Mauris libero augue, finibus ac viverra sed, vulputate nec est. Aliquam sit amet commodo nisi, quis lacinia est. Integer rutrum sapien lacus, facilisis pellentesque ante elementum at. Ut nisl metus, convallis id ultricies sit amet, tristique fermentum nunc.
-        </p>
-
-        <p>
-          In congue lectus eget pulvinar condimentum. Ut sit amet malesuada ligula. In lorem nisl, convallis sed orci in, vulputate gravida elit. Fusce mollis iaculis ultrices. Etiam quis tristique massa. Vestibulum ut massa urna. Integer semper ac eros sit amet luctus. Suspendisse molestie bibendum libero in molestie. Etiam et iaculis turpis.
-        </p>
-
-        <p>
-          Donec tempor luctus ipsum id feugiat. Sed fermentum metus ultricies libero pharetra, non finibus diam sodales. Curabitur viverra, dolor vitae efficitur aliquam, mauris sem sollicitudin elit, in consectetur tortor ex eget justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vestibulum dignissim dolor, vitae sollicitudin elit pretium nec. Cras vestibulum cursus turpis at viverra. Aenean id eleifend urna, ut ornare dolor. Fusce vitae velit quis quam aliquam lobortis in eu erat. Pellentesque ex justo, sollicitudin vitae nibh eget, euismod posuere diam. Proin purus odio, hendrerit vel velit ac, pharetra maximus tortor. Maecenas eget nulla enim. Curabitur ut neque felis. Nulla a velit suscipit, blandit erat ac, pulvinar mauris. Nulla consectetur lacus eget lorem fermentum tincidunt.
-        </p>
+        <p>Improved  video chat capabilities on web and mobile platforms using Twilio's video framework.</p>
+        <p>Followed the DRY principle when building static websites for clients using Laravel's Jigsaw framework. </p>
+        <p>Avoided breaking changes by using Jest to test ui components and implement continuous integration. </p>
+        <p>Implemented responsive design patterns on our web platform using bootstrap and CSS media queries. </p>
+        <p>Utilized Browserstack to ensure consistency across all major mobile devices.</p>
+        <p>Developed components for a private npm package used to share ui components across all platforms.</p>
       </Col>
       <Col>
         <div className='position-sticky mb-4' style={{ top: '15em' }}>
@@ -72,7 +59,7 @@ export default function Work() {
     </Row>
     
     <br />
-    <Row className='mt-5'>
+    <Row className='my-5'>
       <Col>
         <div className='position-sticky' style={{ top: '15em' }}>
           <ImageGallery items={images} />
@@ -100,26 +87,21 @@ export default function Work() {
           <h5 className='lead'>2018 - 2020</h5>
         </div>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non scelerisque est. Fusce hendrerit eros ac sapien efficitur, et commodo metus auctor. Suspendisse vitae nisl efficitur, hendrerit neque nec, aliquam neque. Maecenas ultricies consectetur magna ut viverra. Ut quis ligula vestibulum, tempus tortor nec, egestas lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam euismod lorem suscipit est interdum, quis placerat odio ornare. Vivamus sagittis, libero ut tincidunt hendrerit, dolor purus bibendum lacus, quis suscipit nulla mauris et nibh. Donec hendrerit semper pulvinar. Sed eleifend elit id ornare scelerisque. Curabitur lectus erat, eleifend sit amet aliquet id, volutpat a magna. Duis placerat efficitur ligula, nec placerat magna molestie in. Vestibulum eu tortor pretium, pretium mi quis, commodo magna. Cras a ex metus. Quisque commodo congue interdum.
-        </p>
-
-        <p>
-          Vivamus non lacus orci. Morbi consectetur mi orci, vel pharetra sem ultricies eget. Aenean tempor lectus dui, in faucibus dolor sodales at. Curabitur eu leo vel neque consectetur eleifend. Pellentesque semper justo sed lorem iaculis lobortis. Donec vulputate sapien eget nisl luctus, vitae fermentum turpis sagittis. Nullam lacinia commodo dui, vel consectetur magna congue non. Phasellus eget mauris erat. Ut quis gravida nulla, nec posuere ligula. In nulla metus, consequat et leo vel, consequat dictum tortor. Fusce semper velit felis, at tristique mi pulvinar non.
-        </p>
-
-        <p>
-          Cras pulvinar lectus id nisl ultricies, a lacinia dolor rhoncus. Cras porttitor bibendum mauris quis porta. Duis ultrices justo ut nibh ullamcorper, eu vulputate nibh tristique. Etiam id massa a leo interdum rutrum vulputate et augue. Mauris libero augue, finibus ac viverra sed, vulputate nec est. Aliquam sit amet commodo nisi, quis lacinia est. Integer rutrum sapien lacus, facilisis pellentesque ante elementum at. Ut nisl metus, convallis id ultricies sit amet, tristique fermentum nunc.
-        </p>
-
-        <p>
-          In congue lectus eget pulvinar condimentum. Ut sit amet malesuada ligula. In lorem nisl, convallis sed orci in, vulputate gravida elit. Fusce mollis iaculis ultrices. Etiam quis tristique massa. Vestibulum ut massa urna. Integer semper ac eros sit amet luctus. Suspendisse molestie bibendum libero in molestie. Etiam et iaculis turpis.
-        </p>
-
-        <p>
-          Donec tempor luctus ipsum id feugiat. Sed fermentum metus ultricies libero pharetra, non finibus diam sodales. Curabitur viverra, dolor vitae efficitur aliquam, mauris sem sollicitudin elit, in consectetur tortor ex eget justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vestibulum dignissim dolor, vitae sollicitudin elit pretium nec. Cras vestibulum cursus turpis at viverra. Aenean id eleifend urna, ut ornare dolor. Fusce vitae velit quis quam aliquam lobortis in eu erat. Pellentesque ex justo, sollicitudin vitae nibh eget, euismod posuere diam. Proin purus odio, hendrerit vel velit ac, pharetra maximus tortor. Maecenas eget nulla enim. Curabitur ut neque felis. Nulla a velit suscipit, blandit erat ac, pulvinar mauris. Nulla consectetur lacus eget lorem fermentum tincidunt.
-        </p>
+        <p>Managed database manipulation and extraction using MySQL. </p>
+        <p>Redesigned the UI for several key pages, making it easy to find important patient information. </p>
+        <p>Gained experience with the MVC design pattern by creating controllers to fetch and display model data. </p>
+        <p>Implemented a messaging system, allowing users to send and receive messages within the DARF application.</p>
+        <p>Created a date searchable contact page to list contact information for post surgery patients.</p>
+        <p>Scripted a cron-job to email weekly patient reports detailing which patients were missing components. </p>
+        <p>Utilized RESTful APIs and Vue's Vuex store to update and retrieve the current application state.</p>
+        <p>Added functionality for grouping patients and creating custom flags to filter patients within a group. </p>
+        <p>Visualized patient's evaluation data with interactive graphs using the Chart.js library. </p>
+        <p>Employed JSON Web Token authentication for user login and authentication. </p>
+        <p>Practiced deploying newly written code to the production server with the rocketeer deployment package.</p>
+        <p>Worked with AWS to create staging servers, patch server issues and apply code edits.</p>
+        <p>Integrated 3rd party development packages using npm and composer. </p>
       </Col>
     </Row>
+    <br />
   </Container>
 }
