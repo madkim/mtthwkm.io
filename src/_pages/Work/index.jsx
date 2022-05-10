@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ImageGallery from 'react-image-gallery';
 import { animateWorkPage } from '../../_helpers/animation';
-import { Container, Image, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Work() {
 
@@ -25,15 +25,25 @@ export default function Work() {
   ];
   
   return <Container id='work'>
-    {/* <br />
-    <Row>
-      <Col>
-        <ImageGallery items={images} />
-      </Col>
-    </Row> */}
     <br />
     <Row>
       <Col className='text-light'>
+        <h1 className='fw-light'>
+          Front-End Developer @ &nbsp;
+          <a
+            rel='noopener noreferrer'
+            href='https://www.axshealthapp.com/'
+            target='_blank'
+            style={{color: 'yellow'}}
+          >
+            AxS Health
+          </a>
+        </h1>
+        <div className='d-flex flex-row justify-content-between mb-3 border-bottom'>
+          <h5 className='lead'><i className='fa-brands fa-react'></i> Javascript React</h5>
+          <h5 className='lead'>2020 - present</h5>
+        </div>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non scelerisque est. Fusce hendrerit eros ac sapien efficitur, et commodo metus auctor. Suspendisse vitae nisl efficitur, hendrerit neque nec, aliquam neque. Maecenas ultricies consectetur magna ut viverra. Ut quis ligula vestibulum, tempus tortor nec, egestas lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam euismod lorem suscipit est interdum, quis placerat odio ornare. Vivamus sagittis, libero ut tincidunt hendrerit, dolor purus bibendum lacus, quis suscipit nulla mauris et nibh. Donec hendrerit semper pulvinar. Sed eleifend elit id ornare scelerisque. Curabitur lectus erat, eleifend sit amet aliquet id, volutpat a magna. Duis placerat efficitur ligula, nec placerat magna molestie in. Vestibulum eu tortor pretium, pretium mi quis, commodo magna. Cras a ex metus. Quisque commodo congue interdum.
         </p>
@@ -55,27 +65,41 @@ export default function Work() {
         </p>
       </Col>
       <Col>
-        <div className='position-sticky mb-4' style={{ top: '5em' }}>
+        <div className='position-sticky mb-4' style={{ top: '15em' }}>
           <ImageGallery items={images} />
-          {/* <Image src='https://picsum.photos/id/1015/1000/600/' fluid /> */}
         </div>
       </Col>
     </Row>
     
-    {/* <Row>
-      <Col>
-        <ImageGallery items={images} />
-      </Col>
-    </Row> */}
     <br />
     <Row className='mt-5'>
       <Col>
-        <div className='position-sticky' style={{ top: '5em' }}>
-          {/* <Image src='https://picsum.photos/id/1015/1000/600/' fluid /> */}
+        <div className='position-sticky' style={{ top: '15em' }}>
           <ImageGallery items={images} />
         </div>
       </Col>
       <Col className='text-light'>
+        <h1 className='fw-light'>
+          Full-Stack Developer @ Donaldson Arthritis Research Foundation
+        </h1>
+        <div className='d-flex flex-row justify-content-between mb-3 border-bottom'>
+          <div className='fw-light'>
+            <p>
+             Front-End: <i className='fa-brands fa-js'></i> Javascript,
+              JQuery, <i className='fa-brands fa-html5'></i> HTML,{' '}
+              <i className='fa-brands fa-css3'></i> CSS
+            </p>
+            <p>
+             Back-End: <i className='fa-brands fa-laravel'></i> Laravel,{' '}
+              <i className='fa-brands fa-php'></i> PHP
+            </p>
+            <p>
+             Database: MySQL
+            </p>
+          </div>
+          <h5 className='lead'>2018 - 2020</h5>
+        </div>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non scelerisque est. Fusce hendrerit eros ac sapien efficitur, et commodo metus auctor. Suspendisse vitae nisl efficitur, hendrerit neque nec, aliquam neque. Maecenas ultricies consectetur magna ut viverra. Ut quis ligula vestibulum, tempus tortor nec, egestas lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam euismod lorem suscipit est interdum, quis placerat odio ornare. Vivamus sagittis, libero ut tincidunt hendrerit, dolor purus bibendum lacus, quis suscipit nulla mauris et nibh. Donec hendrerit semper pulvinar. Sed eleifend elit id ornare scelerisque. Curabitur lectus erat, eleifend sit amet aliquet id, volutpat a magna. Duis placerat efficitur ligula, nec placerat magna molestie in. Vestibulum eu tortor pretium, pretium mi quis, commodo magna. Cras a ex metus. Quisque commodo congue interdum.
         </p>
