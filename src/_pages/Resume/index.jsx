@@ -57,7 +57,7 @@ export default function Resume() {
           <i className="fal fa-download"></i> &nbsp;Download
           </Button>
           &nbsp;
-          <Button variant="outline-secondary" onClick={() => navigate(-1)}>
+          <Button variant="outline-dark" onClick={() => navigate(-1)}>
             Back
           </Button>
         </Col>
