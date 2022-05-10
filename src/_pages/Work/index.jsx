@@ -25,12 +25,12 @@ export default function Work() {
   ];
   
   return <Container id='work'>
-    <br />
+    {/* <br />
     <Row>
       <Col>
         <ImageGallery items={images} />
       </Col>
-    </Row>
+    </Row> */}
     <br />
     <Row>
       <Col className='text-light'>
@@ -56,18 +56,25 @@ export default function Work() {
       </Col>
       <Col>
         <div className='position-sticky mb-4' style={{ top: '5em' }}>
-          <Image src='https://picsum.photos/id/1015/1000/600/' fluid />
+          <ImageGallery items={images} />
+          {/* <Image src='https://picsum.photos/id/1015/1000/600/' fluid /> */}
         </div>
       </Col>
     </Row>
     
-    <Row>
+    {/* <Row>
       <Col>
         <ImageGallery items={images} />
       </Col>
-    </Row>
+    </Row> */}
     <br />
-    <Row>
+    <Row className='mt-5'>
+      <Col>
+        <div className='position-sticky' style={{ top: '5em' }}>
+          {/* <Image src='https://picsum.photos/id/1015/1000/600/' fluid /> */}
+          <ImageGallery items={images} />
+        </div>
+      </Col>
       <Col className='text-light'>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non scelerisque est. Fusce hendrerit eros ac sapien efficitur, et commodo metus auctor. Suspendisse vitae nisl efficitur, hendrerit neque nec, aliquam neque. Maecenas ultricies consectetur magna ut viverra. Ut quis ligula vestibulum, tempus tortor nec, egestas lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam euismod lorem suscipit est interdum, quis placerat odio ornare. Vivamus sagittis, libero ut tincidunt hendrerit, dolor purus bibendum lacus, quis suscipit nulla mauris et nibh. Donec hendrerit semper pulvinar. Sed eleifend elit id ornare scelerisque. Curabitur lectus erat, eleifend sit amet aliquet id, volutpat a magna. Duis placerat efficitur ligula, nec placerat magna molestie in. Vestibulum eu tortor pretium, pretium mi quis, commodo magna. Cras a ex metus. Quisque commodo congue interdum.
@@ -88,11 +95,6 @@ export default function Work() {
         <p>
           Donec tempor luctus ipsum id feugiat. Sed fermentum metus ultricies libero pharetra, non finibus diam sodales. Curabitur viverra, dolor vitae efficitur aliquam, mauris sem sollicitudin elit, in consectetur tortor ex eget justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vestibulum dignissim dolor, vitae sollicitudin elit pretium nec. Cras vestibulum cursus turpis at viverra. Aenean id eleifend urna, ut ornare dolor. Fusce vitae velit quis quam aliquam lobortis in eu erat. Pellentesque ex justo, sollicitudin vitae nibh eget, euismod posuere diam. Proin purus odio, hendrerit vel velit ac, pharetra maximus tortor. Maecenas eget nulla enim. Curabitur ut neque felis. Nulla a velit suscipit, blandit erat ac, pulvinar mauris. Nulla consectetur lacus eget lorem fermentum tincidunt.
         </p>
-      </Col>
-      <Col>
-        <div className='position-sticky' style={{ top: '5em' }}>
-          <Image src='https://picsum.photos/id/1015/1000/600/' fluid />
-        </div>
       </Col>
     </Row>
   </Container>
