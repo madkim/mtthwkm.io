@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ImageGallery from 'react-image-gallery';
+import { animateWorkPage } from '../../_helpers/animation';
 import { Container, Image, Row, Col } from 'react-bootstrap'
 
 export default function Work() {
+
+  useEffect(() => {
+    animateWorkPage()
+  }, [])
 
   const images = [
     {
@@ -20,6 +25,7 @@ export default function Work() {
   ];
   
   return <Container id='work'>
+    <br />
     <Row>
       <Col>
         <ImageGallery items={images} />

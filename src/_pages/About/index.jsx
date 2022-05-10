@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
+import gsap from 'gsap'
+import Timeline from './Components/Timeline'
+
 import { Link } from 'react-router-dom'
 import { animateAboutPage } from '../../_helpers/animation'
 import { Container, Row, Col } from 'react-bootstrap'
-
-import gsap from 'gsap'
-import Timeline from './Components/Timeline'
 
 export default function About() {
   useEffect(() => {

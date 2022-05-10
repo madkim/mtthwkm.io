@@ -115,6 +115,11 @@
   opacity: 0;
 }
 
+/* Work */
+#work {
+  opacity: 0;
+}
+
 /* Projects */
 #projects {
   width: 100% !important;

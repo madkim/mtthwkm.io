@@ -108,3 +108,13 @@ export function animateContactPage() {
     duration: 1
   })
 }
+
+// Work Animations
+export function animateWorkPage() {
+  gsap.to('#work', {
+    ease: 'linear',
+    delay: 1,
+    opacity: 1,
+    duration: 0.2
+  })
+}
