@@ -84,7 +84,7 @@ export default function About() {
                 onClick={() => handleSelect('about__timeline')}
                 className='about__item about__timeline'
               >
-                see a cool timeline thingy
+                see a cool timeline
               </li>
             </ul>
           </h1>
