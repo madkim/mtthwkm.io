@@ -120,6 +120,11 @@
   opacity: 0;
 }
 
+/* Resume */
+#resume {
+  opacity: 0;
+}
+
 /* Projects */
 #projects {
   width: 100% !important;

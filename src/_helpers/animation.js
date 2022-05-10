@@ -118,3 +118,14 @@ export function animateWorkPage() {
     duration: 0.2
   })
 }
+
+// Resume Animations 
+export function animateResumePage() {
+  gsap.to('#resume', {
+    ease: 'linear',
+    delay: .5,
+    opacity: 1,
+    duration: 0.2
+  })
+}
+

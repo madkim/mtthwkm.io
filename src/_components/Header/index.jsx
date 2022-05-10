@@ -1,13 +1,10 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react'
-import ResumeModal from '../Modals/Resume'
-import { useLocation } from 'react-router-dom'
+import React, { useEffect, useRef } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 
 export default function Header() {
   const headerRef = useRef(null)
   const location = useLocation()
-
-  const [showResume, setShowResume] = useState(false)
 
   useEffect(() => {
     if (location.pathname === '/home') {
@@ -16,9 +13,6 @@ export default function Header() {
   }, [location.pathname])
 
   return (
-    <Fragment>
-      <ResumeModal show={showResume} handleClose={() => setShowResume(false)}/>
-
       <div ref={headerRef} id='header__icons'>
         <OverlayTrigger
           placement='bottom'
@@ -50,11 +44,12 @@ export default function Header() {
           placement='bottom'
           overlay={<Tooltip id={`tooltip-bottom`}>Resume</Tooltip>}
         >
-          <div className='header__icon px-3' onClick={() => setShowResume(true)}>
+        <Link to='/resume' className='text-decoration-none'>
+          <div className='header__icon px-3'>
             <i className="fal fa-file-alt"></i>
           </div>
+        </Link>
         </OverlayTrigger>
       </div>
-    </Fragment>
   )
 }
