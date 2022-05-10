@@ -56,8 +56,14 @@ export default function Work() {
             AxS Health
           </a>
         </h1>
-        <div className='d-flex flex-row justify-content-between mb-3 border-bottom'>
-          <h5 className='lead'><i className='fa-brands fa-react'></i> Javascript React</h5>
+        <div className='d-flex flex-row justify-content-between mb-3 border-bottom lead'>
+          <p>       
+            <i className='fa-brands fa-js'></i> Javascript&nbsp;&nbsp;         
+            <i className='fa-brands fa-react'></i> React&nbsp;&nbsp; 
+            <i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;
+            <i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;
+            <i className='fa-brands fa-php'></i> PHP&nbsp;&nbsp;MySQL
+          </p>
           <h5 className='lead'>2020 - present</h5>
         </div>
       </Col>
