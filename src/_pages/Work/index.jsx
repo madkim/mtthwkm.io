@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import Header from '../../_components/Header';
+import Navbar from '../../_components/Navbar';
 import ImageGallery from 'react-image-gallery';
 import { animateWorkPage } from '../../_helpers/animation';
 import { Container, Row, Col } from 'react-bootstrap'
@@ -6,6 +8,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 export default function Work() {
 
   useEffect(() => {
+    window.scroll(0, 0)
     animateWorkPage()
   }, [])
 
@@ -25,6 +28,20 @@ export default function Work() {
   ];
   
   return <Container id='work'>
+    <div style={{height: '180px'}}>
+      <Row style={{ position: 'fixed', left: 0, zIndex: 99 }}>
+        <Col>
+          <br />
+          <Header />
+        </Col>
+      </Row>
+      <Row style={{ position: 'fixed', right: 0, zIndex: 99 }}>
+        <Col>
+          <br />
+          <Navbar />
+        </Col>
+      </Row>
+    </div>
     <br />
     <Row>
       <Col className='text-light'>
