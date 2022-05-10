@@ -138,8 +138,6 @@ export default function Home() {
                       <br />a lover of all things coffee{' '}
                     </p>
                   </div>
-                  <p>Please feel free to look around and enjoy your stay</p>
-                  <p>I'm happy you're here</p>
                 </div>
               </div>
             </div>
@@ -160,10 +158,6 @@ export default function Home() {
               />
               <div className='m-5  d-flex justify-content-center flex-row'>
                 <div className='text-center'>
-                  <p>
-                    Hello! I'm Matt <br /> Welcome to my website
-                  </p>
-
                   <p>Please feel free to look around and enjoy your stay</p>
                   <p>I'm happy you're here</p>
                 </div>
