@@ -111,6 +111,10 @@
   list-style-type: disc;
 }
 
+.vertical-timeline-element-date {
+  color: white;
+}
+
 /* Contact */
 #contact {
   opacity: 0;
@@ -318,5 +322,14 @@
   }
   .contact__btn {
     width: 100%
+  }
+  #about__short,
+  #about__long {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .vertical-timeline-element-date {
+    color: black;
+    opacity: 1 !important;
   }
 }

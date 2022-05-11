@@ -17,7 +17,6 @@ export default function Timeline() {
           color: 'black'
         }}
         contentStyle={{ background: 'yellow', color: 'black' }}
-        dateClassName='text-light'
       >
         <h3 className='vertical-timeline-element-title'>
           Front-End Developer @ &nbsp;
@@ -44,7 +43,6 @@ export default function Timeline() {
           color: 'black'
         }}
         contentStyle={{ background: 'yellow', color: 'black' }}
-        dateClassName='text-light'
       >
         <h3 className='vertical-timeline-element-title'>
           Full-Stack Developer @ Donaldson Arthritis Research Foundation
@@ -72,7 +70,6 @@ export default function Timeline() {
           color: 'black'
         }}
         contentStyle={{ background: 'yellow', color: 'black' }}
-        dateClassName='text-light'
       >
         <h3 className='vertical-timeline-element-title'>Graduated College</h3>
         <h4 className='vertical-timeline-element-subtitle'>
@@ -92,7 +89,6 @@ export default function Timeline() {
           color: 'black'
         }}
         contentStyle={{ background: 'yellow', color: 'black' }}
-        dateClassName='text-light'
       >
         <h3 className='vertical-timeline-element-title'>
           Internship @ &nbsp;

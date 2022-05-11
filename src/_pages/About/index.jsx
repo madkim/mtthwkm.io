@@ -223,6 +223,13 @@ export default function About() {
       <div id='about__timeline' className='container lead'>
         <Timeline />
       </div>
+      <br />
+      <small
+        onClick={() => window.location.reload()}
+        className='about__restart'
+      >
+        start over
+      </small>
     </Container>
   )
 }
