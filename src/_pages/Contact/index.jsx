@@ -14,68 +14,68 @@ export default function Contact() {
   return (
     <div id='contact'>
       <br />
-      <Row>
-        <Col>
-          <Navbar />
-        </Col>
-      </Row>
-      <Container className='contact__form'>
-        <br />
+      <Container fluid>
         <Row>
-          <Col xs={{ span: 8, offset: 2 }}>
-            <div>
-              <Row>
-                <Col>
-                  <TextField
-                    fullWidth
-                    id='standard-basic'
-                    label='name'
-                    variant='standard'
-                  />
-                </Col>
-              </Row>
-              <br />
-              <Row>
-                <Col>
-                  <TextField
-                    fullWidth
-                    id='standard-basic'
-                    label='email'
-                    variant='standard'
-                  />
-                </Col>
-              </Row>
-              <br />
-              <Row>
-                <Col>
-                  <TextField
-                    fullWidth
-                    multiline
-                    rows={4}
-                    label='lets talk'
-                    variant='standard'
-                  />
-                </Col>
-              </Row>
-              <br />
-              <Row className='mt-2'>
-                <Col>
-                  <Button
-                    size='large'
-                    variant='contained'
-                    style={{
-                      background: 'forestgreen',
-                      padding: '1em',
-                      width: '200px'
-                    }}
-                  >
-                    <i className='fa-solid fa-hand-wave'></i>
-                  </Button>
-                </Col>
-              </Row>
-            </div>
+          <Col xs='12' className='text-end'>
+            <Navbar />
           </Col>
         </Row>
+      </Container>
+      <Container>
+        <div className='contact__form rounded'>
+          <br />
+          <Row>
+            <Col lg={{ span: 8, offset: 2 }}>
+              <div>
+                <Row>
+                  <Col>
+                    <TextField
+                      fullWidth
+                      id='standard-basic'
+                      label='name'
+                      variant='standard'
+                    />
+                  </Col>
+                </Row>
+                <br />
+                <Row>
+                  <Col>
+                    <TextField
+                      fullWidth
+                      id='standard-basic'
+                      label='email'
+                      variant='standard'
+                    />
+                  </Col>
+                </Row>
+                <br />
+                <Row>
+                  <Col>
+                    <TextField
+                      fullWidth
+                      multiline
+                      rows={4}
+                      label='lets talk'
+                      variant='standard'
+                    />
+                  </Col>
+                </Row>
+                <br />
+                <Row className='mt-2'>
+                  <Col>
+                    <Button
+                      size='large'
+                      variant='contained'
+                      className='contact__btn'
+                    >
+                      <i className='fa-solid fa-hand-wave'></i>
+                    </Button>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </Container>
     </div>
   )

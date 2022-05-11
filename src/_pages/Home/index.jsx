@@ -3,7 +3,6 @@ import Header from '../../_components/Header'
 import Navbar from '../../_components/Navbar'
 import JTreeImg from '../../_assets/jtree.jpg'
 import BishopImg from '../../_assets/bishop3.JPG'
-
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 
@@ -77,12 +76,10 @@ export default function Home() {
         <div className='d-lg-flex d-none pt-4 text-dark' style={{ position: 'fixed' }}>
           <Header />
         </div>
-        <Row style={{ position: 'fixed', right: 0, zIndex: 99 }}>
-          <Col>
-            <br />
+        <div style={{ position: 'fixed', right: 10, zIndex: 99 }}>
+          <br />
             <Navbar />
-          </Col>
-        </Row>
+        </div>
         <Row className='home__title'>
           <Col className='d-flex align-items-center justify-content-center user-select-none'>
             {nameArray[index]}

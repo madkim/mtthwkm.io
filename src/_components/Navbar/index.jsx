@@ -32,10 +32,10 @@ export default function Navbar() {
 
   return (
     <Fragment>
-      <ReactNavbar id='navbar' className='py-0 pl-0 d-lg-none py-2' expand='lg'>
+      <ReactNavbar id='navbar-bars' className='px-0 d-lg-none d-flex py-2 justify-content-end'>
         <SideMenu />
         <Nav className='hamburger-menu mr-auto' onClick={(e) => openNav()}>
-          <Button className='shadow-lg' style={{background: 'black', border: 'none', }}>
+          <Button id='navbar-bars--btn' className='shadow' style={{border: 'none', }}>
             <i className='fal fa-bars' style={{ fontSize: '2em', color: 'none' }}/>
           </Button>
         </Nav>

@@ -4,6 +4,14 @@
 }
 
 /* Navbar */
+#navbar-bars--btn {
+  background-image: url('./_assets/bishop.JPG');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .navbar {
   color: white;
   padding: 2em;
@@ -113,6 +121,12 @@
 
 .contact__form {
   opacity: 0;
+}
+
+.contact__btn {
+  background: forestgreen !important;
+  padding: 1em !important;
+  width: 200px
 }
 
 /* Work */
@@ -296,5 +310,13 @@
 @media only screen and (max-width: 991px) {
   .home__title {
     font-size: 15vw;
+  }
+  .contact__form {
+    margin-top: 3em;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.663);
+  }
+  .contact__btn {
+    width: 100%
   }
 }
