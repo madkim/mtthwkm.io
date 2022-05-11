@@ -6,6 +6,7 @@ import BishopImg from '../../_assets/bishop3.JPG'
 import { useNavigate } from 'react-router-dom'
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
+import gsap from 'gsap'
 
 export default function Home() {
   const imgOneRef = useRef(null)
@@ -72,7 +73,14 @@ export default function Home() {
   }
 
   const handleAbout = () => {
-    navigate('/about')
+    gsap.to('#home__details--container', {
+      ease: 'power',
+      duration: 1.5,
+      opacity: 0,
+      onComplete: () => {
+        navigate('/about')
+      }
+    })
   }
 
   if (loading) {
@@ -85,7 +93,7 @@ export default function Home() {
         <div className='d-lg-flex d-none pt-4 text-dark' style={{ position: 'fixed' }}>
           <Header />
         </div>
-        <div style={{ position: 'fixed', right: 10, zIndex: 99 }}>
+        <div style={{ position: 'fixed', right: 12, zIndex: 99 }}>
           <br />
             <Navbar />
         </div>
