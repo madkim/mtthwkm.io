@@ -10,8 +10,12 @@ class MainLayout extends Component {
     return (
       <Fragment>
         <br />
-        <Header />
-        <Navbar />
+        <div className='d-none d-lg-flex'>
+          <Header />
+        </div>
+        <div className='d-flex justify-content-end container-fluid'>
+          <Navbar />
+        </div>
         <Outlet />
         {/* <Footer /> */}
       </Fragment>
