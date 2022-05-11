@@ -1,6 +1,9 @@
 /* Utility */
-.cursor-pointer {
+.cursor-pointer:hover {
   cursor: pointer;
+}
+.z-index-99 {
+  z-index: 99 !important;
 }
 
 /* Navbar */
@@ -282,18 +285,27 @@
   justify-content: center;
 }
 
-.home__scroll--text {
+.home__scroll--btn {
   color: white !important;
   background-color: red;
   padding: 0.5em;
   transition: transform 0.5s, font-size 0.2s;
 }
 
-.home__scroll--text:hover {
+.home__scroll--btn:hover {
   color: red !important;
-  background-color: white;
   cursor: pointer;
   font-size: 20px;
+  background-color: white;
+}
+
+.home__continue--btn {
+  color: white !important;
+  border: 1px solid red;
+  z-index: 1000;
+  padding: 0.5em;
+  position: relative;
+  transition: transform 0.5s, font-size 0.2s;
 }
 
 .home__parallax--1 {
@@ -309,6 +321,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+}
+
+.home__img--fade-sticky,
+.home__img--fade {
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  background: black;
+}
+
+.home__img--fade-sticky {
+  position: sticky !important;
 }
 
 @media only screen and (max-width: 991px) {
