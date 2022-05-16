@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { animateProjectsPage } from '../../_helpers/animation'
 import ProjectCard from './Components/ProjectCard'
+import { animateProjectsPage } from '../../_helpers/animation'
 
 export default function Projects() {
   const [selected, setSelected] = useState('active')

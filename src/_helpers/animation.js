@@ -108,3 +108,24 @@ export function animateContactPage() {
     duration: 1
   })
 }
+
+// Work Animations
+export function animateWorkPage() {
+  gsap.to('#work', {
+    ease: 'linear',
+    delay: 1,
+    opacity: 1,
+    duration: 0.2
+  })
+}
+
+// Resume Animations 
+export function animateResumePage() {
+  gsap.to('#resume', {
+    ease: 'linear',
+    delay: .5,
+    opacity: 1,
+    duration: 0.2
+  })
+}
+

@@ -98,13 +98,11 @@ export default function Home() {
         </Row>
       </Container>
 
-      {/* <div className="home__parallax--1"></div> */}
-
       <div id='home__details--container'>
         <div ref={homeDetailsBgRef} className='home__details--background h-100'>
           <div
             ref={homeDetailsRef}
-            className='text-center home__details container'
+            className='text-center home__details mx-5'
           >
             <div
               ref={imgOneRef}
@@ -140,15 +138,13 @@ export default function Home() {
                       <br />a lover of all things coffee{' '}
                     </p>
                   </div>
-                  <p>Please feel free to look around and enjoy your stay</p>
-                  <p>I'm happy you're here</p>
                 </div>
               </div>
             </div>
             <div
               ref={imgTwoRef}
               style={{
-                position: 'absolute',
+                position: 'sticky',
                 height: '1000px',
                 width: '100%',
                 background: 'black'
@@ -160,12 +156,8 @@ export default function Home() {
                 src={BishopImg}
                 style={{ objectFit: 'cover' }}
               />
-              <div className=' m-5  d-flex justify-content-center flex-row'>
+              <div className='m-5  d-flex justify-content-center flex-row'>
                 <div className='text-center'>
-                  <p>
-                    Hello! I'm Matt <br /> Welcome to my website
-                  </p>
-
                   <p>Please feel free to look around and enjoy your stay</p>
                   <p>I'm happy you're here</p>
                 </div>
