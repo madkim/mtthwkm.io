@@ -90,12 +90,16 @@ export default function Home() {
   return (
     <Fragment>
       <Container id='home' fluid>
-        <div className='d-lg-flex d-none pt-4 text-dark position-fixed'>
-          <Header />
-        </div>
-        <div className='mt-4 navbar--container'>
-          <Navbar />
-        </div>
+        <Row className='mt-4 d-lg-flex d-none header--container'>
+          <Col>
+            <Header />
+          </Col>
+        </Row>
+        <Row className='mt-4 navbar--container'>
+          <Col>
+            <Navbar />
+          </Col>
+        </Row>
         <Row className='home__title'>
           <Col className='d-flex align-items-center justify-content-center user-select-none'>
             {nameArray[index]}

@@ -13,7 +13,7 @@ export default function Contact() {
 
   return (
     <div id='contact'>
-      <Container fluid className='mt-4'>
+      <Container fluid className='pt-4'>
         <Row>
           <Col xs='12' className='text-end'>
             <Navbar />
