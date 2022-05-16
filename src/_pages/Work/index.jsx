@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react'
-import Header from '../../_components/Header';
-import Navbar from '../../_components/Navbar';
 import ImageGallery from 'react-image-gallery';
 
 import Logo from '../../_assets/axs/Shared/logo@3x.png'
@@ -11,8 +9,8 @@ import MacbookMessages from '../../_assets/axs/Shared/MacbookMessages@3x.png'
 import MacbookTelehealth from '../../_assets/axs/Shared/MacbookTelehealth@3x.png'
 import DigitalRegistration from '../../_assets/axs/Shared/DigitalRegistration@3x.png'
 
+import { Row, Col } from 'react-bootstrap'
 import { animateWorkPage } from '../../_helpers/animation';
-import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Work() {
 
