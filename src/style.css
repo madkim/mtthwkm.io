@@ -73,6 +73,12 @@
   cursor: pointer;
 }
 
+.header--container {
+  left: 0px; 
+  z-index: 99;
+  position: fixed; 
+}
+
 /* Footer */
 #footer {
   bottom: 0;

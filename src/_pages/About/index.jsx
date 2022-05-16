@@ -3,8 +3,8 @@ import gsap from 'gsap'
 import Timeline from './Components/Timeline'
 
 import { Link } from 'react-router-dom'
+import { Row, Col } from 'react-bootstrap'
 import { animateAboutPage } from '../../_helpers/animation'
-import { Container, Row, Col } from 'react-bootstrap'
 
 export default function About() {
   useEffect(() => {
@@ -50,10 +50,7 @@ export default function About() {
   }
 
   return (
-    <Container
-      id='about'
-      className='d-flex flex-column justify-content-center align-items-center text-light'
-    >
+    <div id='about' className='d-flex flex-column justify-content-center align-items-center text-light' >
       <Row className='my-4'>
         <Col>
           <small
@@ -227,6 +224,6 @@ export default function About() {
       >
         start over
       </small>
-    </Container>
+    </div>
   )
 }

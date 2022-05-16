@@ -15,11 +15,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path='/' element={<MainLayout />}>
+          <Route path='/work' element={<Work />} />
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
         </Route>
         <Route path='/home' element={<Home />} />
-        <Route path='/work' element={<Work />} />
         <Route path='/resume' element={<Resume />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>

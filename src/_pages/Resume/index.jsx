@@ -39,7 +39,7 @@ export default function Resume() {
           {loading || !ResumePDF ? 
             <Spinner animation='border'/>
             :
-            <Page className={'d-flex'} scale={scale} pageNumber={1} />
+            <Page scale={scale} pageNumber={1} />
           }
         </Document>
       </div>

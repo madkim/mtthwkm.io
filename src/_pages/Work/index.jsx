@@ -62,20 +62,7 @@ export default function Work() {
     },
   ];
   
-  return <Container id='work'>
-    <div className='mb-4' style={{height: '180px'}}>
-      <Row className='mt-4 d-lg-flex d-none' style={{ position: 'fixed', left: 0, zIndex: 99 }}>
-        <Col>
-          <Header />
-        </Col>
-      </Row>
-      <Row className='mt-4 navbar--container'>
-        <Col>
-          <Navbar />
-        </Col>
-      </Row>
-    </div>
-
+  return <div id='work'>
     <Row>
       <Col lg={{span: 8, offset: 2}} className='text-light'>
         <h1 className='fw-light text-center'>
@@ -215,5 +202,5 @@ export default function Work() {
         <p>Integrated 3rd party development packages using npm and composer. </p>
       </Col>
     </Row>
-  </Container>
+  </div>
 }
