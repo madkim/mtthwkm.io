@@ -14,10 +14,11 @@ export default function Projects() {
   }
 
   return (
-    <div id='projects'>
-      <div className='project__click__me text-light user-select-none mb-4'>
+    <div id='projects' className='d-flex flex-column justify-content-center align-items-center' >
+      <div className='project__click__me text-light user-select-none'>
         click me &nbsp;<i className='fa-solid fa-hand-point-down'></i>
       </div>
+      <br />
       <div id='project__cards'>
         <ProjectCard
           select={handleSelect}
@@ -44,7 +45,9 @@ export default function Projects() {
         />
       </div>
 
-      <div id='project__arrows' className='my-4'>
+      <br />
+
+      <div id='project__arrows'>
         <div className='project__arrow'>
           <i className='fa-thin fa-2xl fa-circle-arrow-left'></i>
         </div>
@@ -52,6 +55,7 @@ export default function Projects() {
           <i className='fa-thin fa-2xl fa-circle-arrow-right'></i>
         </div>
       </div>
+      <br />
     </div>
   )
 }

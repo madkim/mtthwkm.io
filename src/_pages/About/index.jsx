@@ -52,7 +52,7 @@ export default function About() {
   }
 
   return (
-    <div id='about' className='d-flex flex-column justify-content-center align-items-center text-light' >
+    <div id='about' className='d-flex flex-column justify-content-center align-items-center text-light'>
       <Row className='my-4'>
         <Col>
           <small
