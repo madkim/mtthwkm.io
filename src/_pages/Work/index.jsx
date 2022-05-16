@@ -8,7 +8,6 @@ import Welcome from '../../_assets/axs/Shared/welcome-macbook@3x.png'
 import MacbookForms from '../../_assets/axs/Shared/MacbookForms@3x.png'
 import MacbookEvents from '../../_assets/axs/Shared/MacbookEvents@3x.png'
 import MacbookMessages from '../../_assets/axs/Shared/MacbookMessages@3x.png'
-import TelehealthVideo from '../../_assets/axs/Shared/TelehealthVideo@3x.png'
 import MacbookTelehealth from '../../_assets/axs/Shared/MacbookTelehealth@3x.png'
 import DigitalRegistration from '../../_assets/axs/Shared/DigitalRegistration@3x.png'
 
@@ -57,13 +56,6 @@ export default function Work() {
       originalHeight: 500,
     },
     {
-      original: TelehealthVideo,
-      thumbnail: TelehealthVideo,
-      thumbnailHeight: 50,
-      originalHeight: 500,
-      thumbnailClass: 'thumbnail__width mx-2'
-    },
-    {
       original: MacbookTelehealth,
       thumbnail: MacbookTelehealth,
       originalHeight: 500,
@@ -85,7 +77,7 @@ export default function Work() {
     </div>
 
     <Row>
-      <Col className='text-light'>
+      <Col lg={{span: 8, offset: 2}} className='text-light'>
         <h1 className='fw-light text-center'>
           Front-End Developer @ &nbsp;
           <a
@@ -97,20 +89,29 @@ export default function Work() {
             AxS Health
           </a>
         </h1>
-        <div className='d-flex flex-row justify-content-between mb-3 border-bottom lead'>
-          <p>       
+        <div className='d-flex flex-row justify-content-center mt-3 mb-2'>
+          <div>       
             <i className='fa-brands fa-js'></i> Javascript&nbsp;&nbsp;         
             <i className='fa-brands fa-react'></i> React&nbsp;&nbsp; 
             <i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;
             <i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;
             <i className='fa-brands fa-php'></i> PHP&nbsp;&nbsp;MySQL
-          </p>
-          <h5 className='lead'>2020 - present</h5>
+          </div>
+        </div>
+        <div className='d-flex flex-row justify-content-center'>
+          <p>2020 - present</p>
+        </div>
+      </Col>
+    </Row>
+    <Row className='my-4'>
+      <Col lg={{span: 8, offset: 2}}>
+        <div className='mb-4'>
+          <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} />
         </div>
       </Col>
     </Row>
     <Row className='mb-4'>
-      <Col xs='4' className='text-light'>
+      <Col xs='12' lg={{span: 6, offset: 3}} className='text-light'>
         <p>Improved  video chat capabilities on web and mobile platforms using Twilio's video framework.</p>
         <p>Followed the DRY principle when building static websites for clients using Laravel's Jigsaw framework. </p>
         <p>Avoided breaking changes by using Jest to test ui components and implement continuous integration. </p>
@@ -118,41 +119,37 @@ export default function Work() {
         <p>Utilized Browserstack to ensure consistency across all major mobile devices.</p>
         <p>Developed components for a private npm package used to share ui components across all platforms.</p>
       </Col>
-      <Col>
-        <Col>
-          <div className='position-sticky mb-4' style={{ top: '15em' }}>
-            <ImageGallery items={images} />
-          </div>
-        </Col>
-      </Col>
     </Row>
 
+    <hr />
+
     <Row className='mt-5'>
-      <Col className='text-light'>
+      <Col lg={{span: 8, offset: 2}} className='text-light'>
         <h1 className='fw-light text-center'>
           Full-Stack Developer @ Donaldson Arthritis Research Foundation
         </h1>
-        <div className='mb-3 border-bottom'>
-          <div className='lead'>
-            <Row>
-              <Col xs='auto'>    
-              <p>
-                <i className='fa-brands fa-js'></i> Javascript&nbsp;
-                JQuery&nbsp; <i className='fa-brands fa-html5'></i> HTML&nbsp;{' '}
-                <i className='fa-brands fa-css3'></i> CSS&nbsp; <i className='fa-brands fa-laravel'></i> Laravel&nbsp;{' '}
-                <i className='fa-brands fa-php'></i> PHP&nbsp; MySQL
-              </p>
-              </Col>
-              <Col className='text-end'>
-                <h5 className='mt-auto lead'>2018 - 2020</h5>
-              </Col>
-            </Row>
+        <div className='d-flex flex-row justify-content-center mt-3 mb-2'>
+          <div>
+            <i className='fa-brands fa-js'></i> Javascript&nbsp;
+            JQuery&nbsp; <i className='fa-brands fa-html5'></i> HTML&nbsp;{' '}
+            <i className='fa-brands fa-css3'></i> CSS&nbsp; <i className='fa-brands fa-laravel'></i> Laravel&nbsp;{' '}
+            <i className='fa-brands fa-php'></i> PHP&nbsp; MySQL
           </div>
+        </div>
+        <div className='d-flex flex-row justify-content-center'>
+          <p>2018 - 2020</p>
+        </div>
+      </Col>
+    </Row>
+    <Row className='my-4'>
+      <Col lg={{span: 8, offset: 2}}>
+        <div className='mb-4'>
+          <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} />
         </div>
       </Col>
     </Row>
     <Row className='mb-4'>
-      <Col xs='4' className='text-light'>
+      <Col xs='12' lg={{span: 6, offset: 3}} className='text-light'>
         <p>Managed database manipulation and extraction using MySQL. </p>
         <p>Redesigned the UI for several key pages, making it easy to find important patient information. </p>
         <p>Gained experience with the MVC design pattern by creating controllers to fetch and display model data. </p>
@@ -166,13 +163,6 @@ export default function Work() {
         <p>Practiced deploying newly written code to the production server with the rocketeer deployment package.</p>
         <p>Worked with AWS to create staging servers, patch server issues and apply code edits.</p>
         <p>Integrated 3rd party development packages using npm and composer. </p>
-      </Col>
-      <Col>
-        <Col>
-          <div className='position-sticky mb-4' style={{ top: '15em' }}>
-            <ImageGallery items={images} />
-          </div>
-        </Col>
       </Col>
     </Row>
   </Container>
