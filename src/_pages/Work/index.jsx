@@ -2,6 +2,16 @@ import React, { useEffect } from 'react'
 import Header from '../../_components/Header';
 import Navbar from '../../_components/Navbar';
 import ImageGallery from 'react-image-gallery';
+
+import Logo from '../../_assets/axs/Shared/logo@3x.png'
+import Welcome from '../../_assets/axs/Shared/welcome-macbook@3x.png'
+import MacbookForms from '../../_assets/axs/Shared/MacbookForms@3x.png'
+import MacbookEvents from '../../_assets/axs/Shared/MacbookEvents@3x.png'
+import MacbookMessages from '../../_assets/axs/Shared/MacbookMessages@3x.png'
+import TelehealthVideo from '../../_assets/axs/Shared/TelehealthVideo@3x.png'
+import MacbookTelehealth from '../../_assets/axs/Shared/MacbookTelehealth@3x.png'
+import DigitalRegistration from '../../_assets/axs/Shared/DigitalRegistration@3x.png'
+
 import { animateWorkPage } from '../../_helpers/animation';
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -14,35 +24,66 @@ export default function Work() {
 
   const images = [
     {
-      original: 'https://picsum.photos/id/1018/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1018/250/150/',
+      original: Logo,
+      thumbnail: Logo,
+      originalHeight: 500,
+      originalClass: 'original__class--logo'
     },
     {
-      original: 'https://picsum.photos/id/1015/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1015/250/150/',
+      original: DigitalRegistration,
+      thumbnail: DigitalRegistration,
+      thumbnailHeight: 50,
+      originalHeight: 500,
+      thumbnailClass: 'thumbnail__width mx-2'
     },
     {
-      original: 'https://picsum.photos/id/1019/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1019/250/150/',
+      original: Welcome,
+      thumbnail: Welcome,
+      originalHeight: 500,
+    },
+    {
+      original: MacbookForms,
+      thumbnail: MacbookForms,
+      originalHeight: 500,
+    },
+    {
+      original: MacbookEvents,
+      thumbnail: MacbookEvents,
+      originalHeight: 500,
+    },
+    {
+      original: MacbookMessages,
+      thumbnail: MacbookMessages,
+      originalHeight: 500,
+    },
+    {
+      original: TelehealthVideo,
+      thumbnail: TelehealthVideo,
+      thumbnailHeight: 50,
+      originalHeight: 500,
+      thumbnailClass: 'thumbnail__width mx-2'
+    },
+    {
+      original: MacbookTelehealth,
+      thumbnail: MacbookTelehealth,
+      originalHeight: 500,
     },
   ];
   
   return <Container id='work'>
-    <div style={{height: '180px'}}>
-      <Row style={{ position: 'fixed', left: 0, zIndex: 99 }}>
+    <div className='mb-4' style={{height: '180px'}}>
+      <Row className='mt-4' style={{ position: 'fixed', left: 0, zIndex: 99 }}>
         <Col>
-          <br />
           <Header />
         </Col>
       </Row>
-      <Row style={{ position: 'fixed', right: 0, zIndex: 99 }}>
+      <Row className='mt-4' style={{ position: 'fixed', right: 0, zIndex: 99 }}>
         <Col>
-          <br />
           <Navbar />
         </Col>
       </Row>
     </div>
-    <br />
+
     <Row>
       <Col className='text-light'>
         <h1 className='fw-light text-center'>
@@ -68,7 +109,7 @@ export default function Work() {
         </div>
       </Col>
     </Row>
-    <Row>
+    <Row className='mb-4'>
       <Col xs='4' className='text-light'>
         <p>Improved  video chat capabilities on web and mobile platforms using Twilio's video framework.</p>
         <p>Followed the DRY principle when building static websites for clients using Laravel's Jigsaw framework. </p>
@@ -86,7 +127,6 @@ export default function Work() {
       </Col>
     </Row>
 
-    <br />
     <Row className='mt-5'>
       <Col className='text-light'>
         <h1 className='fw-light text-center'>
@@ -111,7 +151,7 @@ export default function Work() {
         </div>
       </Col>
     </Row>
-    <Row>
+    <Row className='mb-4'>
       <Col xs='4' className='text-light'>
         <p>Managed database manipulation and extraction using MySQL. </p>
         <p>Redesigned the UI for several key pages, making it easy to find important patient information. </p>
@@ -135,6 +175,5 @@ export default function Work() {
         </Col>
       </Col>
     </Row>
-    <br />
   </Container>
 }

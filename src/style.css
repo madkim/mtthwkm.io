@@ -236,6 +236,12 @@
 #work {
   height: 100vh;
 }
+.thumbnail__width {
+  width: 35px !important;
+}
+.original__class--logo img{
+  width: 50% !important;
+}
 
 /* Home */
 #home {

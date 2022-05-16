@@ -54,8 +54,7 @@ export default function About() {
       id='about'
       className='d-flex flex-column justify-content-center align-items-center text-light'
     >
-      <br />
-      <Row>
+      <Row className='my-4'>
         <Col>
           <small
             onClick={() => window.location.reload()}
@@ -90,7 +89,6 @@ export default function About() {
           </h1>
         </Col>
       </Row>
-      <br />
 
       <div id='about__short' className='container lead'>
         <p>
@@ -220,10 +218,9 @@ export default function About() {
         <br />
       </div>
 
-      <div id='about__timeline' className='container lead'>
+      <div id='about__timeline' className='container lead mb-4'>
         <Timeline />
       </div>
-      <br />
       <small
         onClick={() => window.location.reload()}
         className='about__restart'

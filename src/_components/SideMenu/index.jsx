@@ -92,7 +92,7 @@ export default function SideMenu() {
         </div>
       </div>
       <div>
-        <Row>
+        <Row className='mb-4'>
           <Col xs='3'>
             <a
               rel='noopener noreferrer'
@@ -125,7 +125,6 @@ export default function SideMenu() {
             </Link>
           </Col>
         </Row>
-        <br />
       </div>
     </div>
   )

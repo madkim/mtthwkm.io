@@ -13,8 +13,7 @@ export default function Contact() {
 
   return (
     <div id='contact'>
-      <br />
-      <Container fluid>
+      <Container fluid className='mt-4'>
         <Row>
           <Col xs='12' className='text-end'>
             <Navbar />
@@ -23,11 +22,10 @@ export default function Contact() {
       </Container>
       <Container>
         <div className='contact__form rounded'>
-          <br />
-          <Row>
+          <Row className='mt-4'>
             <Col lg={{ span: 8, offset: 2 }}>
               <div>
-                <Row>
+                <Row className='mb-4'>
                   <Col>
                     <TextField
                       fullWidth
@@ -37,8 +35,7 @@ export default function Contact() {
                     />
                   </Col>
                 </Row>
-                <br />
-                <Row>
+                <Row className='mb-4'>
                   <Col>
                     <TextField
                       fullWidth
@@ -48,8 +45,7 @@ export default function Contact() {
                     />
                   </Col>
                 </Row>
-                <br />
-                <Row>
+                <Row className='mb-4'>
                   <Col>
                     <TextField
                       fullWidth
@@ -60,7 +56,6 @@ export default function Contact() {
                     />
                   </Col>
                 </Row>
-                <br />
                 <Row className='mt-2'>
                   <Col>
                     <Button

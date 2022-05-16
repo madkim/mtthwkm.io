@@ -93,9 +93,8 @@ export default function Home() {
         <div className='d-lg-flex d-none pt-4 text-dark' style={{ position: 'fixed' }}>
           <Header />
         </div>
-        <div style={{ position: 'fixed', right: 12, zIndex: 99 }}>
-          <br />
-            <Navbar />
+        <div className='mt-4' style={{ position: 'fixed', right: 12, zIndex: 99 }}>
+          <Navbar />
         </div>
         <Row className='home__title'>
           <Col className='d-flex align-items-center justify-content-center user-select-none'>
@@ -123,11 +122,11 @@ export default function Home() {
                 style={{ objectFit: 'cover' }}
               />
               <div className='m-5 d-flex justify-content-center flex-row'>
-                <div className='text-center'>
+                <div className='text-center mb-4'>
                   <p>
                     Hello! I'm Matt <br /> Welcome to my website
                   </p>
-                  <div>
+                  <div className='mb-4'>
                     <p>
                       I'm
                       <br />
@@ -141,7 +140,6 @@ export default function Home() {
                       <br />a lover of all things coffee{' '}
                     </p>
                   </div>
-                  <br />
                   <div 
                     onClick={() => offset >= 3500 ? handleAbout() : handleContinue() } 
                     className='cursor-pointer home__continue--btn rounded-pill'
@@ -149,7 +147,6 @@ export default function Home() {
                     { offset >= 3500 ? 'about me' : 'continue'}
                   </div>
                 </div>
-                <br />
               </div>
             </div>
             <div ref={imgTwoRef} className='home__img--fade-sticky' >
