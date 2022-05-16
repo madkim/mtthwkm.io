@@ -44,7 +44,7 @@
 }
 
 .navbar--container {
-  right: 12;
+  right: 12px;
   z-index: 99;
   position: fixed;
 }

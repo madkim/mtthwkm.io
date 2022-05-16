@@ -69,7 +69,7 @@ export default function Work() {
           <Header />
         </Col>
       </Row>
-      <Row className='mt-4' style={{ position: 'fixed', right: 12, zIndex: 99 }}>
+      <Row className='mt-4 navbar--container'>
         <Col>
           <Navbar />
         </Col>
@@ -79,27 +79,46 @@ export default function Work() {
     <Row>
       <Col lg={{span: 8, offset: 2}} className='text-light'>
         <h1 className='fw-light text-center'>
-          Front-End Developer @ &nbsp;
-          <a
-            rel='noopener noreferrer'
-            href='https://www.axshealthapp.com/'
-            target='_blank'
-            style={{color: 'yellow'}}
-          >
-            AxS Health
-          </a>
+          Front-End Developer 
+          <div className='d-inline-block'>
+            &nbsp;@&nbsp;
+            <a
+              rel='noopener noreferrer'
+              href='https://www.axshealthapp.com/'
+              target='_blank'
+              style={{color: 'yellow'}}
+            >
+              AxS Health
+            </a>
+          </div>
         </h1>
-        <div className='d-flex flex-row justify-content-center mt-3 mb-2'>
-          <div>       
-            <i className='fa-brands fa-js'></i> Javascript&nbsp;&nbsp;         
-            <i className='fa-brands fa-react'></i> React&nbsp;&nbsp; 
-            <i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;
-            <i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;
-            <i className='fa-brands fa-php'></i> PHP&nbsp;&nbsp;MySQL
+        <div className='d-none d-sm-block'>
+          <div className='d-flex flex-row justify-content-center mt-3 mb-2'>
+            <div><i className='fa-brands fa-js'></i> Javascript&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-react'></i> React&nbsp;&nbsp; </div>
+            <div><i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-php'></i> PHP&nbsp;&nbsp;</div>
+            <div>MySQL</div>
+          </div>
+          <div className='d-flex flex-row justify-content-center'>
+            <p>2020 - present</p>
           </div>
         </div>
-        <div className='d-flex flex-row justify-content-center'>
-          <p>2020 - present</p>
+        <div className='d-block d-sm-none mt-4'>
+          <div className='d-flex flex-row mt-3 justify-content-center'>
+            <div><i className='fa-brands fa-js'></i> Javascript&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-react'></i> React&nbsp;&nbsp; </div>
+            <div><i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;</div>
+          </div>
+          <div className='d-flex flex-row mb-2 justify-content-center'>
+            <div><i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-php'></i> PHP&nbsp;&nbsp;</div>
+            <div>MySQL</div>
+          </div>
+          <div className='d-flex flex-row justify-content-center'>
+            <p>2020 - present</p>
+          </div>
         </div>
       </Col>
     </Row>
@@ -116,7 +135,7 @@ export default function Work() {
       </Col>
     </Row>
     <Row className='mb-4'>
-      <Col xs='12' lg={{span: 6, offset: 3}} className='text-light'>
+      <Col xs='12' lg={{span: 6, offset: 3}} className='text-light px-5 px-sm-0'>
         <p>Improved  video chat capabilities on web and mobile platforms using Twilio's video framework.</p>
         <p>Followed the DRY principle when building static websites for clients using Laravel's Jigsaw framework. </p>
         <p>Avoided breaking changes by using Jest to test ui components and implement continuous integration. </p>
@@ -126,23 +145,44 @@ export default function Work() {
       </Col>
     </Row>
 
-    <hr />
+    <hr className='my-5' />
 
     <Row className='mt-5'>
       <Col lg={{span: 8, offset: 2}} className='text-light'>
-        <h1 className='fw-light text-center'>
+        <h1 className='fw-light text-center d-lg-block d-none'>
           Full-Stack Developer @ Donaldson Arthritis Research Foundation
         </h1>
-        <div className='d-flex flex-row justify-content-center mt-3 mb-2'>
-          <div>
-            <i className='fa-brands fa-js'></i> Javascript&nbsp;
-            JQuery&nbsp; <i className='fa-brands fa-html5'></i> HTML&nbsp;{' '}
-            <i className='fa-brands fa-css3'></i> CSS&nbsp; <i className='fa-brands fa-laravel'></i> Laravel&nbsp;{' '}
-            <i className='fa-brands fa-php'></i> PHP&nbsp; MySQL
+        <h1 className='fw-light text-center d-lg-none d-block'>
+          Full-Stack Developer <br /> <small>@ Donaldson Arthritis Research Foundation</small> 
+        </h1>
+
+        <div className='d-none d-sm-block'>
+          <div className='d-flex flex-row justify-content-center mt-3 mb-2'>
+            <div><i className='fa-brands fa-js'></i> Javascript&nbsp;&nbsp;</div>
+            <div>JQuery&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-php'></i> PHP&nbsp;&nbsp;</div>
+            <div>MySQL</div>
+          </div>
+          <div className='d-flex flex-row justify-content-center'>
+            <p>2018 - 2020</p>
           </div>
         </div>
-        <div className='d-flex flex-row justify-content-center'>
-          <p>2018 - 2020</p>
+        <div className='d-block d-sm-none mt-4'>
+          <div className='d-flex flex-row mt-3 justify-content-center'>
+            <div><i className='fa-brands fa-js'></i> Javascript&nbsp;&nbsp;</div>
+            <div>JQuery&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;</div>
+          </div>
+          <div className='d-flex flex-row mb-2 justify-content-center'>
+            <div><i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;</div>
+            <div><i className='fa-brands fa-php'></i> PHP&nbsp;&nbsp;</div>
+            <div>MySQL</div>
+          </div>
+          <div className='d-flex flex-row justify-content-center'>
+            <p>2018 - 2020</p>
+          </div>
         </div>
       </Col>
     </Row>
@@ -159,7 +199,7 @@ export default function Work() {
       </Col>
     </Row>
     <Row className='mb-4 pb-5'>
-      <Col xs='12' lg={{span: 6, offset: 3}} className='text-light'>
+      <Col xs='12' lg={{span: 6, offset: 3}} className='text-light px-5 px-sm-0'>
         <p>Managed database manipulation and extraction using MySQL. </p>
         <p>Redesigned the UI for several key pages, making it easy to find important patient information. </p>
         <p>Gained experience with the MVC design pattern by creating controllers to fetch and display model data. </p>
