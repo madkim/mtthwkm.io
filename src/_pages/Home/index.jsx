@@ -1,4 +1,5 @@
 import React, { useEffect, Fragment, useState, useRef } from 'react'
+import gsap from 'gsap'
 import Header from '../../_components/Header'
 import Navbar from '../../_components/Navbar'
 import JTreeImg from '../../_assets/jtree.jpg'
@@ -6,7 +7,6 @@ import BishopImg from '../../_assets/bishop3.JPG'
 import { useNavigate } from 'react-router-dom'
 import { animateHomePage } from '../../_helpers/animation'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import gsap from 'gsap'
 
 export default function Home() {
   const imgOneRef = useRef(null)
