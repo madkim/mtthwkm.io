@@ -64,12 +64,12 @@ export default function Work() {
   
   return <Container id='work'>
     <div className='mb-4' style={{height: '180px'}}>
-      <Row className='mt-4' style={{ position: 'fixed', left: 0, zIndex: 99 }}>
+      <Row className='mt-4 d-lg-flex d-none' style={{ position: 'fixed', left: 0, zIndex: 99 }}>
         <Col>
           <Header />
         </Col>
       </Row>
-      <Row className='mt-4' style={{ position: 'fixed', right: 0, zIndex: 99 }}>
+      <Row className='mt-4' style={{ position: 'fixed', right: 12, zIndex: 99 }}>
         <Col>
           <Navbar />
         </Col>
@@ -106,7 +106,12 @@ export default function Work() {
     <Row className='my-4'>
       <Col lg={{span: 8, offset: 2}}>
         <div className='mb-4'>
-          <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} />
+          <div className='d-none d-lg-block'>
+            <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} />
+          </div>
+          <div className='d-block d-lg-none'>
+            <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} showThumbnails={false} />
+          </div>
         </div>
       </Col>
     </Row>
@@ -144,11 +149,16 @@ export default function Work() {
     <Row className='my-4'>
       <Col lg={{span: 8, offset: 2}}>
         <div className='mb-4'>
-          <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} />
+          <div className='d-none d-lg-block'>
+            <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} />
+          </div>
+          <div className='d-block d-lg-none'>
+            <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} showThumbnails={false} />
+          </div>
         </div>
       </Col>
     </Row>
-    <Row className='mb-4'>
+    <Row className='mb-4 pb-5'>
       <Col xs='12' lg={{span: 6, offset: 3}} className='text-light'>
         <p>Managed database manipulation and extraction using MySQL. </p>
         <p>Redesigned the UI for several key pages, making it easy to find important patient information. </p>

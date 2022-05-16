@@ -90,10 +90,10 @@ export default function Home() {
   return (
     <Fragment>
       <Container id='home' fluid>
-        <div className='d-lg-flex d-none pt-4 text-dark' style={{ position: 'fixed' }}>
+        <div className='d-lg-flex d-none pt-4 text-dark position-fixed'>
           <Header />
         </div>
-        <div className='mt-4' style={{ position: 'fixed', right: 12, zIndex: 99 }}>
+        <div className='mt-4 navbar--container'>
           <Navbar />
         </div>
         <Row className='home__title'>

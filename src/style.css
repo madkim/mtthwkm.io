@@ -43,6 +43,12 @@
   color: yellow;
 }
 
+.navbar--container {
+  right: 12;
+  z-index: 99;
+  position: fixed;
+}
+
 /* Header */
 #header {
   top: 0;
