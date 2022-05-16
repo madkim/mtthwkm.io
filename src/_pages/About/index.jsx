@@ -2,11 +2,13 @@ import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import Timeline from './Components/Timeline'
 
-import { Link } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
 import { animateAboutPage } from '../../_helpers/animation'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function About() {
+  const navigate = useNavigate(null)
+
   useEffect(() => {
     animateAboutPage()
   }, [])
@@ -81,6 +83,13 @@ export default function About() {
                 className='about__item about__timeline'
               >
                 see a cool timeline
+              </li>
+              <br />
+              <li
+                onClick={() => navigate('/work')}
+                className='about__item about__work'
+              >
+                check out some work
               </li>
             </ul>
           </h1>
@@ -216,13 +225,20 @@ export default function About() {
       </div>
 
       <div id='about__timeline' className='container lead mb-4'>
-        <Timeline />
+        <div className='d-none d-xs-block'><Timeline/></div>
+        <div className='d-block d-xs-none'><Timeline animate={false}/></div>
       </div>
       <small
         onClick={() => window.location.reload()}
-        className='about__restart'
+        className='about__restart mb-5'
       >
         start over
+      </small>
+      <small
+        onClick={() => navigate('/work')}
+        className='about__restart'
+      >
+        continue to work
       </small>
     </div>
   )

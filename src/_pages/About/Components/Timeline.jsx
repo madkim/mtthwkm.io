@@ -5,9 +5,9 @@ import {
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 
-export default function Timeline() {
+export default function Timeline({ animate = true }) {
   return (
-    <VerticalTimeline>
+    <VerticalTimeline animate={animate}>
       <VerticalTimelineElement
         date='2020 - present'
         className='vertical-timeline-element--work'
