@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Offcanvas, Row, Col, Button } from 'react-bootstrap'
+
 import './style.css'
 
 export default function SideMenu({ show, handleClose }) {
@@ -8,7 +9,8 @@ export default function SideMenu({ show, handleClose }) {
 
   return (
     <Offcanvas show={show} onHide={handleClose} placement='end' style={{width: '250px', background: 'black'}}>
-      <Offcanvas.Body>
+      <Offcanvas.Header className='justify-content-end pt-4 pr-4' closeButton closeVariant='white'></Offcanvas.Header>
+      <Offcanvas.Body className='pt-0'>
         <div id='mySidepanel' className='sidepanel fw-light' onClick={handleClose} >
           <div className='sidepanel__container text-start'>
             <div>

@@ -1,12 +1,11 @@
 /* The sidepanel menu */
 .sidepanel {
-  height: 100%; /* Specify a height */
+  height: 95%; /* Specify a height */
   z-index: 99; /* Stay on top */
   display: flex;
   position: fixed; /* Stay in place */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px; /* Place content 60px from the top */
   flex-direction: column;
   background-color: black /* Black*/
 }
