@@ -15,9 +15,9 @@ export default function Footer() {
     <div
       ref={footerRef}
       id='footer'
-      className='py-1 text-light text-center w-100 lead user-select-none'
+      className='py-1 text-light text-center w-100 font-weight-light user-select-none'
     >
-      mtthwkm.io
+      <small>mtthwkm.io</small>
     </div>
   )
 }

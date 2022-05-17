@@ -33,12 +33,12 @@ export default function Navbar() {
   return (
     <Fragment>
       <ReactNavbar id='navbar-bars' className='px-0 d-lg-none d-flex py-2 justify-content-end'>
-        <SideMenu />
         <Nav className='hamburger-menu mr-auto' onClick={(e) => openNav()}>
           <Button id='navbar-bars--btn' className='shadow' style={{border: 'none', }}>
             <i className='fal fa-bars' style={{ fontSize: '2em', color: 'none' }}/>
           </Button>
         </Nav>
+        <SideMenu />
       </ReactNavbar>
 
       <Row ref={navRef} className='navbar justify-content-end d-none d-lg-inline-flex'>

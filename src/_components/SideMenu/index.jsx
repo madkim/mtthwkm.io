@@ -13,10 +13,6 @@ export default function SideMenu() {
 
   return (
     <div id='mySidepanel' className='sidepanel fw-light' onClick={() => closeNav()}>
-      <div className='text-center mb-4'>
-        {/* <img src={Logo} alt='AxS Health Logo' height='120' /> */}
-      </div>
-
       <div className='sidepanel__container text-start'>
         <div>
           <Link
