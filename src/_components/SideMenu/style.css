@@ -1,8 +1,5 @@
 /* The sidepanel menu */
 .sidepanel {
-  top: 0;
-  right: -23em;
-  width: 250px; /* 0 width - change this with JavaScript */
   height: 100%; /* Specify a height */
   z-index: 99; /* Stay on top */
   display: flex;

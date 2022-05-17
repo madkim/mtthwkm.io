@@ -7,7 +7,9 @@ import { Row, Col, Nav, Navbar as ReactNavbar, Button } from 'react-bootstrap'
 export default function Navbar() {
   const navRef = useRef(null)
   const location = useLocation()
+
   const [active, setActive] = useState(location.pathname)
+  const [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
     if (location.pathname === '/home') {
@@ -21,7 +23,7 @@ export default function Navbar() {
   }
 
   const openNav = () => {
-    document.getElementById('mySidepanel').style.right = '0em'
+    setShowMenu(true)
   }
 
   const pageActive = (page) => {
@@ -38,7 +40,7 @@ export default function Navbar() {
             <i className='fal fa-bars' style={{ fontSize: '2em', color: 'none' }}/>
           </Button>
         </Nav>
-        <SideMenu />
+        <SideMenu show={showMenu} handleClose={() => setShowMenu(false)} />
       </ReactNavbar>
 
       <Row ref={navRef} className='navbar justify-content-end d-none d-lg-inline-flex'>
