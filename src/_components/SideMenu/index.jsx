@@ -8,7 +8,7 @@ export default function SideMenu({ show, handleClose }) {
   const location = useLocation()
 
   return (
-    <Offcanvas show={show} onHide={handleClose} placement='end' style={{width: '250px', background: 'black'}}>
+    <Offcanvas id='offcanvas' show={show} onHide={handleClose} placement='end'>
       <Offcanvas.Header className='justify-content-end pt-4 pr-4' closeButton closeVariant='white'></Offcanvas.Header>
       <Offcanvas.Body className='pt-0'>
         <div id='mySidepanel' className='sidepanel fw-light' onClick={handleClose} >

@@ -1,3 +1,9 @@
+#offcanvas {
+  width: 250px; 
+  background: black; 
+  border-left: .5px solid #181818   
+}
+
 /* The sidepanel menu */
 .sidepanel {
   height: 95%; /* Specify a height */
