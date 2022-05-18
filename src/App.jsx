@@ -6,9 +6,10 @@ import Resume from './_pages/Resume'
 import Contact from './_pages/Contact'
 import Projects from './_pages/Projects'
 import MainLayout from './_layouts/Main'
-import AppContainer from './_containers/App'
+import AppContainer from './_containers/AppContainer'
 
 import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom'
+
 import './style.css'
 
 export default class App extends Component {  
