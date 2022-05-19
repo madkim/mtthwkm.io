@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Button from '@mui/material/Button'
+import Swal from 'sweetalert2'
 import Navbar from '../../_components/Navbar'
+import Button from '@mui/material/Button'
 
 import { TextField } from '@mui/material'
-import { Container, Row, Col } from 'react-bootstrap'
 import { animateContactPage } from '../../_helpers/animation'
+import { Container, Row, Col, Spinner } from 'react-bootstrap'
 
 export default function Contact() {
   useEffect(() => {
@@ -15,7 +16,7 @@ export default function Contact() {
   const [email, setEmail] = useState('')
   const [errors, setErrors] = useState({})
   const [details, setDetails] = useState('')
-
+  const [sending, setSending] = useState(false)
 
   const isValidEmail = (email) => {
     const emailRequirements = /\S+@\S+\.\S+/
@@ -40,10 +41,27 @@ export default function Contact() {
     }
 
     if (Object.keys(errors).length === 0) {
-      console.log('Send Email')
+      setSending(true)
+      setTimeout(() => {
+        setSending(false)
+        handleClearForm()
+        Swal.fire({
+          title: 'Your email was sent successfully!',
+          text: "Thanks for contacting me, I will do my best to get back to you as soon as possible :)",
+          icon: 'success',
+          confirmButtonColor: '#218838',
+          confirmButtonText: 'Great, thanks!'
+        })
+      }, 1000);
     } else {
       setErrors(errors)
     }
+  }
+
+  const handleClearForm = () => {
+    setName('')
+    setEmail('')
+    setDetails('')
   }
 
   return (
@@ -110,9 +128,16 @@ export default function Contact() {
                       size='large'
                       variant='contained'
                       onClick={handleContact}
+                      disabled={sending}
                       className='contact__btn'
                     >
-                      <i className='fa-solid fa-hand-wave'></i>
+                    { sending ? 
+                      <Spinner size='sm' animation='border' variant='light'/> 
+                      : 
+                      <div>
+                        <i className='fa-solid fa-hand-wave' />
+                      </div>
+                    }
                     </Button>
                   </Col>
                 </Row>
