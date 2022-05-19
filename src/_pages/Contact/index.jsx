@@ -13,12 +13,37 @@ export default function Contact() {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [errors, setErrors] = useState({})
   const [details, setDetails] = useState('')
 
+
+  const isValidEmail = (email) => {
+    const emailRequirements = /\S+@\S+\.\S+/
+    return emailRequirements.test(email)
+  }
+
   const handleContact = () => {
-    console.log('name', name)
-    console.log('email', email)
-    console.log('details', details)
+    setErrors({})
+    const errors = {}
+
+    if (name === '') {
+      errors.name = 'Please enter a name.'
+    }
+    if (isValidEmail(email) === false) {
+      errors.email = 'Please enter a valid email.'
+    }
+    if (email === '') {
+      errors.email = 'Please enter an email.'
+    }
+    if (details === '') {
+      errors.details = 'Please enter a message.'
+    }
+
+    if (Object.keys(errors).length === 0) {
+      console.log('Send Email')
+    } else {
+      setErrors(errors)
+    }
   }
 
   return (
@@ -34,16 +59,18 @@ export default function Contact() {
         <div>
           <Row className='mt-4'>
             <Col lg={{ span: 8, offset: 2 }}>
-              <div className='contact__form rounded'>
+              <div className='contact__form rounded shadow'>
                 <Row className='mb-4'>
                   <Col>
                     <TextField
                       fullWidth
-                      id='standard-basic'
+                      id='formName'
                       label='name'
                       value={name}
+                      error={Object.keys(errors).includes('name')}
                       variant='standard'
                       onChange={(e) => setName(e.target.value)}
+                      helperText={errors.name}
                     />
                   </Col>
                 </Row>
@@ -51,11 +78,13 @@ export default function Contact() {
                   <Col>
                     <TextField
                       fullWidth
-                      id='standard-basic'
+                      id='formEmail'
                       label='email'
                       value={email}
+                      error={Object.keys(errors).includes('email')}
                       variant='standard'
                       onChange={(e) => setEmail(e.target.value)}
+                      helperText={errors.email}
                     />
                   </Col>
                 </Row>
@@ -64,11 +93,14 @@ export default function Contact() {
                     <TextField
                       fullWidth
                       multiline
+                      id='formDetails'
                       rows={4}
                       value={details}
                       label='lets talk'
+                      error={Object.keys(errors).includes('details')}
                       variant='standard'
                       onChange={(e) => setDetails(e.target.value)}
+                      helperText={errors.details}
                     />
                   </Col>
                 </Row>
