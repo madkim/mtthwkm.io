@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '@mui/material/Button'
 import Navbar from '../../_components/Navbar'
 
@@ -11,6 +11,16 @@ export default function Contact() {
     animateContactPage()
   }, [])
 
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [details, setDetails] = useState('')
+
+  const handleContact = () => {
+    console.log('name', name)
+    console.log('email', email)
+    console.log('details', details)
+  }
+
   return (
     <div id='contact'>
       <Container fluid className='pt-4'>
@@ -21,17 +31,19 @@ export default function Contact() {
         </Row>
       </Container>
       <Container>
-        <div className='contact__form rounded'>
+        <div>
           <Row className='mt-4'>
             <Col lg={{ span: 8, offset: 2 }}>
-              <div>
+              <div className='contact__form rounded'>
                 <Row className='mb-4'>
                   <Col>
                     <TextField
                       fullWidth
                       id='standard-basic'
                       label='name'
+                      value={name}
                       variant='standard'
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </Col>
                 </Row>
@@ -41,7 +53,9 @@ export default function Contact() {
                       fullWidth
                       id='standard-basic'
                       label='email'
+                      value={email}
                       variant='standard'
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </Col>
                 </Row>
@@ -51,8 +65,10 @@ export default function Contact() {
                       fullWidth
                       multiline
                       rows={4}
+                      value={details}
                       label='lets talk'
                       variant='standard'
+                      onChange={(e) => setDetails(e.target.value)}
                     />
                   </Col>
                 </Row>
@@ -61,6 +77,7 @@ export default function Contact() {
                     <Button
                       size='large'
                       variant='contained'
+                      onClick={handleContact}
                       className='contact__btn'
                     >
                       <i className='fa-solid fa-hand-wave'></i>
