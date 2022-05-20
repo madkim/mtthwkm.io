@@ -4,6 +4,7 @@ import Navbar from '../../_components/Navbar'
 import Button from '@mui/material/Button'
 
 import { TextField } from '@mui/material'
+import { sendContactEmail } from '../../_services/contact.service'
 import { animateContactPage } from '../../_helpers/animation'
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
 
@@ -21,6 +22,12 @@ export default function Contact() {
   const isValidEmail = (email) => {
     const emailRequirements = /\S+@\S+\.\S+/
     return emailRequirements.test(email)
+  }
+
+  const handleClearForm = () => {
+    setName('')
+    setEmail('')
+    setDetails('')
   }
 
   const handleContact = () => {
@@ -42,26 +49,32 @@ export default function Contact() {
 
     if (Object.keys(errors).length === 0) {
       setSending(true)
-      setTimeout(() => {
-        setSending(false)
-        handleClearForm()
-        Swal.fire({
-          title: 'Your email was sent successfully!',
-          text: "Thanks for contacting me, I will do my best to get back to you as soon as possible :)",
-          icon: 'success',
-          confirmButtonColor: '#218838',
-          confirmButtonText: 'Great, thanks!'
+      sendContactEmail(name, email, details)
+        .then(function (response) {
+          handleClearForm()
+          Swal.fire({
+            title: 'Your email was sent successfully!',
+            text: "Thanks for contacting me, I will do my best to get back to you as soon as possible :)",
+            icon: 'success',
+            confirmButtonColor: '#218838',
+            confirmButtonText: 'Great, thanks!'
+          })
         })
-      }, 1000);
+        .catch(function (error) {
+          Swal.fire({
+            title: 'Something went wrong!',
+            text: "Sorry about that, please try again :(",
+            icon: 'error',
+            confirmButtonColor: '#dc3741',
+            confirmButtonText: 'Okay!'
+          })
+        })
+        .then(() => {
+            setSending(false)
+        })
     } else {
       setErrors(errors)
     }
-  }
-
-  const handleClearForm = () => {
-    setName('')
-    setEmail('')
-    setDetails('')
   }
 
   return (
