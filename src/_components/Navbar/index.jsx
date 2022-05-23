@@ -107,11 +107,11 @@ export default function Navbar() {
               <i className='navbar--icon fa-light fa-code'></i>
             </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col className={showIcon('/projects')}>
               <i className='navbar--icon fa-light fa-rocket-launch'></i>
             </Col>
-          </Row>
+          </Row> */}
           <Row>
             <Col className={showIcon('/contact')}>
               <i className='navbar--icon fa-light fa-hand-wave'></i>
