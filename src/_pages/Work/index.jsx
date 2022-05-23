@@ -139,7 +139,7 @@ export default function Work() {
       </Col>
     </Row>
 
-    <hr className='my-5' />
+    {/* <hr className='my-5' />
 
     <Row className='mt-5'>
       <Col lg={{span: 8, offset: 2}} className='text-light'>
@@ -208,6 +208,6 @@ export default function Work() {
         <p>Worked with AWS to create staging servers, patch server issues and apply code edits.</p>
         <p>Integrated 3rd party development packages using npm and composer. </p>
       </Col>
-    </Row>
+    </Row> */}
   </div>
 }

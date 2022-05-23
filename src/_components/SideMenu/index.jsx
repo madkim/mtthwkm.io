@@ -56,7 +56,7 @@ export default function SideMenu({ show, handleClose }) {
                   <Col>Work</Col>
                 </Row>
               </Link>
-              <Link
+              {/* <Link
                 to='/projects'
                 onClick={handleClose}
                 className={`mt-2 font-weight-light ${
@@ -69,7 +69,7 @@ export default function SideMenu({ show, handleClose }) {
                   </Col>
                   <Col>Projects</Col>
                 </Row>
-              </Link>
+              </Link> */}
               <Link
                 to='/contact'
                 onClick={handleClose}

@@ -72,7 +72,7 @@ export default function Navbar() {
               work
             </div>
           </Link>
-          <Link to='/projects' className='text-decoration-none'>
+          {/* <Link to='/projects' className='text-decoration-none'>
             <div
               className={pageActive('/projects')}
               onMouseEnter={() => setActive('/projects')}
@@ -80,7 +80,7 @@ export default function Navbar() {
             >
               projects
             </div>
-          </Link>
+          </Link> */}
           <Link to='/contact' className='text-decoration-none'>
             <div
               className={pageActive('/contact')}
