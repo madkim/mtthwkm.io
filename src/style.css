@@ -356,8 +356,22 @@
 }
 
 @media only screen and (max-width: 991px) {
+  #navbar-bars--btn {
+    background-size: 100vh;
+    background-attachment: unset;
+  }
+  #home {
+    background-attachment: unset;
+  }
+  #home__details--container {
+    background: unset
+  }
   .home__title {
     font-size: 15vw;
+  }
+  .home__parallax--1,
+  .home__parallax--2 {
+    background-attachment: unset;
   }
   .contact__form {
     margin-top: 3em;
