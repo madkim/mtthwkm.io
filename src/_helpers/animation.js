@@ -58,14 +58,14 @@ export function animateAboutPage() {
     ease: 'elastic',
     opacity: 1,
     delay: 1,
-    duration: 2,
+    duration: 1,
     y: -20
   })
   gsap.to('.about__item', {
     ease: 'elastic',
     opacity: 1,
     delay: 2,
-    duration: 2,
+    duration: 1,
     y: 20
   })
 }
