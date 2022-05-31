@@ -235,7 +235,7 @@ export default function Work() {
         </ul>
         <br />
         <h5>About AxS:</h5>
-        <p>Our platform offers digital patient registration, telemedicine, and patient communication solutions, enabling practices to improve access and deliver care simply.</p>
+        <p>AxS offers digital patient registration, telemedicine, and patient communication solutions, enabling practices to improve access and deliver care simply.</p>
         <p>The difficulties healthcare presents to the US public are only increasing.  However, only now do we live in an environment that is capable of welcoming solutions to those difficulties.  We've entered an era where medical opinion, technologies and public demand have all come together to accept these changes and create a tool that can actually make a difference in the way patients interact with the healthcare system.  </p>
 
         <p>We, and others like us, are recognizing this environment and creating tools that patients can leverage, making each participant a change-maker in their own right.  We just happen to do it better.</p>
@@ -344,6 +344,14 @@ export default function Work() {
         <p>Practiced deploying newly written code to the production server with the rocketeer deployment package.</p>
         <p>Worked with AWS to create staging servers, patch server issues and apply code edits.</p>
         <p>Integrated 3rd party development packages using npm and composer. </p>
+        <br />
+        <h5>About DARF:</h5>
+        <p>Spurred by his interest in orthopedic research, Thomas K. Donaldson, MD, founded the Donaldson Arthritis Research Foundation (DARF) in December 2005.</p>
+        <p>The continuing partnership with Ian Clarke, PhD, provides a synergy of purpose between these talented, dedicated professionals. The result of this relationship is shown in their many published articles on hip and knee joint replacement surgery and the evolution of prosthetics.</p>
+        <p>The focus of DARF is patient arthritis awareness, continued orthopedic education, and clinical and basic science research which will result in the promotion of orthopedic education and the improvement of joint replacement products. </p>
+        <p>DARF's mission is to help patients and professionals better understand arthritis and its treatments while continuing support for pain-free motion. Since its formation in 2005, Donaldson Arthritis Research Foundation (DARF) has been working to achieve its mission by supporting orthopedic material science research and educational awareness programs.</p>
+        <p>DARF supports both clinical as well as basic science research and scientific forums in relaying these findings. Educational grants are made available to residents, medical students and undergrads for research in our state-of-the-art material science and biomechanics lab. Our mission is achieved by the perfect mixture of financial support for basic science, clinical research in basic orthopedic implants, and support of educational programs for increased arthritis awareness.</p>
+        <p>The DARF Research Center supports a worldwide joint implant retrieval program. The results of this research are shared with the industry to promote improved implant devices and implant results. </p>
       </Col>
     </Row>
   </div>
