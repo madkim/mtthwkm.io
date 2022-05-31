@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
+import ReactPlayer from 'react-player'
 import ImageGallery from 'react-image-gallery';
 
 // AXS
-import Logo from '../../_assets/axs/Shared/logo@3x.png'
 import Welcome from '../../_assets/axs/Shared/welcome-macbook@3x.png'
 import MacbookForms from '../../_assets/axs/Shared/MacbookForms@3x.png'
 import MacbookEvents from '../../_assets/axs/Shared/MacbookEvents@3x.png'
@@ -20,31 +20,19 @@ import Procedure2 from '../../_assets/darf/Procedure2.png'
 import Procedure3 from '../../_assets/darf/Procedure3.png'
 import ProcedureSearch from '../../_assets/darf/ProcedureSearch.png'
 import ProcedureSearch2 from '../../_assets/darf/ProcedureSearch2.png'
+import BarcodeScannerTutorial from '../../_assets/darf/BarcodeScannerTutorial.MP4'
+import ChangePasswordTutorial from '../../_assets/darf/ChangePasswordTutorial.MP4'
 
-import { Row, Col } from 'react-bootstrap'
 import { animateWorkPage } from '../../_helpers/animation';
+import { Row, Col, Nav, Tab } from 'react-bootstrap'
 
 export default function Work() {
-
   useEffect(() => {
     window.scroll(0, 0)
     animateWorkPage()
   }, [])
 
   const axsImages = [
-    {
-      original: Logo,
-      thumbnail: Logo,
-      originalHeight: 500,
-      originalClass: 'original__class--logo'
-    },
-    {
-      original: DigitalRegistration,
-      thumbnail: DigitalRegistration,
-      thumbnailHeight: 50,
-      originalHeight: 500,
-      thumbnailClass: 'thumbnail__width mx-2'
-    },
     {
       original: Welcome,
       thumbnail: Welcome,
@@ -69,6 +57,13 @@ export default function Work() {
       original: MacbookTelehealth,
       thumbnail: MacbookTelehealth,
       originalHeight: 500,
+    },
+    {
+      original: DigitalRegistration,
+      thumbnail: DigitalRegistration,
+      thumbnailHeight: 50,
+      originalHeight: 500,
+      thumbnailClass: 'thumbnail__width mx-2'
     },
   ];
 
@@ -167,6 +162,53 @@ export default function Work() {
         </div>
       </Col>
     </Row>
+
+    <Row className='my-5'>
+      <Col lg={{span: 8, offset: 2}}>
+        <div className='mb-4'>
+          <Tab.Container defaultActiveKey="1">
+            <Tab.Content className='mb-4'>
+              <Tab.Pane eventKey="1">
+                <ReactPlayer url='https://www.youtube.com/embed/cnqBOrnMhgg' controls width="100%"/>
+              </Tab.Pane>
+              <Tab.Pane eventKey="2">
+                <ReactPlayer url='https://www.youtube.com/embed/wE3CVpj9sIk' controls width="100%"/>
+              </Tab.Pane>
+              <Tab.Pane eventKey="3">
+                <ReactPlayer url='https://www.youtube.com/embed/-II4OYYzIzU' controls width="100%"/>
+              </Tab.Pane>
+              <Tab.Pane eventKey="4">
+                <ReactPlayer url='https://www.youtube.com/embed/9qXm57pJuZc' controls width="100%"/>
+              </Tab.Pane>
+            </Tab.Content>
+
+            <Nav variant="pills" className='justify-content-center flex-column flex-xl-row' >
+              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+                <Nav.Link eventKey="1">
+                  Schedule Form
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+                <Nav.Link eventKey="3">
+                  View Form
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+                <Nav.Link eventKey="2">
+                  Message Patient
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+                <Nav.Link eventKey="4">
+                  Telehealth Video
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Tab.Container>
+        </div>
+      </Col>
+    </Row>
+
     <Row className='my-4'>
       <Col lg={{span: 8, offset: 2}}>
         <div className='mb-4'>
@@ -179,8 +221,9 @@ export default function Work() {
         </div>
       </Col>
     </Row>
+
     <Row className='mb-4'>
-      <Col xs='12' lg={{span: 6, offset: 3}} className='text-light px-5 px-sm-0'>
+      <Col xs='12' lg={{span: 8, offset: 2}} className='text-light px-5 px-sm-0'>
         <p>As a Front-End Developer at AxS Health I have the pleasure of developing features for our client web platform as well as our patient web, iOS and Android platforms. I develop dynamic and reusable components in React JS in order to give physicians the ability to schedule and perform Telehealth Appointments with patients. Additionally our client platform allows users to send forms to patients in order to easily and efficiently collect patient information as well as message patients directly.</p>
         <ul>
           <li>Improved  video chat capabilities on web and mobile platforms using Twilio's video framework.</li><br />
@@ -242,6 +285,37 @@ export default function Work() {
         </div>
       </Col>
     </Row>
+
+    <Row className='my-5'>
+      <Col lg={{span: 8, offset: 2}}>
+        <div className='mb-4'>
+          <Tab.Container defaultActiveKey="1">
+            <Tab.Content className='mb-4'>
+              <Tab.Pane eventKey="1">
+                <ReactPlayer url={BarcodeScannerTutorial} controls width="100%"/>
+              </Tab.Pane>
+              <Tab.Pane eventKey="2">
+                <ReactPlayer url={ChangePasswordTutorial} controls width="100%"/>
+              </Tab.Pane>
+            </Tab.Content>
+
+            <Nav variant="pills" className='justify-content-center flex-column flex-xl-row' >
+              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+                <Nav.Link eventKey="1">
+                  Barcode Scanner
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+                <Nav.Link eventKey="2">
+                  Change Password
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Tab.Container>
+        </div>
+      </Col>
+    </Row>
+
     <Row className='my-4'>
       <Col lg={{span: 8, offset: 2}}>
         <div className='mb-4'>
@@ -254,8 +328,9 @@ export default function Work() {
         </div>
       </Col>
     </Row>
+
     <Row className='mb-4 pb-5'>
-      <Col xs='12' lg={{span: 6, offset: 3}} className='text-light px-5 px-sm-0'>
+      <Col xs='12' lg={{span: 8, offset: 2}} className='text-light px-5 px-sm-0'>
         <p>Managed database manipulation and extraction using MySQL. </p>
         <p>Redesigned the UI for several key pages, making it easy to find important patient information. </p>
         <p>Gained experience with the MVC design pattern by creating controllers to fetch and display model data. </p>
