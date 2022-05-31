@@ -366,6 +366,9 @@
   #home__details--container {
     background: unset
   }
+  .home__details {
+    top: 14vh;
+  }
   .home__title {
     font-size: 15vw;
   }
