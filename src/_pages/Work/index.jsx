@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import ImageGallery from 'react-image-gallery';
 
+// AXS
 import Logo from '../../_assets/axs/Shared/logo@3x.png'
 import Welcome from '../../_assets/axs/Shared/welcome-macbook@3x.png'
 import MacbookForms from '../../_assets/axs/Shared/MacbookForms@3x.png'
@@ -8,6 +9,17 @@ import MacbookEvents from '../../_assets/axs/Shared/MacbookEvents@3x.png'
 import MacbookMessages from '../../_assets/axs/Shared/MacbookMessages@3x.png'
 import MacbookTelehealth from '../../_assets/axs/Shared/MacbookTelehealth@3x.png'
 import DigitalRegistration from '../../_assets/axs/Shared/DigitalRegistration@3x.png'
+
+// DARF
+import Table from '../../_assets/darf/Table.png'
+import Patient from '../../_assets/darf/Patient.png'
+import Patient2 from '../../_assets/darf/Patient2.png'
+import Patient3 from '../../_assets/darf/Patient3.png'
+import Procedure from '../../_assets/darf/Procedure.png'
+import Procedure2 from '../../_assets/darf/Procedure2.png'
+import Procedure3 from '../../_assets/darf/Procedure3.png'
+import ProcedureSearch from '../../_assets/darf/ProcedureSearch.png'
+import ProcedureSearch2 from '../../_assets/darf/ProcedureSearch2.png'
 
 import { Row, Col } from 'react-bootstrap'
 import { animateWorkPage } from '../../_helpers/animation';
@@ -19,7 +31,7 @@ export default function Work() {
     animateWorkPage()
   }, [])
 
-  const images = [
+  const axsImages = [
     {
       original: Logo,
       thumbnail: Logo,
@@ -56,6 +68,54 @@ export default function Work() {
     {
       original: MacbookTelehealth,
       thumbnail: MacbookTelehealth,
+      originalHeight: 500,
+    },
+  ];
+
+  const darfImages = [
+    {
+      original: Table,
+      thumbnail: Table,
+      originalHeight: 500,
+    },
+    {
+      original: Patient,
+      thumbnail: Patient,
+      originalHeight: 500,
+    },
+    {
+      original: Patient2,
+      thumbnail: Patient2,
+      originalHeight: 500,
+    },
+    {
+      original: Patient3,
+      thumbnail: Patient3,
+      originalHeight: 500,
+    },
+    {
+      original: Procedure,
+      thumbnail: Procedure,
+      originalHeight: 500,
+    },
+    {
+      original: Procedure2,
+      thumbnail: Procedure2,
+      originalHeight: 500,
+    },
+    {
+      original: Procedure3,
+      thumbnail: Procedure3,
+      originalHeight: 500,
+    },
+    {
+      original: ProcedureSearch,
+      thumbnail: ProcedureSearch,
+      originalHeight: 500,
+    },
+    {
+      original: ProcedureSearch2,
+      thumbnail: ProcedureSearch2,
       originalHeight: 500,
     },
   ];
@@ -111,10 +171,10 @@ export default function Work() {
       <Col lg={{span: 8, offset: 2}}>
         <div className='mb-4'>
           <div className='d-none d-lg-block'>
-            <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} />
+            <ImageGallery showPlayButton={false} items={axsImages} showFullscreenButton={false} />
           </div>
           <div className='d-block d-lg-none'>
-            <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} showThumbnails={false} />
+            <ImageGallery showPlayButton={false} items={axsImages} showFullscreenButton={false} showThumbnails={false} />
           </div>
         </div>
       </Col>
@@ -141,7 +201,7 @@ export default function Work() {
       </Col>
     </Row>
 
-    {/* <hr className='my-5' />
+    <hr className='my-5' />
 
     <Row className='mt-5'>
       <Col lg={{span: 8, offset: 2}} className='text-light'>
@@ -186,10 +246,10 @@ export default function Work() {
       <Col lg={{span: 8, offset: 2}}>
         <div className='mb-4'>
           <div className='d-none d-lg-block'>
-            <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} />
+            <ImageGallery showPlayButton={false} items={darfImages} showFullscreenButton={false} />
           </div>
           <div className='d-block d-lg-none'>
-            <ImageGallery showPlayButton={false} items={images} showFullscreenButton={false} showThumbnails={false} />
+            <ImageGallery showPlayButton={false} items={darfImages} showFullscreenButton={false} showThumbnails={false} />
           </div>
         </div>
       </Col>
@@ -210,6 +270,6 @@ export default function Work() {
         <p>Worked with AWS to create staging servers, patch server issues and apply code edits.</p>
         <p>Integrated 3rd party development packages using npm and composer. </p>
       </Col>
-    </Row> */}
+    </Row>
   </div>
 }
