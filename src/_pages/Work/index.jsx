@@ -163,7 +163,20 @@ export default function Work() {
       </Col>
     </Row>
 
-    <Row className='my-5'>
+    <Row className='my-4 mx-3'>
+      <Col lg={{span: 8, offset: 2}}>
+        <div className='mb-4'>
+          <div className='d-none d-lg-block'>
+            <ImageGallery showPlayButton={false} items={axsImages} showFullscreenButton={false} />
+          </div>
+          <div className='d-block d-lg-none'>
+            <ImageGallery showPlayButton={false} items={axsImages} showFullscreenButton={false} showThumbnails={false} />
+          </div>
+        </div>
+      </Col>
+    </Row>
+
+    <Row className='my-5 mx-3'>
       <Col lg={{span: 8, offset: 2}}>
         <div className='mb-4'>
           <Tab.Container defaultActiveKey="1">
@@ -182,42 +195,29 @@ export default function Work() {
               </Tab.Pane>
             </Tab.Content>
 
-            <Nav variant="pills" className='justify-content-center flex-column flex-xl-row' >
-              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+            <Nav variant="pills" className='justify-content-center' >
+              <Nav.Item className='cursor-pointer mx-xl-3'>
                 <Nav.Link eventKey="1">
                   Schedule Form
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+              <Nav.Item className='cursor-pointer mx-xl-3'>
                 <Nav.Link eventKey="3">
                   View Form
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+              <Nav.Item className='cursor-pointer  mx-xl-3'>
                 <Nav.Link eventKey="2">
                   Message Patient
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+              <Nav.Item className='cursor-pointer  mx-xl-3'>
                 <Nav.Link eventKey="4">
                   Telehealth Video
                 </Nav.Link>
               </Nav.Item>
             </Nav>
           </Tab.Container>
-        </div>
-      </Col>
-    </Row>
-
-    <Row className='my-4'>
-      <Col lg={{span: 8, offset: 2}}>
-        <div className='mb-4'>
-          <div className='d-none d-lg-block'>
-            <ImageGallery showPlayButton={false} items={axsImages} showFullscreenButton={false} />
-          </div>
-          <div className='d-block d-lg-none'>
-            <ImageGallery showPlayButton={false} items={axsImages} showFullscreenButton={false} showThumbnails={false} />
-          </div>
         </div>
       </Col>
     </Row>
@@ -286,7 +286,20 @@ export default function Work() {
       </Col>
     </Row>
 
-    <Row className='my-5'>
+    <Row className='my-4 mx-3'>
+      <Col lg={{span: 8, offset: 2}}>
+        <div className='mb-4'>
+          <div className='d-none d-lg-block'>
+            <ImageGallery showPlayButton={false} items={darfImages} showFullscreenButton={false} />
+          </div>
+          <div className='d-block d-lg-none'>
+            <ImageGallery showPlayButton={false} items={darfImages} showFullscreenButton={false} showThumbnails={false} />
+          </div>
+        </div>
+      </Col>
+    </Row>
+
+    <Row className='my-5 mx-3'>
       <Col lg={{span: 8, offset: 2}}>
         <div className='mb-4'>
           <Tab.Container defaultActiveKey="1">
@@ -299,32 +312,19 @@ export default function Work() {
               </Tab.Pane>
             </Tab.Content>
 
-            <Nav variant="pills" className='justify-content-center flex-column flex-xl-row' >
-              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+            <Nav variant="pills" className='justify-content-center' >
+              <Nav.Item className='cursor-pointer mx-xl-3'>
                 <Nav.Link eventKey="1">
                   Barcode Scanner
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className='cursor-pointer my-3 mx-xl-3'>
+              <Nav.Item className='cursor-pointer mx-xl-3'>
                 <Nav.Link eventKey="2">
                   Change Password
                 </Nav.Link>
               </Nav.Item>
             </Nav>
           </Tab.Container>
-        </div>
-      </Col>
-    </Row>
-
-    <Row className='my-4'>
-      <Col lg={{span: 8, offset: 2}}>
-        <div className='mb-4'>
-          <div className='d-none d-lg-block'>
-            <ImageGallery showPlayButton={false} items={darfImages} showFullscreenButton={false} />
-          </div>
-          <div className='d-block d-lg-none'>
-            <ImageGallery showPlayButton={false} items={darfImages} showFullscreenButton={false} showThumbnails={false} />
-          </div>
         </div>
       </Col>
     </Row>
