@@ -2,11 +2,13 @@ import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import Timeline from './Components/Timeline'
 
-import { Link } from 'react-router-dom'
+import { Row, Col } from 'react-bootstrap'
 import { animateAboutPage } from '../../_helpers/animation'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function About() {
+  const navigate = useNavigate(null)
+
   useEffect(() => {
     animateAboutPage()
   }, [])
@@ -50,12 +52,8 @@ export default function About() {
   }
 
   return (
-    <Container
-      id='about'
-      className='d-flex flex-column justify-content-center align-items-center text-light'
-    >
-      <br />
-      <Row>
+    <div id='about' className='d-flex flex-column justify-content-center align-items-center text-light'>
+      <Row className='my-4'>
         <Col>
           <small
             onClick={() => window.location.reload()}
@@ -86,11 +84,17 @@ export default function About() {
               >
                 see a cool timeline
               </li>
+              <br />
+              <li
+                onClick={() => navigate('/work')}
+                className='about__item about__work'
+              >
+                check out some work
+              </li>
             </ul>
           </h1>
         </Col>
       </Row>
-      <br />
 
       <div id='about__short' className='container lead'>
         <p>
@@ -220,9 +224,22 @@ export default function About() {
         <br />
       </div>
 
-      <div id='about__timeline' className='container lead'>
-        <Timeline />
+      <div id='about__timeline' className='container lead mb-4'>
+        <div className='d-none d-xs-block'><Timeline/></div>
+        <div className='d-block d-xs-none'><Timeline animate={false}/></div>
       </div>
-    </Container>
+      <small
+        onClick={() => window.location.reload()}
+        className='about__restart mb-5'
+      >
+        start over
+      </small>
+      <small
+        onClick={() => navigate('/work')}
+        className='about__restart'
+      >
+        continue to work
+      </small>
+    </div>
   )
 }

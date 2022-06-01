@@ -33,16 +33,17 @@ export default function Resume() {
 
   return (
     <div id='resume'>
-      <div className='d-flex flex-column align-items-center container'>
+      {/* Desktop */}
+      <div className='d-none d-lg-flex flex-column align-items-center container'>
         <Document file={ResumePDF} onLoadSuccess={onDocumentLoadSuccess}>
           {loading || !ResumePDF ? 
             <Spinner animation='border'/>
             :
-            <Page className={'d-flex'} scale={scale} pageNumber={1} />
+            <Page scale={scale} pageNumber={1} />
           }
         </Document>
       </div>
-      <Row className='w-100 justify-content-between fixed-bottom bg-light py-2 shadow-lg'>
+      <Row className='d-none d-lg-flex justify-content-between fixed-bottom bg-light p-2 shadow-lg'>
         <Col xs={{span: 6, offset: 3}} className='text-center'>
           <Button disabled={scale === 2} variant="outline-dark" onClick={() => setScale(2)}>
               <i className={`far fa-search-plus`}></i>
@@ -52,7 +53,7 @@ export default function Resume() {
               <i className={`far fa-search-minus`}></i>
           </Button>
         </Col>
-        <Col xs={{span: 'auto', offset: 1}} className='text-right'>
+        <Col xs={{span: 'auto'}} className='text-right'>
           <Button variant="outline-success" onClick={handleDownload}>
           <i className="fal fa-download"></i> &nbsp;Download
           </Button>
@@ -62,6 +63,26 @@ export default function Resume() {
           </Button>
         </Col>
       </Row>
+
+      {/* Mobile */}
+      <div className='d-lg-none d-flex h-100 justify-content-center flex-column align-items-center container'>
+        <Document file={ResumePDF} onLoadSuccess={onDocumentLoadSuccess}>
+          {loading || !ResumePDF ? 
+            <Spinner animation='border'/>
+            :
+            <Page scale={.6} pageNumber={1} />
+          }
+        </Document>
+      </div>
+      <div className='d-lg-none d-flex justify-content-center fixed-bottom bg-light p-2 shadow-lg'>
+          <Button variant="outline-success" onClick={handleDownload}>
+          <i className="fal fa-download"></i> &nbsp;Download
+          </Button>
+          &nbsp;
+          <Button variant="outline-dark" onClick={() => navigate(-1)}>
+            Back
+          </Button>
+      </div>
     </div>
   )
 }

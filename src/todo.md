@@ -58,6 +58,15 @@ Now you know a lot about me! Tell me about yourself! (Link to contact page)
 - Timeline with work only??
 - Info about work (Online Resume) also probably link resume as well
   - AxS
+    Our platform offers digital patient registration, telemedicine, and patient communication solutions, enabling practices to improve access and deliver care simply.
+    The difficulties healthcare presents to the US public are only increasing.  However, only now do we live in an environment that is capable of welcoming solutions to those difficulties.  We’ve entered an era where medical opinion, technologies and public demand have all come together to accept these changes and create a tool that can actually make a difference in the way patients interact with the healthcare system.  
+
+    We, and others like us, are recognizing this environment and creating tools that patients can leverage, making each participant a change-maker in their own right.  We just happen to do it better.
+
+    AxS Health has developed a healthcare software platform that gives patients priority access to in-person doctor visits as well as convenient, in-app telemedicine treatment for simple conditions. Combining these elements makes AxS the only truly comprehensive offering for digital healthcare access for Cash, PPO, and High Deductible Health Plan holding patients. 
+
+    Check out the AxS Health App in the iTunes App Store and the Google Play Store to step into the future of healthcare delivery.
+
   - DARF
   - FieldTest
 - Letters of rec

@@ -14,7 +14,7 @@ export default function Projects() {
   }
 
   return (
-    <div id='projects'>
+    <div id='projects' className='d-flex flex-column justify-content-center align-items-center' >
       <div className='project__click__me text-light user-select-none'>
         click me &nbsp;<i className='fa-solid fa-hand-point-down'></i>
       </div>
