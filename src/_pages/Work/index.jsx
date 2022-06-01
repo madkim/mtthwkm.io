@@ -331,19 +331,21 @@ export default function Work() {
 
     <Row className='mb-4 pb-5'>
       <Col xs='12' lg={{span: 8, offset: 2}} className='text-light px-5 px-sm-0'>
-        <p>Managed database manipulation and extraction using MySQL. </p>
-        <p>Redesigned the UI for several key pages, making it easy to find important patient information. </p>
-        <p>Gained experience with the MVC design pattern by creating controllers to fetch and display model data. </p>
-        <p>Implemented a messaging system, allowing users to send and receive messages within the DARF application.</p>
-        <p>Created a date searchable contact page to list contact information for post surgery patients.</p>
-        <p>Scripted a cron-job to email weekly patient reports detailing which patients were missing components. </p>
-        <p>Utilized RESTful APIs and Vue's Vuex store to update and retrieve the current application state.</p>
-        <p>Added functionality for grouping patients and creating custom flags to filter patients within a group. </p>
-        <p>Visualized patient's evaluation data with interactive graphs using the Chart.js library. </p>
-        <p>Employed JSON Web Token authentication for user login and authentication. </p>
-        <p>Practiced deploying newly written code to the production server with the rocketeer deployment package.</p>
-        <p>Worked with AWS to create staging servers, patch server issues and apply code edits.</p>
-        <p>Integrated 3rd party development packages using npm and composer. </p>
+        <ul>
+          <li>Managed database manipulation and extraction using MySQL. </li><br />
+          <li>Redesigned the UI for several key pages, making it easy to find important patient information. </li><br />
+          <li>Gained experience with the MVC design pattern by creating controllers to fetch and display model data. </li><br />
+          <li>Implemented a messaging system, allowing users to send and receive messages within the DARF application.</li><br />
+          <li>Created a date searchable contact page to list contact information for post surgery patients.</li><br />
+          <li>Scripted a cron-job to email weekly patient reports detailing which patients were missing components. </li><br />
+          <li>Utilized RESTful APIs and Vue's Vuex store to update and retrieve the current application state.</li><br />
+          <li>Added functionality for grouping patients and creating custom flags to filter patients within a group. </li><br />
+          <li>Visualized patient's evaluation data with interactive graphs using the Chart.js library. </li><br />
+          <li>Employed JSON Web Token authentication for user login and authentication. </li><br />
+          <li>Practiced deploying newly written code to the production server with the rocketeer deployment package.</li><br />
+          <li>Worked with AWS to create staging servers, patch server issues and apply code edits.</li><br />
+          <li>Integrated 3rd party development packages using npm and composer. </li><br />
+        </ul>
         <br />
         <h5>About DARF:</h5>
         <p>Spurred by his interest in orthopedic research, Thomas K. Donaldson, MD, founded the Donaldson Arthritis Research Foundation (DARF) in December 2005.</p>
