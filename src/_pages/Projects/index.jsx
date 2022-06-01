@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+// import Poster from '../../_assets/slugsense/Poster.jpg'
 import ProjectCard from './Components/ProjectCard'
+import SlugsenseCover from '../../_assets/slugsense/ArchitectureUserBigger.jpg'
 import { animateProjectsPage } from '../../_helpers/animation'
 
 export default function Projects() {
@@ -32,7 +34,7 @@ export default function Projects() {
         <ProjectCard
           select={handleSelect}
           status={selected}
-          image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
+          image={SlugsenseCover}
         />
         <ProjectCard
           select={handleSelect}

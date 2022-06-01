@@ -1,3 +1,4 @@
 node_modules
 /build
 AWSCLIV2.pkg
+/src/_assets/slugsense/SlugSenseDemo.mov

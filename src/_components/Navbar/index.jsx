@@ -72,7 +72,7 @@ export default function Navbar() {
               work
             </div>
           </Link>
-          {/* <Link to='/projects' className='text-decoration-none'>
+          <Link to='/projects' className='text-decoration-none'>
             <div
               className={pageActive('/projects')}
               onMouseEnter={() => setActive('/projects')}
@@ -80,7 +80,7 @@ export default function Navbar() {
             >
               projects
             </div>
-          </Link> */}
+          </Link>
           <Link to='/contact' className='text-decoration-none'>
             <div
               className={pageActive('/contact')}
@@ -107,11 +107,11 @@ export default function Navbar() {
               <i className='navbar--icon fa-light fa-code'></i>
             </Col>
           </Row>
-          {/* <Row>
+          <Row>
             <Col className={showIcon('/projects')}>
               <i className='navbar--icon fa-light fa-rocket-launch'></i>
             </Col>
-          </Row> */}
+          </Row>
           <Row>
             <Col className={showIcon('/contact')}>
               <i className='navbar--icon fa-light fa-hand-wave'></i>
