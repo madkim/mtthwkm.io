@@ -334,6 +334,7 @@ export default function Work() {
 
     <Row className='mb-4 pb-5'>
       <Col xs='12' lg={{span: 8, offset: 2}} className='text-light px-5 px-sm-0'>
+        <p>As a Fullstack Developer at Donaldson Arthritis Research Facility (DARF) I worked on a CakePHP web application that was used to keep track of patient's post surgery progress by adding patient information to the database and draw analysis from patient data stored in the database. After about a year I decided to rewrite the entire DARF DB web application from scratch using Vue.js as the front-end and the Laravel PHP framework for the backend. </p>
         <ul>
           <li>Managed database manipulation and extraction using MySQL. </li><br />
           <li>Redesigned the UI for several key pages, making it easy to find important patient information. </li><br />
