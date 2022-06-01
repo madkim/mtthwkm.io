@@ -242,9 +242,7 @@ export default function Work() {
         <h5>About AxS:</h5>
         <p>AxS offers digital patient registration, telemedicine, and patient communication solutions, enabling practices to improve access and deliver care simply.</p>
         <p>The difficulties healthcare presents to the US public are only increasing.  However, only now do we live in an environment that is capable of welcoming solutions to those difficulties.  We've entered an era where medical opinion, technologies and public demand have all come together to accept these changes and create a tool that can actually make a difference in the way patients interact with the healthcare system.  </p>
-
         <p>We, and others like us, are recognizing this environment and creating tools that patients can leverage, making each participant a change-maker in their own right.  We just happen to do it better.</p>
-
         <p>AxS Health has developed a healthcare software platform that gives patients priority access to in-person doctor visits as well as convenient, in-app telemedicine treatment for simple conditions. Combining these elements makes AxS the only truly comprehensive offering for digital healthcare access for Cash, PPO, and High Deductible Health Plan holding patients. </p>
       </Col>
     </Row>
