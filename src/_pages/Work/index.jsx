@@ -226,12 +226,17 @@ export default function Work() {
       <Col xs='12' lg={{span: 8, offset: 2}} className='text-light px-5 px-sm-0'>
         <p>As a Front-End Developer at AxS Health I have the pleasure of developing features for our client web platform as well as our patient web, iOS and Android platforms. I develop dynamic and reusable components in React JS in order to give physicians the ability to schedule and perform Telehealth Appointments with patients. Additionally our client platform allows users to send forms to patients in order to easily and efficiently collect patient information as well as message patients directly.</p>
         <ul>
-          <li>Improved  video chat capabilities on web and mobile platforms using Twilio's video framework.</li><br />
-          <li>Followed the DRY principle when building static websites for clients using Laravel's Jigsaw framework. </li><br />
-          <li>Avoided breaking changes by using Jest to test ui components and implement continuous integration. </li><br />
-          <li>Implemented responsive design patterns on our web platform using bootstrap and CSS media queries. </li><br />
-          <li>Utilized Browserstack to ensure consistency across all major mobile devices.</li><br />
-          <li>Developed components for a private npm package used to share ui components across all platforms.</li>
+            <li>Created dynamic and reusable components with React JS.</li><br />
+            <li>Tested ui components and implemented continuous integration using Jest.</li><br />
+            <li>Implemented responsive design patterns using bootstrap and CSS media queries.</li><br />
+            <li>Brought projects to life through interactive elements like SVG and CSS animations.</li><br />
+            <li>Integrated with back-end systems, APIs, and SDKs to create rich, data-driven behaviors.</li><br />
+            <li>Utilized Browserstack to review and test code against modern browsers and mobile devices.</li><br />
+            <li>Built mobile-first, touch-optimized web applications, and cross-platform mobile applications.</li><br />
+            <li>Improved video chat capabilities on web and mobile platforms using Twilio's video framework.</li><br />
+            <li>Developed components for a private npm package used to share ui components across all platforms.</li><br />
+            <li>Followed the DRY principle when building static websites for clients using Laravel's Jigsaw framework.</li><br />
+            <li>Translated design comprehensives into web and mobile standards-compliant HTML/CSS/JavaScript markup.</li><br />
         </ul>
         <br />
         <h5>About AxS:</h5>
