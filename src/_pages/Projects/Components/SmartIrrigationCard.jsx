@@ -23,10 +23,11 @@ export default function SmartIrrigationCard({ status = '', select }) {
         style={{ borderRadius: '1.5em 1.5em 0 0', height: 'auto', width: '100%' }}
       />
       <div className='project__card--details p-3'>
-        <h5>Smart Irrigation (UCSC Capstone Project)</h5>
-        <p>
-          <small>The focus of the Smart Irrigation project is to help users reduce water consumption in gardens, greenhouses, and farms. By placing our nodes in the soil, users can learn about the specific conditions their plants are experiencing, such as moisture, humidity, temperature and sunlight.</small>
-        </p>
+        <div className='d-flex justify-content-between flex-row'>
+          <h5>Smart Irrigation (UCSC Capstone Project)</h5>
+          <b>2017</b>
+        </div>
+        <p><small>The focus of the Smart Irrigation project is to help users reduce water consumption in gardens, greenhouses, and farms. By placing our nodes in the soil, users can learn about the specific conditions their plants are experiencing, such as moisture, humidity, temperature and sunlight.</small></p>
 
         {status === 'show' && (
           <Row>
