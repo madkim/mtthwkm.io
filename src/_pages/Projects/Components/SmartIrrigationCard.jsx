@@ -5,7 +5,7 @@ import UI_Design from '../../../_assets/slugsense/UI_Design.jpeg'
 import DeviceOuter from '../../../_assets/slugsense/outer.png'
 import DeviceInner from '../../../_assets/slugsense/inner.png'
 import SlugsenseCover from '../../../_assets/slugsense/ArchitectureUserBigger.jpg'
-import SmartIrrigationDemo from '../../../_assets/slugsense/SlugSenseDemo.mov'
+import SmartIrrigationDemo from '../../../_assets/slugsense/SlugSenseDemoSmall.mov'
 import { Image, Row, Col } from 'react-bootstrap'
 
 export default function SmartIrrigationCard({ status = '', select }) {
@@ -31,8 +31,11 @@ export default function SmartIrrigationCard({ status = '', select }) {
         {status === 'show' && (
           <Row>
             <hr />
+            <Col xs='12' className='mb-5'>
+              <ReactPlayer url={SmartIrrigationDemo} controls width='100%' height='100%'/>
+            </Col>
             <Col>
-              <div className='d-flex flex-column justify-content-between h-100' >
+              <div className='d-flex flex-column h-100' style={{justifyContent: 'space-evenly'}}>
                 <div>
                   <h5 className='m-0'>Overview</h5>
                   <p>Smart Irrigation aims to address the growing importance of conserving water wherever possible, with a focus on using water more efficiently in gardens, greenhouses, and farms. We set out to create a feedback system consisting of both hardware and software, which allows users to make informed decisions regarding the use of natural resources in landscaping, gardening, and agriculture based on aggregated data from attached sensors, thus leading to increased yield and efficient use of natural resources.</p>
@@ -67,10 +70,7 @@ export default function SmartIrrigationCard({ status = '', select }) {
             </Col>
             <Col>
               <Row className='mb-3'>
-                <Col xs='6'>
-                  <ReactPlayer url={SmartIrrigationDemo} controls width='100%' height='100%'/>
-                </Col>
-                <Col xs='6'>
+                <Col xs='12'>
                   <Image
                     src={UI_Design}
                     style={{width: '100%'}}
