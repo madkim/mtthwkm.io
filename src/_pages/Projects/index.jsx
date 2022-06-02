@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-// import Poster from '../../_assets/slugsense/Poster.jpg'
 import ProjectCard from './Components/ProjectCard'
-import SlugsenseCover from '../../_assets/slugsense/ArchitectureUserBigger.jpg'
+import SmartIrrigationCard from './Components/SmartIrrigationCard'
 import { animateProjectsPage } from '../../_helpers/animation'
 
 export default function Projects() {
@@ -31,10 +30,9 @@ export default function Projects() {
           select={handleSelect}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
-        <ProjectCard
+        <SmartIrrigationCard 
           select={handleSelect}
           status={selected}
-          image={SlugsenseCover}
         />
         <ProjectCard
           select={handleSelect}
