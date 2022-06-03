@@ -4,10 +4,12 @@ import { Image } from 'react-bootstrap'
 
 export default function ProjectCard({ image, status = '', select }) {
   const projectCard = classNames('project__card', {
-    'project__card--first': status === 'first',
+    'project__card--show': status === 'show',
     'project__card--last': status === 'last',
+    'project__card--first': status === 'first',
     'project__card--active': status === 'active',
-    'project__card--show': status === 'show'
+    'project__card--last-hidden': status === 'last-hidden',
+    'project__card--first-hidden': status === 'first-hidden',
   })
 
   return (

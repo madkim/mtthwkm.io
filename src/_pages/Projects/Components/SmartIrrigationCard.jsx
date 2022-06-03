@@ -10,10 +10,12 @@ import { Image, Row, Col } from 'react-bootstrap'
 
 export default function SmartIrrigationCard({ status = '', select }) {
   const projectCard = classNames('project__card', {
-    'project__card--first': status === 'first',
+    'project__card--show': status === 'show',
     'project__card--last': status === 'last',
+    'project__card--first': status === 'first',
     'project__card--active': status === 'active',
-    'project__card--show': status === 'show'
+    'project__card--last-hidden': status === 'last-hidden',
+    'project__card--first-hidden': status === 'first-hidden',
   })
 
   return (
@@ -31,6 +33,11 @@ export default function SmartIrrigationCard({ status = '', select }) {
 
         {status === 'show' && (
           <Row>
+            <Col xs='12' className='mb-3'>
+              <h6>Summary</h6>
+              <div>iOS, Swift</div>
+              <div>https://devpost.com/software/slugsense</div>
+            </Col>
             <hr />
             <Col xs='12' className='mb-5'>
               <ReactPlayer url={SmartIrrigationDemo} controls width='100%' height='100%'/>

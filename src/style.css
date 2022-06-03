@@ -169,13 +169,12 @@
 }
 
 #project__cards {
-  /* left: -19vw; */
-  width: 140vw;
+  /* width: 60%; */
   opacity: 0;
-  display: flex;
-  position: relative;
-  transition: opacity 1s;
-  align-items: center;
+  position: absolute;
+  top: 30vh;
+  transition-property: all;
+  transition-duration: 1s;
 }
 
 .project__click__me {
@@ -191,10 +190,22 @@
   height: 50vh;
   margin: 0.5em;
   filter: grayscale(1);
-  position: relative;
-  transition: filter 0.2s, top 0.5s, width 0.5s, height 0.5s;
+  position: absolute !important;
+  transition: filter 0.2s, top 0.5s, width 0.5s, height 0.5s, transform 1s, opacity 0.5s;
   background: white;
   border-radius: 1.5em;
+}
+
+.project__card--first {
+  transform: translateX(-45vw);
+}
+.project__card--last {
+  transform: translateX(20vw);
+}
+
+.project__card--last-hidden,
+.project__card--first-hidden {
+  opacity: 0;
 }
 
 .project__card--first,
@@ -204,13 +215,13 @@
   height: 45vh;
 }
 
-.project__card--active,
-.project__card:hover {
-  top: 0em;
+.project__card--active {
+  top: 0em; 
   width: 35vw;
   height: 55vh;
   cursor: pointer;
   filter: grayscale(0);
+  transform: translateX(-18vw);
 }
 
 .project__card--show {
@@ -219,6 +230,7 @@
   height: 100% !important;
   filter: grayscale(0);
 }
+
 
 #project__arrows {
   width: 100%;

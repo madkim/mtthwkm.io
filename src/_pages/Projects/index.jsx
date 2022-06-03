@@ -5,6 +5,7 @@ import { animateProjectsPage } from '../../_helpers/animation'
 
 export default function Projects() {
   const [selected, setSelected] = useState('active')
+  const [cardOrder, setCardOrder] = useState(['first-hidden', 'first', 'active', 'last', 'last-hidden'])
 
   useEffect(() => {
     animateProjectsPage()
@@ -12,6 +13,30 @@ export default function Projects() {
 
   const handleSelect = () => {
     setSelected(selected === 'active' ? 'show' : 'active')
+  }
+
+  const handleNext = () => {
+    let order = []
+    order.push(cardOrder[4])
+    cardOrder.forEach((item, index) => {
+      if (index !== 4) {
+        order.push(item)
+      }
+    })
+    console.log(order)
+    setCardOrder(order)
+  }
+
+  const handlePrev = () => {
+    let order = []
+    cardOrder.forEach((item, index) => {
+      if (index !== 0) {
+        order.push(item)
+      }
+    })
+    order.push(cardOrder[0])
+    console.log(order)
+    setCardOrder(order)
   }
 
   return (
@@ -23,24 +48,26 @@ export default function Projects() {
       <div id='project__cards'>
         <ProjectCard
           select={handleSelect}
-          status='first'
+          status={cardOrder[0]}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
         <ProjectCard
           select={handleSelect}
+          status={cardOrder[1]}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
         <SmartIrrigationCard 
           select={handleSelect}
-          status={selected}
+          status={cardOrder[2]}
         />
         <ProjectCard
           select={handleSelect}
+          status={cardOrder[3]}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
         <ProjectCard
           select={handleSelect}
-          status='last'
+          status={cardOrder[4]}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
       </div>
@@ -48,10 +75,10 @@ export default function Projects() {
       <br />
 
       <div id='project__arrows'>
-        <div className='project__arrow'>
+        <div className='project__arrow' onClick={handlePrev}>
           <i className='fa-thin fa-2xl fa-circle-arrow-left'></i>
         </div>
-        <div className='project__arrow'>
+        <div className='project__arrow' onClick={handleNext}>
           <i className='fa-thin fa-2xl fa-circle-arrow-right'></i>
         </div>
       </div>
