@@ -191,7 +191,7 @@
   margin: 0.5em;
   filter: grayscale(1);
   position: absolute !important;
-  transition: filter 0.2s, top 0.5s, width 0.5s, height 0.5s, transform 1s, opacity 0.5s;
+  transition: filter 0.2s, top 0.5s, width 0.5s, height 0.5s, transform 0.5s, opacity 0.5s;
   background: white;
   border-radius: 1.5em;
 }
@@ -201,6 +201,12 @@
 }
 .project__card--last {
   transform: translateX(20vw);
+}
+.project__card--first-hidden {
+  transform: translateX(-78vw);
+}
+.project__card--last-hidden {
+  transform: translateX(48vw);
 }
 
 .project__card--last-hidden,
@@ -216,12 +222,20 @@
 }
 
 .project__card--active {
+  transform: translateX(-18vw);
+}
+
+.project__card:hover {
+  cursor: pointer;
+  filter: grayscale(0);
+}
+
+.project__card--active {
   top: 0em; 
   width: 35vw;
   height: 55vh;
   cursor: pointer;
   filter: grayscale(0);
-  transform: translateX(-18vw);
 }
 
 .project__card--show {
