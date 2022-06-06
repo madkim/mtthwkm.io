@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import { Image } from 'react-bootstrap'
 
 export default function SpaceCard({ image, step, status = '', select }) {
   const spaceRef = useRef(null)
+  const [showDetails, setShowDetails] = useState(false)
 
   useEffect(() => {
     switch (step) {
@@ -32,13 +33,21 @@ export default function SpaceCard({ image, step, status = '', select }) {
     }
   }, [step])
 
+  const handleShowDetails = () => {
+    if (step === 2) {
+      setShowDetails(!showDetails)
+    } else {
+      setShowDetails(false)
+    }
+  }
+
   const projectCard = classNames('project__card', {
-    // 'project__card--show': showDetails,
+    'project__card--show': showDetails,
     'project__card--active': step === 2,
   })
 
   return (
-    <div ref={spaceRef} onClick={select} className={projectCard}>
+    <div ref={spaceRef} onClick={handleShowDetails} className={projectCard}>
       <Image
         src={image}
         style={{

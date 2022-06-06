@@ -15,13 +15,11 @@ export default function Projects() {
 
   const handleNext = () => {
     const nextStep = (currentStep + 1) % 5
-    console.log(nextStep)
     setCurrentStep(nextStep)
   }  
 
   const handlePrev = () => {
     const prevStep = currentStep === 0 ? 4 : (currentStep - 1) % 5
-    console.log(prevStep)
     setCurrentStep(prevStep)
   }
 
