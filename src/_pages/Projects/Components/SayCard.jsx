@@ -1,17 +1,27 @@
-import React from 'react'
-import classNames from 'classnames'
+import React, { useEffect, useRef } from 'react'
 import { Image } from 'react-bootstrap'
 
-export default function ProjectCard({ image, step, status = '', select }) {
-  const projectCard = classNames('project__card', {
-    'project__card--first': status === 'first',
-    'project__card--last': status === 'last',
-    'project__card--active': status === 'active',
-    'project__card--show': status === 'show'
-  })
+export default function SayCard({ image, step, status = '', select }) {
+  const sayRef = useRef(null)
+
+  useEffect(() => {
+    switch (step) {
+      case 0:
+        sayRef.current.style.transform = 'translateX(0vw)'      
+        sayRef.current.style.opacity = 1
+        break;
+      case 1:
+        sayRef.current.style.transform = 'translateX(-35vw)'
+        sayRef.current.style.opacity = 0
+        break;
+    
+      default:
+        break;
+    }
+  }, [step])
 
   return (
-    <div onClick={select} className={projectCard}>
+    <div ref={sayRef} onClick={select} className='project__card'>
       <Image
         src={image}
         style={{
@@ -21,7 +31,7 @@ export default function ProjectCard({ image, step, status = '', select }) {
         }}
       />
       <div className='project__card--details p-3'>
-        <h5>Project</h5>
+        <h5>SAY</h5>
         <p className='lead'>This is the short detail about the project</p>
 
         {status === 'show' && (

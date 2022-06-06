@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import ReactPlayer from 'react-player'
 import UI_Design from '../../../_assets/slugsense/UI_Design.jpeg'
@@ -8,16 +8,29 @@ import SlugsenseCover from '../../../_assets/slugsense/ArchitectureUserBigger.jp
 import SmartIrrigationDemo from '../../../_assets/slugsense/SlugSenseDemoSmall.mov'
 import { Image, Row, Col } from 'react-bootstrap'
 
-export default function SmartIrrigationCard({ status = '', select }) {
+export default function SmartIrrigationCard({ step, status = '', select }) {
+  const smartIrrigationRef = useRef(null)
+
+  useEffect(() => {
+    switch (step) {
+      case 0: 
+        smartIrrigationRef.current.style.transform = 'translateX(0vw)'
+        break;
+      case 1:
+        smartIrrigationRef.current.style.transform = 'translateX(-32vw)'
+        break;
+    
+      default:
+        break;
+    }
+  }, [step])
+
   const projectCard = classNames('project__card', {
-    'project__card--first': status === 'first',
-    'project__card--last': status === 'last',
-    'project__card--active': status === 'active',
-    'project__card--show': status === 'show'
+    'project__card--active' : step === 0
   })
 
   return (
-    <div onClick={select} className={projectCard}>
+    <div ref={smartIrrigationRef} onClick={select} className={projectCard}>
       <Image
         src={SlugsenseCover}
         style={{ borderRadius: '1.5em 1.5em 0 0', height: 'auto', width: '100%' }}

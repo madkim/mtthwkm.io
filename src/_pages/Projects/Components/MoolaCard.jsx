@@ -1,17 +1,27 @@
-import React from 'react'
-import classNames from 'classnames'
+import React, { useEffect, useRef } from 'react'
 import { Image } from 'react-bootstrap'
 
-export default function ProjectCard({ image, step, status = '', select }) {
-  const projectCard = classNames('project__card', {
-    'project__card--first': status === 'first',
-    'project__card--last': status === 'last',
-    'project__card--active': status === 'active',
-    'project__card--show': status === 'show'
-  })
+export default function MoolaCard({ image, step, status = '', select }) {
+  const moolaRef = useRef(null)
 
+  useEffect(() => {
+    switch (step) {
+      case 0:
+        moolaRef.current.style.transform = 'translateX(0vw)'
+        moolaRef.current.style.opacity = '0'
+        break;
+      case 1:
+        moolaRef.current.style.transform = 'translateX(120vw)'
+        moolaRef.current.style.opacity = '0'
+        break;
+    
+      default:
+        break;
+    }
+  }, [step])
+  
   return (
-    <div onClick={select} className={projectCard}>
+    <div ref={moolaRef} onClick={select} className='project__card'>
       <Image
         src={image}
         style={{
@@ -21,7 +31,7 @@ export default function ProjectCard({ image, step, status = '', select }) {
         }}
       />
       <div className='project__card--details p-3'>
-        <h5>Project</h5>
+        <h5>MOOLA</h5>
         <p className='lead'>This is the short detail about the project</p>
 
         {status === 'show' && (

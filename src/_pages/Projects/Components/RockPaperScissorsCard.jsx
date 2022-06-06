@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import { Image } from 'react-bootstrap'
 
-export default function ProjectCard({ image, step, status = '', select }) {
+export default function RockPaperScissorsCard({ image, step, status = '', select }) {
+  const rockPaperScissorsRef = useRef(null)
+
+  useEffect(() => {
+    switch (step) {
+      case 0:
+        rockPaperScissorsRef.current.style.transform = 'translateX(0vw)'
+        break;
+      case 1:
+        rockPaperScissorsRef.current.style.transform = 'translateX(-32vw)'
+        break;
+      default:
+        break;
+    }
+  }, [step])
+
   const projectCard = classNames('project__card', {
-    'project__card--first': status === 'first',
-    'project__card--last': status === 'last',
-    'project__card--active': status === 'active',
-    'project__card--show': status === 'show'
+    'project__card--active' : step === 1
   })
 
   return (
-    <div onClick={select} className={projectCard}>
+    <div ref={rockPaperScissorsRef} onClick={select} className={projectCard}>
       <Image
         src={image}
         style={{
@@ -21,7 +33,7 @@ export default function ProjectCard({ image, step, status = '', select }) {
         }}
       />
       <div className='project__card--details p-3'>
-        <h5>Project</h5>
+        <h5>Rock Paper Scissors</h5>
         <p className='lead'>This is the short detail about the project</p>
 
         {status === 'show' && (

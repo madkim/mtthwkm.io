@@ -170,7 +170,8 @@
 
 #project__cards {
   /* left: -19vw; */
-  width: 140vw;
+  /* width: 140vw; */
+  /* width: 100vw; */
   opacity: 0;
   display: flex;
   position: relative;
@@ -186,29 +187,23 @@
 }
 
 .project__card {
-  top: 1em;
+  /* top: 1em; */
   width: 30vw;
   height: 50vh;
-  margin: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
   filter: grayscale(1);
   position: relative;
-  transition: filter 0.2s, top 0.5s, width 0.5s, height 0.5s;
+  transition: filter 0.1s, top 0.5s, width 0.5s, height 0.5s, transform 0.4s, opacity 0.2s;
   background: white;
   border-radius: 1.5em;
 }
 
-.project__card--first,
-.project__card--last {
-  top: 2em;
-  width: 25vw;
-  height: 45vh;
-}
-
 .project__card--active,
 .project__card:hover {
-  top: 0em;
-  width: 35vw;
-  height: 55vh;
+  /* top: 0em; */
+  width: 40vw;
+  height: 60vh;
   cursor: pointer;
   filter: grayscale(0);
 }

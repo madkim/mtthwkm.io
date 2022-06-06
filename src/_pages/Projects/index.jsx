@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import ProjectCard from './Components/ProjectCard'
+import SayCard from './Components/SayCard'
+import MoolaCard from './Components/MoolaCard'
+import SpaceCard from './Components/SpaceCard'
 import SmartIrrigationCard from './Components/SmartIrrigationCard'
+import RockPaperScissorsCard from './Components/RockPaperScissorsCard'
 import { animateProjectsPage } from '../../_helpers/animation'
 
 export default function Projects() {
   const [selected, setSelected] = useState('active')
+  const [currentStep, setCurrentStep] = useState(0)
 
   useEffect(() => {
     animateProjectsPage()
@@ -14,6 +18,18 @@ export default function Projects() {
     setSelected(selected === 'active' ? 'show' : 'active')
   }
 
+  const handleNext = () => {
+    const nextStep = (currentStep + 1) % 5
+    console.log(nextStep)
+    setCurrentStep(nextStep)
+  }  
+
+  const handlePrev = () => {
+    const prevStep = (currentStep - 1) % 5
+    console.log(prevStep)
+    setCurrentStep(prevStep)
+  }
+
   return (
     <div id='projects' className='d-flex flex-column justify-content-center align-items-center' >
       <div className='project__click__me text-light user-select-none'>
@@ -21,26 +37,28 @@ export default function Projects() {
       </div>
       <br />
       <div id='project__cards'>
-        <ProjectCard
+        <MoolaCard
+          step={Math.abs(currentStep)}
           select={handleSelect}
-          status='first'
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
-        <ProjectCard
+        <SayCard
+          step={Math.abs(currentStep)}
           select={handleSelect}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
         <SmartIrrigationCard 
+          step={Math.abs(currentStep)}
           select={handleSelect}
-          status={selected}
         />
-        <ProjectCard
+        <RockPaperScissorsCard
+          step={Math.abs(currentStep)}
           select={handleSelect}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
-        <ProjectCard
+        <SpaceCard
+          step={Math.abs(currentStep)}
           select={handleSelect}
-          status='last'
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
       </div>
@@ -48,10 +66,10 @@ export default function Projects() {
       <br />
 
       <div id='project__arrows'>
-        <div className='project__arrow'>
+        <div className='project__arrow' onClick={handlePrev}>
           <i className='fa-thin fa-2xl fa-circle-arrow-left'></i>
         </div>
-        <div className='project__arrow'>
+        <div className='project__arrow' onClick={handleNext}>
           <i className='fa-thin fa-2xl fa-circle-arrow-right'></i>
         </div>
       </div>
