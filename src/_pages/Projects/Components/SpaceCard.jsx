@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import classNames from 'classnames'
 import { Image } from 'react-bootstrap'
 
 export default function SpaceCard({ image, step, status = '', select }) {
@@ -7,21 +8,37 @@ export default function SpaceCard({ image, step, status = '', select }) {
   useEffect(() => {
     switch (step) {
       case 0: 
-        spaceRef.current.style.transform = 'translateX(0vw)'
         spaceRef.current.style.opacity = 0
+        spaceRef.current.style.transform = 'translateX(0vw)'
         break;
       case 1:
-        spaceRef.current.style.transform = 'translateX(-32vw)'
         spaceRef.current.style.opacity = 1
+        spaceRef.current.style.transform = 'translateX(-32vw)'
         break;
-    
+        case 2:
+        spaceRef.current.style.opacity = 1
+        spaceRef.current.style.transform = 'translateX(-64vw)'
+        break;
+        case 3:
+        spaceRef.current.style.opacity = 1
+        spaceRef.current.style.transform = 'translateX(-104.3vw)'
+        break;
+      case 4:
+        spaceRef.current.style.opacity = 0
+        spaceRef.current.style.transform = 'translateX(-135vw)'
+        break;
       default:
         break;
     }
   }, [step])
 
+  const projectCard = classNames('project__card', {
+    // 'project__card--show': showDetails,
+    'project__card--active': step === 2,
+  })
+
   return (
-    <div ref={spaceRef} onClick={select} className='project__card'>
+    <div ref={spaceRef} onClick={select} className={projectCard}>
       <Image
         src={image}
         style={{

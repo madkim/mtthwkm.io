@@ -8,10 +8,24 @@ export default function RockPaperScissorsCard({ image, step, status = '', select
   useEffect(() => {
     switch (step) {
       case 0:
+        rockPaperScissorsRef.current.style.opacity = 1
         rockPaperScissorsRef.current.style.transform = 'translateX(0vw)'
         break;
       case 1:
+        rockPaperScissorsRef.current.style.opacity = 1
         rockPaperScissorsRef.current.style.transform = 'translateX(-32vw)'
+        break;
+      case 2:
+        rockPaperScissorsRef.current.style.opacity = 1
+        rockPaperScissorsRef.current.style.transform = 'translateX(-64vw)'
+        break;
+      case 3:
+        rockPaperScissorsRef.current.style.opacity = 0
+        rockPaperScissorsRef.current.style.transform = 'translateX(-128vw)'
+        break;
+      case 4:
+        rockPaperScissorsRef.current.style.opacity = 0
+        rockPaperScissorsRef.current.style.transform = 'translateX(32vw)'
         break;
       default:
         break;

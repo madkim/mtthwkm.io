@@ -165,7 +165,7 @@
 #projects {
   width: 100% !important;
   height: 100% !important;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 #project__cards {
@@ -187,7 +187,6 @@
 }
 
 .project__card {
-  /* top: 1em; */
   width: 30vw;
   height: 50vh;
   margin-left: 1em;
@@ -199,9 +198,12 @@
   border-radius: 1.5em;
 }
 
-.project__card--active,
-.project__card:hover {
-  /* top: 0em; */
+.project__card:hover:not(.project__card--active) {
+  cursor: pointer;
+  filter: grayscale(0);
+}
+
+.project__card--active {
   width: 40vw;
   height: 60vh;
   cursor: pointer;

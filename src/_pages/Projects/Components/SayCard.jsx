@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React, { useEffect, useRef } from 'react'
 import { Image } from 'react-bootstrap'
 
@@ -7,12 +8,24 @@ export default function SayCard({ image, step, status = '', select }) {
   useEffect(() => {
     switch (step) {
       case 0:
-        sayRef.current.style.transform = 'translateX(0vw)'      
         sayRef.current.style.opacity = 1
+        sayRef.current.style.transform = 'translateX(0vw)'      
         break;
       case 1:
-        sayRef.current.style.transform = 'translateX(-35vw)'
         sayRef.current.style.opacity = 0
+        sayRef.current.style.transform = 'translateX(-35vw)'
+        break;
+      case 2:
+        sayRef.current.style.opacity = 0
+        sayRef.current.style.transform = 'translateX(120vw)'
+        break;
+      case 3:
+        sayRef.current.style.opacity = 1
+        sayRef.current.style.transform = 'translateX(64vw)'
+        break;
+      case 4:
+        sayRef.current.style.opacity = 1
+        sayRef.current.style.transform = 'translateX(32vw)'
         break;
     
       default:
@@ -20,8 +33,13 @@ export default function SayCard({ image, step, status = '', select }) {
     }
   }, [step])
 
+  const projectCard = classNames('project__card', {
+    // 'project__card--show': showDetails,
+    'project__card--active': step === 4,
+  })
+
   return (
-    <div ref={sayRef} onClick={select} className='project__card'>
+    <div ref={sayRef} onClick={select} className={projectCard}>
       <Image
         src={image}
         style={{

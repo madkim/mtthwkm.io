@@ -20,7 +20,7 @@ export default function Projects() {
   }  
 
   const handlePrev = () => {
-    const prevStep = (currentStep - 1) % 5
+    const prevStep = (currentStep - 4) % 5
     console.log(prevStep)
     setCurrentStep(prevStep)
   }

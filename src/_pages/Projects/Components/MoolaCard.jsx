@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React, { useEffect, useRef } from 'react'
 import { Image } from 'react-bootstrap'
 
@@ -7,21 +8,36 @@ export default function MoolaCard({ image, step, status = '', select }) {
   useEffect(() => {
     switch (step) {
       case 0:
+        moolaRef.current.style.opacity = 0
         moolaRef.current.style.transform = 'translateX(0vw)'
-        moolaRef.current.style.opacity = '0'
         break;
       case 1:
-        moolaRef.current.style.transform = 'translateX(120vw)'
-        moolaRef.current.style.opacity = '0'
+        moolaRef.current.style.opacity = 0
+        moolaRef.current.style.transform = 'translateX(132vw)'
         break;
-    
+      case 2:
+        moolaRef.current.style.opacity = 1
+        moolaRef.current.style.transform = 'translateX(104.3vw)'
+        break;
+      case 3:
+        moolaRef.current.style.opacity = 1
+        moolaRef.current.style.transform = 'translateX(64vw)'
+        break;
+      case 4:
+        moolaRef.current.style.opacity = 1
+        moolaRef.current.style.transform = 'translateX(32vw)'
+        break;
       default:
         break;
     }
   }, [step])
+
+  const projectCard = classNames('project__card', {
+    'project__card--active' : step === 3
+  })
   
   return (
-    <div ref={moolaRef} onClick={select} className='project__card'>
+    <div ref={moolaRef} onClick={select} className={projectCard}>
       <Image
         src={image}
         style={{

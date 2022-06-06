@@ -19,9 +19,21 @@ export default function SmartIrrigationCard({ step }) {
         smartIrrigationRef.current.style.transform = 'translateX(0vw)'
         break;
       case 1:
+        smartIrrigationRef.current.style.opacity = 1
         smartIrrigationRef.current.style.transform = 'translateX(-32vw)'
         break;
-    
+      case 2:
+        smartIrrigationRef.current.style.opacity = 0
+        smartIrrigationRef.current.style.transform = 'translateX(-64vw)'
+        break; 
+      case 3:
+        smartIrrigationRef.current.style.opacity = 0
+        smartIrrigationRef.current.style.transform = 'translateX(64vw)'
+        break; 
+      case 4:
+        smartIrrigationRef.current.style.opacity = 1
+        smartIrrigationRef.current.style.transform = 'translateX(32vw)'
+        break; 
       default:
         break;
     }
