@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import ReactPlayer from 'react-player'
 import UI_Design from '../../../_assets/slugsense/UI_Design.jpeg'
@@ -8,10 +8,12 @@ import SlugsenseCover from '../../../_assets/slugsense/ArchitectureUserBigger.jp
 import SmartIrrigationDemo from '../../../_assets/slugsense/SlugSenseDemoSmall.mov'
 import { Image, Row, Col } from 'react-bootstrap'
 
-export default function SmartIrrigationCard({ step, status = '', select }) {
+export default function SmartIrrigationCard({ step }) {
   const smartIrrigationRef = useRef(null)
+  const [showDetails, setShowDetails] = useState(false)
 
   useEffect(() => {
+    setShowDetails(false)
     switch (step) {
       case 0: 
         smartIrrigationRef.current.style.transform = 'translateX(0vw)'
@@ -25,12 +27,21 @@ export default function SmartIrrigationCard({ step, status = '', select }) {
     }
   }, [step])
 
+  const handleShowDetails = () => {
+    if (step === 0) {
+      setShowDetails(!showDetails)
+    } else {
+      setShowDetails(false)
+    }
+  }
+
   const projectCard = classNames('project__card', {
-    'project__card--active' : step === 0
+    'project__card--show': showDetails,
+    'project__card--active': step === 0,
   })
 
   return (
-    <div ref={smartIrrigationRef} onClick={select} className={projectCard}>
+    <div ref={smartIrrigationRef} onClick={handleShowDetails} className={projectCard}>
       <Image
         src={SlugsenseCover}
         style={{ borderRadius: '1.5em 1.5em 0 0', height: 'auto', width: '100%' }}
@@ -42,7 +53,7 @@ export default function SmartIrrigationCard({ step, status = '', select }) {
         </div>
         <p><small>The focus of the Smart Irrigation project is to help users reduce water consumption in gardens, greenhouses, and farms. By placing our nodes in the soil, users can learn about the specific conditions their plants are experiencing, such as moisture, humidity, temperature and sunlight.</small></p>
 
-        {status === 'show' && (
+        {showDetails && (
           <Row>
             <hr />
             <Col xs='12' className='mb-5'>

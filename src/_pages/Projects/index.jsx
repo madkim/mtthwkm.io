@@ -7,16 +7,11 @@ import RockPaperScissorsCard from './Components/RockPaperScissorsCard'
 import { animateProjectsPage } from '../../_helpers/animation'
 
 export default function Projects() {
-  const [selected, setSelected] = useState('active')
   const [currentStep, setCurrentStep] = useState(0)
 
   useEffect(() => {
     animateProjectsPage()
   }, [])
-
-  const handleSelect = () => {
-    setSelected(selected === 'active' ? 'show' : 'active')
-  }
 
   const handleNext = () => {
     const nextStep = (currentStep + 1) % 5
@@ -39,26 +34,21 @@ export default function Projects() {
       <div id='project__cards'>
         <MoolaCard
           step={Math.abs(currentStep)}
-          select={handleSelect}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
         <SayCard
           step={Math.abs(currentStep)}
-          select={handleSelect}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
         <SmartIrrigationCard 
           step={Math.abs(currentStep)}
-          select={handleSelect}
         />
         <RockPaperScissorsCard
           step={Math.abs(currentStep)}
-          select={handleSelect}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
         <SpaceCard
           step={Math.abs(currentStep)}
-          select={handleSelect}
           image='https://www.apple.com/newsroom/images/product/app-store/Apple_App-Study-Results_hero.jpg.landing-big_2x.jpg'
         />
       </div>
