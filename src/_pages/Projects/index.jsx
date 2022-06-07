@@ -72,7 +72,7 @@ export default function Projects() {
       <div id='project__arrows'>
         { showDetails ? 
           <div className='d-flex flex-column justify-content-center'>
-            <Button variant='outline-light' className='px-5' onClick={() => setShowDetails(false)}>Close</Button>
+            <Button variant='light' className='px-5' onClick={() => setShowDetails(false)}>Close</Button>
           </div>
           :
           <div className='w-100 d-flex flex-row justify-content-center'>  
