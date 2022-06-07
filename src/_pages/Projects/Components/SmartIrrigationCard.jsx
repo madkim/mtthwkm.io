@@ -58,7 +58,7 @@ export default function SmartIrrigationCard({ step, showDetails, handleShowDetai
           <div><i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;</div>
           <div><i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;</div>
         </div>
-        <p style={{fontSize: '2vh'}}>The focus of the Smart Irrigation project is to help users reduce water consumption in gardens, greenhouses, and farms. By placing our nodes in the soil, users can learn about the specific conditions their plants are experiencing, such as moisture, humidity, temperature and sunlight.</p>
+        <p style={{fontSize: '1.8vh'}}>The focus of the Smart Irrigation project is to help users reduce water consumption in gardens, greenhouses, and farms. By placing our nodes in the soil, users can learn about the specific conditions their plants are experiencing, such as moisture, humidity, temperature and sunlight.</p>
 
         {showDetails && step === 0 && (
           <Row>
