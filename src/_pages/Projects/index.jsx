@@ -4,8 +4,9 @@ import MoolaCard from './Components/MoolaCard'
 import SpaceCard from './Components/SpaceCard'
 import SmartIrrigationCard from './Components/SmartIrrigationCard'
 import RockPaperScissorsCard from './Components/RockPaperScissorsCard'
-import { animateProjectsPage } from '../../_helpers/animation'
+
 import { Button } from 'react-bootstrap'
+import { animateProjectsPage } from '../../_helpers/animation'
 
 export default function Projects() {
   const [currentStep, setCurrentStep] = useState(0)
