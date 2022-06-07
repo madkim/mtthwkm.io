@@ -53,11 +53,28 @@ export default function SmartIrrigationCard({ step, showDetails, handleShowDetai
           <h5>Smart Irrigation (UCSC Capstone Project)</h5>
           <b>2017</b>
         </div>
-        <p><small>The focus of the Smart Irrigation project is to help users reduce water consumption in gardens, greenhouses, and farms. By placing our nodes in the soil, users can learn about the specific conditions their plants are experiencing, such as moisture, humidity, temperature and sunlight.</small></p>
+        <div className='d-flex flex-row justify-content-start mb-1' style={{fontSize: 12}}>
+          <div><i className="fab fa-swift"></i> Swift&nbsp;&nbsp;</div>
+          <div><i className='fa-brands fa-html5'></i> HTML&nbsp;&nbsp;</div>
+          <div><i className='fa-brands fa-css3'></i> CSS&nbsp;&nbsp;</div>
+        </div>
+        <p style={{fontSize: '2vh'}}>The focus of the Smart Irrigation project is to help users reduce water consumption in gardens, greenhouses, and farms. By placing our nodes in the soil, users can learn about the specific conditions their plants are experiencing, such as moisture, humidity, temperature and sunlight.</p>
 
         {showDetails && step === 0 && (
           <Row>
             <hr />
+            <Col>
+              <h5 >Summary</h5>
+              <ul>
+                <li>Developed an iOS app in Swift that provides users with hourly readings regarding their plant's surrounding temperature, moisture, air humidity and sunlight.</li>
+                <li>Visualized temperature, moisture, air humidity and sunlight readings over the last 24 hours enabling users to identify if their plants are within their ideal ranges using the Charts API.</li>
+                <li>Created a gridview to aid users in selecting any of their devices quickly to obtain details regarding their plant.</li>
+                <li>
+                  <b>More Info:</b>&nbsp;
+                  <a rel='noopener noreferrer' className='text-warning' href='https://devpost.com/software/slugsense' target='_blank'>https://devpost.com/software/slugsense</a>
+                </li>
+              </ul>
+            </Col>
             <Col xs='12' className='mb-5'>
               <ReactPlayer url={SmartIrrigationDemo} controls width='100%' height='100%'/>
             </Col>

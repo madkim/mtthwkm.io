@@ -9,6 +9,7 @@ import { Button } from 'react-bootstrap'
 import { animateProjectsPage } from '../../_helpers/animation'
 
 export default function Projects() {
+  const [hasClicked, setHasClicked] = useState(false)
   const [currentStep, setCurrentStep] = useState(0)
   const [showDetails, setShowDetails] = useState(false)
 
@@ -27,15 +28,17 @@ export default function Projects() {
   }
 
   const handleShowDetails = () => {
+      setHasClicked(true)
       setShowDetails(true)
   }
 
   return (
     <div id='projects' className='d-flex flex-column justify-content-center align-items-center' >
-      <div className='project__click__me text-light user-select-none'>
-        click me &nbsp;<i className='fa-solid fa-hand-point-down'></i>
-      </div>
-      <br />
+      { hasClicked === false &&
+        <div className='project__click__me text-light user-select-none'>
+          click me &nbsp;<i className='fa-solid fa-hand-point-down'></i>
+        </div>
+      }
       <div id='project__cards'>
         <MoolaCard
           step={Math.abs(currentStep)}

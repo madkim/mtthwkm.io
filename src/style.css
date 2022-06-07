@@ -165,13 +165,9 @@
 #projects {
   width: 100% !important;
   height: 100% !important;
-  /* padding-bottom: 100px; */
 }
 
 #project__cards {
-  /* left: -19vw; */
-  /* width: 140vw; */
-  /* width: 100%; */
   opacity: 0;
   display: flex;
   position: relative;
@@ -181,6 +177,7 @@
 }
 
 .project__click__me {
+  margin-bottom: 10px;
   opacity: 0;
   display: flex;
   align-items: center;
@@ -197,6 +194,7 @@
   transition: filter 0.1s, top 0.5s, width 0.5s, height 0.5s, transform 0.4s, opacity 0.2s;
   background: white;
   border-radius: 1.5em;
+  overflow: hidden;
 }
 
 .project__card:hover:not(.project__card--active) {
@@ -206,7 +204,7 @@
 
 .project__card--active {
   width: 40vw;
-  height: 60vh;
+  height: 61vh;
   cursor: pointer;
   filter: grayscale(0);
 }
@@ -215,7 +213,7 @@
   top: 0em;
   width: 90vw !important;
   cursor: initial;
-  height: 100% !important;
+  height: auto !important;
   filter: grayscale(0);
 }
 
