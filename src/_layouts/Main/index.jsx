@@ -7,6 +7,10 @@ import { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 class MainLayout extends Component {
+  componentDidMount() {
+    window.scroll(0, 0)
+  }
+
   render() {
     return ( <>
       <Container>
