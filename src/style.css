@@ -165,7 +165,7 @@
 #projects {
   width: 100% !important;
   height: 100% !important;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 #project__cards {
@@ -177,6 +177,7 @@
   position: relative;
   transition: opacity 1s;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .project__click__me {
