@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import { Image } from 'react-bootstrap'
 
-export default function SpaceCard({ image, step, status = '', select }) {
+export default function SpaceCard({ image, step, showDetails, handleShowDetails  }) {
   const spaceRef = useRef(null)
-  const [showDetails, setShowDetails] = useState(false)
 
   useEffect(() => {
     switch (step) {
@@ -33,16 +32,8 @@ export default function SpaceCard({ image, step, status = '', select }) {
     }
   }, [step])
 
-  const handleShowDetails = () => {
-    if (step === 2) {
-      setShowDetails(!showDetails)
-    } else {
-      setShowDetails(false)
-    }
-  }
-
   const projectCard = classNames('project__card', {
-    'project__card--show': showDetails,
+    'project__card--show': showDetails && step === 2,
     'project__card--active': step === 2,
   })
 
@@ -60,7 +51,7 @@ export default function SpaceCard({ image, step, status = '', select }) {
         <h5>SPACE</h5>
         <p className='lead'>This is the short detail about the project</p>
 
-        {status === 'show' && (
+        {showDetails && step === 2 && (
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             non scelerisque est. Fusce hendrerit eros ac sapien efficitur, et

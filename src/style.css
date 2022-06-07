@@ -213,6 +213,7 @@
 .project__card--show {
   top: 0em;
   width: 90vw !important;
+  cursor: initial;
   height: 100% !important;
   filter: grayscale(0);
 }

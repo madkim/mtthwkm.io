@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import { Image } from 'react-bootstrap'
 
-export default function RockPaperScissorsCard({ image, step }) {
+export default function RockPaperScissorsCard({ image, step, showDetails, handleShowDetails }) {
   const rockPaperScissorsRef = useRef(null)
-  const [showDetails, setShowDetails] = useState(false)
 
   useEffect(() => {
     switch (step) {
@@ -33,16 +32,8 @@ export default function RockPaperScissorsCard({ image, step }) {
     }
   }, [step])
 
-  const handleShowDetails = () => {
-    if (step === 1) {
-      setShowDetails(!showDetails)
-    } else {
-      setShowDetails(false)
-    }
-  }
-
   const projectCard = classNames('project__card', {
-    'project__card--show': showDetails,
+    'project__card--show': showDetails && step === 1,
     'project__card--active': step === 1,
   })
 
@@ -60,7 +51,7 @@ export default function RockPaperScissorsCard({ image, step }) {
         <h5>Rock Paper Scissors</h5>
         <p className='lead'>This is the short detail about the project</p>
 
-        {showDetails && (
+        {showDetails && step === 1 && (
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             non scelerisque est. Fusce hendrerit eros ac sapien efficitur, et

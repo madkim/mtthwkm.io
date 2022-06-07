@@ -1,10 +1,9 @@
 import classNames from 'classnames'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Image } from 'react-bootstrap'
 
-export default function MoolaCard({ image, step }) {
+export default function MoolaCard({ image, step, showDetails, handleShowDetails }) {
   const moolaRef = useRef(null)
-  const [showDetails, setShowDetails] = useState(false)
 
   useEffect(() => {
     switch (step) {
@@ -33,16 +32,8 @@ export default function MoolaCard({ image, step }) {
     }
   }, [step])
 
-  const handleShowDetails = () => {
-    if (step === 3) {
-      setShowDetails(!showDetails)
-    } else {
-      setShowDetails(false)
-    }
-  }
-
   const projectCard = classNames('project__card', {
-    'project__card--show': showDetails,
+    'project__card--show': showDetails && step === 3,
     'project__card--active': step === 3,
   })
   
@@ -60,7 +51,7 @@ export default function MoolaCard({ image, step }) {
         <h5>MOOLA</h5>
         <p className='lead'>This is the short detail about the project</p>
 
-        {showDetails && (
+        {showDetails && step === 3 && (
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             non scelerisque est. Fusce hendrerit eros ac sapien efficitur, et
