@@ -121,10 +121,9 @@ export default function Home() {
           <div ref={homeDetailsRef} className='text-center home__details mx-5'>
             <div ref={imgOneRef} className='home__img--fade'>
               <Image
-                height={300}
                 width={'100%'}
                 src={JTreeImg}
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', height: '30vh' }}
               />
               <div className='m-5 d-flex justify-content-center flex-row'>
                 <div className='text-center mb-4'>
@@ -156,10 +155,9 @@ export default function Home() {
             </div>
             <div ref={imgTwoRef} className='home__img--fade-sticky' >
               <Image
-                height={300}
                 width={'100%'}
                 src={BishopImg}
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', height: '30vh' }}
               />
               <div className='m-5  d-flex justify-content-center flex-row'>
                 <div className='text-center'>

@@ -17,8 +17,8 @@
 
 .navbar {
   color: white;
-  padding: 2em;
-  opacity: 1;
+  padding: 0em 2em !important;
+  opacity: 1 !important;
   text-align: right;
 }
 
@@ -271,7 +271,7 @@
 
 #home__details--container {
   color: white;
-  height: 500vh;
+  height: 700vh;
   background: url('./_assets/bishop.JPG') no-repeat fixed center;
   background-size: cover;
 }
